@@ -1,9 +1,11 @@
 package model.element;
 
+import fr.exia.showboard.ISquare;
+
 /*
  * @author Souar SN
  */
-public interface IElement {
+public interface IElement extends ISquare {
 	
 	public Boolean isAlive ();
 	/*

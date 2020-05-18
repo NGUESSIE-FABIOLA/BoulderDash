@@ -1,5 +1,7 @@
 package model.element;
 
+import java.awt.Image;
+
 /*
  * @author Souar SN
  */
@@ -8,6 +10,11 @@ public class Element implements IElement {
 	/*
 	 * 
 	 */
+	public Element(final Sprite sprite, final Permeability permeability) {
+		// TODO Auto-generated constructor stub
+		this.setSprite(sprite);
+		this.setPermeability(permeability);
+	}
 	private Permeability permeability;
 
 	@Override
@@ -57,6 +64,12 @@ public class Element implements IElement {
 
 	public void setPermeability(Permeability permeability) {
 		this.permeability = permeability;
+	}
+
+	@Override
+	public Image getImage() {
+		// TODO Auto-generated method stub
+		return this.getImage();
 	}
 	
 
