@@ -34,4 +34,6 @@ public interface IModel {
 	 */
 	public MotionFullElement getCharacter();
 
+	Observable getObservable();
+
 }
