@@ -19,7 +19,7 @@ public class Map extends Observable {
 	/*
 	 * 
 	 */
-	private ICAD icad;
+	//private ICAD icad;
 	private int score;
 	private int timer;
 	private int objective;
@@ -46,27 +46,33 @@ public class Map extends Observable {
 		this.widht = widht;
 	}
 	public IElement[][] getMap(){
+		return null;
 		
 	}
 	public void setMap(IElement[][] map) {
 		
 	}
 	public List<IElement> getAllElement(){
+		return null;
 		
 	}
 	public IElement getElementByPosition(int x, int y) {
+		return null;
 		
 	}
 	public IElement getElementByID(int ID) {
+		return null;
 		
 	}
 	public IElement getElementByName(String name) {
+		return null;
 		
 	}
 	public void SetMapHasChanged() {
 		
 	}
 	public Observable getObservable() {
+		return null;
 		
 	} 
 	

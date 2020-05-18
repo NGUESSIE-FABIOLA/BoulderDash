@@ -10,7 +10,7 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 /**
- * @author nodji
+ * @author Souar SN
  *
  */
 public class Sprite {
