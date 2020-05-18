@@ -3,18 +3,22 @@
  */
 package model.element.motionless;
 
+import model.element.Permeability;
 import model.element.Sprite;
 
 /**
  * @author Heidy Kengne
  *
  */
-public class Background {
+public class Background extends MotionlessElement{
 
-	   private Sprite BACKGROUND;
+	  /** The Constant SPRITE. */
+    private static final Sprite SPRITE = new Sprite(' ', "Bac.png");
 
-	   public Background() {
-	       // super();
-	    }
-	    
+    /**
+     * Instantiates a new Background.
+     */
+    Background() {
+        super(SPRITE, Permeability.PENETRABLE);
+    }
 }

@@ -41,6 +41,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="H:/Windows 10 Pro/Javac/ProjetA1/showboard-master/showboardGP2.jar"/>
+	<classpathentry kind="lib" path="E:/X24/Nouveau dossier/Proj/showboardGP2.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

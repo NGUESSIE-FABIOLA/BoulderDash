@@ -9,7 +9,7 @@ import model.element.Sprite;
  * @author Heidy Kengne
  *
  */
-public class Character extends MotionFullElement {
+public class Character {
 
 	  /** The Constant SPRITE. */
     private Sprite CHARACTER;

@@ -3,18 +3,23 @@
  */
 package model.element.motionless;
 
+import model.element.Permeability;
 import model.element.Sprite;
 
 /**
  * @author Heidy Kengne
  *
  */
-public class SpecialStoneWall {
+public class SpecialStoneWall extends MotionlessElement{
 
-	   private Sprite SPECIAL_STONE_WALL;
+	  /** The Constant SPRITE. */
+    private static final Sprite SPRITE = new Sprite('s', "Bling.png");
 
-	   public SpecialStoneWall() {
-	       // super();
-	    }
+    /**
+     * Instantiates a new SpecialStoneWall.
+     */
+    SpecialStoneWall() {
+        super(SPRITE, Permeability.PENETRABLE);
+    }
 	    
 }

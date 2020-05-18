@@ -14,6 +14,6 @@ import model.element.Sprite;
 public abstract class MotionlessElement extends Element {
 
 	   MotionlessElement(final Sprite sprite, final Permeability permeability) {
-	        super();
+	        super(sprite, permeability);
 	    }
 }
