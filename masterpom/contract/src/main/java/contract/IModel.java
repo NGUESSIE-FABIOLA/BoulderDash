@@ -3,6 +3,7 @@ package contract;
 import java.util.Observable;
 
 import entity.HelloWorld;
+import model.element.motionfull.MotionFullElement;
 
 /**
  * The Interface IModel.
@@ -24,12 +25,13 @@ public interface IModel {
 	 * @param code
 	 *          the code
 	 */
-	void loadHelloWorld(String code);
+	public IMap getMap();
 
 	/**
 	 * Gets the observable.
 	 *
 	 * @return the observable
 	 */
-	Observable getObservable();
+	public MotionFullElement getCharacter();
+
 }
