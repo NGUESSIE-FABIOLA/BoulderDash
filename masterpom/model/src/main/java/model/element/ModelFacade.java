@@ -5,7 +5,6 @@ package model.element;
 
 import contract.IMap;
 import contract.IModel;
-import contract.IMotionfullElement;
 import entity.HelloWorld;
 import model.element.motionfull.MotionFullElement;
 
