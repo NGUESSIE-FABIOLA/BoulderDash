@@ -160,7 +160,20 @@ class ViewFrame extends JFrame implements KeyListener {
 	 * @see java.awt.event.KeyListener#keyPressed(java.awt.event.KeyEvent)
 	 */
 	public void keyPressed(final KeyEvent e) {
+		
 		this.getController().orderPerform(View.keyCodeToControllerOrder(e.getKeyCode()));
+		
+		if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+			
+		}else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+			
+		}else if (e.getKeyCode() == KeyEvent.VK_UP) {
+			
+		}else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
+			
+		}else if(e.getKeyCode() == KeyEvent.VK_C) {
+			
+		}
 	}
 
 	/*

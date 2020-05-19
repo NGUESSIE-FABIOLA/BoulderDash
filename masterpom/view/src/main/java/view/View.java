@@ -1,5 +1,7 @@
 package view;
 
+import java.awt.Dimension;
+import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 
 import javax.swing.SwingUtilities;
@@ -8,6 +10,8 @@ import contract.ControllerOrder;
 import contract.IController;
 import contract.IModel;
 import contract.IView;
+import fr.exia.showboard.BoardFrame;
+
 
 /**
  * The Class View.
@@ -16,6 +20,10 @@ import contract.IView;
  */
 public final class View implements IView, Runnable {
 
+	private static final int squareSize = 50;
+
+    private Rectangle        closeView;
+    
 	/** The frame. */
 	private final ViewFrame viewFrame;
 
@@ -27,6 +35,8 @@ public final class View implements IView, Runnable {
 	 */
 	public View(final IModel model) {
 		this.viewFrame = new ViewFrame(model);
+		// this.getMyVehicle().getSprite().loadImage();
+		// this.setCloseView(new Rectangle(0, this.getMyVehicle().getY(), this.getRoad().getWidth(), roadView));
 		SwingUtilities.invokeLater(this);
 	}
 
@@ -68,6 +78,22 @@ public final class View implements IView, Runnable {
 	 */
 	public void run() {
 		this.viewFrame.setVisible(true);
+		
+		final BoardFrame boardFrame = new BoardFrame("Close view");
+       // boardFrame.setDimension(new Dimension(this.getRoad().getWidth(), this.getRoad().getHeight()));
+        boardFrame.setDisplayFrame(this.closeView);
+        boardFrame.setSize(this.closeView.width * squareSize, this.closeView.height * squareSize);
+        boardFrame.setHeightLooped(true);
+     // boardFrame.addKeyListener(this);
+        boardFrame.setFocusable(true);
+        boardFrame.setFocusTraversalKeysEnabled(false);
+
+       // boardFrame.addPawn(this.getMyVehicle());
+
+        //this.getRoad().getObservable().addObserver(boardFrame.getObserver());
+       // this.followMyVehicle();
+
+        boardFrame.setVisible(true);
 	}
 
 	/**
@@ -79,4 +105,20 @@ public final class View implements IView, Runnable {
 	public void setController(final IController controller) {
 		this.viewFrame.setController(controller);
 	}
+
+	/**
+	 * @return the closeView
+	 */
+	public Rectangle getCloseView() {
+		return closeView;
+	}
+
+	/**
+	 * @param closeView the closeView to set
+	 */
+	public void setCloseView(Rectangle closeView) {
+		this.closeView = closeView;
+	}
+	
+	
 }
