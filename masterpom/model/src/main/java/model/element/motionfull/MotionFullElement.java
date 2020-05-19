@@ -1,0 +1,62 @@
+/**
+ * 
+ */
+package model.element.motionfull;
+
+import java.awt.Point;
+
+import contract.IDestructible;
+import model.element.Element;
+import model.element.Permeability;
+import model.element.Sprite;
+
+/**
+ * @author Heidy Kengne
+ *
+ */
+
+public abstract class MotionFullElement extends Element implements IDestructible {
+
+	public MotionFullElement(Sprite sprite, Permeability permeability) {
+		super(sprite, permeability);
+		// TODO Auto-generated constructor stub
+	}
+
+	public void moveUp() {
+		
+	}
+	
+	public void moveDown() {
+		
+	}
+
+	public void moveLeft() {
+		
+	}
+	
+	public void moveRight() {
+		
+	}
+
+	/**
+	 * @return the x
+	 */
+	public int getX() {
+		return 0;
+	}
+
+	/**
+	 * @return the y
+	 */
+	public int getY() {
+		return 0;
+	}
+
+	public Point getPosition() {
+	   return this.getPosition();
+	    }
+	
+	  public void die() {
+	        
+	    }
+}
