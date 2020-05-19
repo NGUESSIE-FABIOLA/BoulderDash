@@ -3,6 +3,8 @@
  */
 package model.element;
 
+import java.util.Observable;
+
 import contract.IMap;
 import contract.IModel;
 import entity.HelloWorld;
@@ -30,6 +32,12 @@ public class ModelFacade implements IModel {
 
 	@Override
 	public MotionFullElement getCharacter() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Observable getObservable() {
 		// TODO Auto-generated method stub
 		return null;
 	}
