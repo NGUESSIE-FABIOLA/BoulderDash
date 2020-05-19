@@ -14,6 +14,8 @@ import javax.imageio.ImageIO;
  *
  */
 public class Sprite {
+	public static int LEVEL;
+
 	/** The image*/
 	
 	private Image image;

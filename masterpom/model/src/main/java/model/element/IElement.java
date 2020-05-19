@@ -1,5 +1,7 @@
 package model.element;
 
+import java.awt.Image;
+
 import fr.exia.showboard.ISquare;
 
 /*
@@ -32,4 +34,9 @@ public interface IElement extends ISquare {
 	 * 
 	 */
 	public Permeability getPermeability();
+	int getX();
+	void setX(int x);
+	int getY();
+	void setY(int y);
+	
 }

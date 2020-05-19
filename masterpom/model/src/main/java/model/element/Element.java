@@ -1,6 +1,7 @@
 package model.element;
 
 import java.awt.Image;
+import java.awt.Point;
 
 /*
  * @author Souar SN
@@ -10,12 +11,18 @@ public class Element implements IElement {
 	/*
 	 * 
 	 */
+	private Permeability permeability;
+	
+	private Point position;
+	
 	public Element(final Sprite sprite, final Permeability permeability) {
 		// TODO Auto-generated constructor stub
-		this.setSprite(sprite);
-		this.setPermeability(permeability);
+		   this.setSprite(sprite);
+	       this.setPermeability(permeability);
+	       this.position = new Point();
+
 	}
-	private Permeability permeability;
+
 
 	@Override
 	public Boolean isAlive() {
@@ -32,7 +39,7 @@ public class Element implements IElement {
 	@Override
 	public String getName() {
 		// TODO Auto-generated method stub
-		return null;
+		return "";
 	}
 
 	@Override
@@ -42,18 +49,18 @@ public class Element implements IElement {
 	}
 
 	@Override
-	public Sprite getSprite() {
+	public final Sprite getSprite() {
 		// TODO Auto-generated method stub
 		return this.sprite;
 	}
 
 	@Override
-	public Permeability getPermeability() {
+	public final Permeability getPermeability() {
 		// TODO Auto-generated method stub
 		return this.permeability;
 	}
 
-	public void setSprite(Sprite sprite) {
+	public final void setSprite(Sprite sprite) {
 		this.sprite = sprite;
 	}
 	@Override
@@ -61,16 +68,57 @@ public class Element implements IElement {
 		// TODO Auto-generated method stub
 		return super.toString();
 	}
+	
 
 	public void setPermeability(Permeability permeability) {
 		this.permeability = permeability;
 	}
+	@Override
+	public int getX() {
+		// TODO Auto-generated method stub
+		return this.getPosition().x;
+	}
+	
+	@Override
+	public void setX(int x) {
+		// TODO Auto-generated method stub
+		this.getPosition().x = x;
+	}
 
 	@Override
-	public Image getImage() {
+	public int getY() {
 		// TODO Auto-generated method stub
-		return this.getImage();
+		return this.getPosition().y;
 	}
 	
 
+
+	@Override
+	public void setY(int y) {
+		// TODO Auto-generated method stub
+		this.getPosition().y = y;
+	}
+
+
+	/**
+	 * @return the position
+	 */
+	public Point getPosition() {
+		return this.position;
+	}
+
+
+	/**
+	 * @param position the position to set
+	 */
+	public void setPosition(Point position) {
+		this.position = position;
+	}
+
+
+	@Override
+	public final Image getImage() {
+		// TODO Auto-generated method stub
+		return this.getSprite().getImage();
+	}
 }
