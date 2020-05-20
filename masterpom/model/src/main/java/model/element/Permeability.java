@@ -4,7 +4,7 @@
 package model.element;
 
 /**
- * @author nodji
+ * @author Souar SN
  *
  */
 public enum Permeability {

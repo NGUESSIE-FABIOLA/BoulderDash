@@ -3,6 +3,11 @@
  */
 package model.element;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -97,6 +102,27 @@ public class Map extends Observable {
 		return this.map[x][y];
 		
 	}
+	public void loadFile(final String fileName) throws IOException {
+		final BufferedReader buff = new BufferedReader(new InputStreamReader(new FileInputStream(fileName)));
+		String Line;
+		int y = 0;
+		Line = buff.readLine();
+		this.setHeight(Integer.parseInt(Line));
+		Line = buff.readLine();
+		this.setWidth(Integer.parseInt(Line));
+		
+		char map[][]= new char[this.getWidth()][this.getHeight()];
+		while(Line != null) {
+			for(int x =0; x< Line.toCharArray().length; x++) {
+				
+				map[x][y]= Line.toCharArray()[x];
+			}
+			Line = buff.readLine();
+			y++;
+		}
+		buff.close();
+	}
+	
 	/*
 	 * 
 	 * get by ID

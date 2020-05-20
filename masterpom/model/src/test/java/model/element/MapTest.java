@@ -31,6 +31,8 @@ public class MapTest {
 	public static void tearDownAfterClass() throws Exception {
 	}
 
+	private Map width;
+
 	/**
 	 * @throws java.lang.Exception
 	 */
@@ -66,7 +68,9 @@ public class MapTest {
 	 */
 	@Test
 	public void testGetWidth() {
+		Map excepted = width;
 		//fail("Not yet implemented"); // TODO
+		assertEquals(excepted,this.width.getWidth());
 	}
 
 	/**

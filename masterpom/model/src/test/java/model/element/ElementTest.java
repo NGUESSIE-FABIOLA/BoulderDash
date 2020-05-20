@@ -47,7 +47,7 @@ public class ElementTest {
 	public void testSetSprite() {
 	final IElement expected = sprite;
 		//fail("Not yet implemented"); // TODO
-	
+	//this.sprite.getSprite(); miss map
 		assertEquals(expected, this.sprite);
 	}
 
@@ -55,6 +55,7 @@ public class ElementTest {
 	public void testSetPermeability() {
 		final IElement excepted = permeability;
 		//fail("Not yet implemented"); // TODO
+		//this.permeability.getPermeability(); miss map to complete
 		assertEquals(excepted, this.permeability);
 	}
 
