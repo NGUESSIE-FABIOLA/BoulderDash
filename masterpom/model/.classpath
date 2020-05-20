@@ -41,6 +41,10 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="E:/X24/Nouveau dossier/Proj/showboardGP2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bryan/OneDrive/Bureau/PROSIT/PROSIT 4.3 Interfaces/showboard.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/bryan/OneDrive/Bureau/PROSIT/PROSIT%204.3%20Interfaces/showboard.doc.jar!/"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
