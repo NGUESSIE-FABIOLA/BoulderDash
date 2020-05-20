@@ -3,8 +3,10 @@ package model;
 import java.sql.SQLException;
 import java.util.Observable;
 
+import contract.IMap;
 import contract.IModel;
 import entity.HelloWorld;
+import model.element.motionfull.MotionFullElement;
 
 /**
  * The Class Model.
@@ -81,5 +83,17 @@ public final class Model extends Observable implements IModel {
 	 */
 	public Observable getObservable() {
 		return this;
+	}
+
+	@Override
+	public IMap getMap() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public MotionFullElement getCharacter() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

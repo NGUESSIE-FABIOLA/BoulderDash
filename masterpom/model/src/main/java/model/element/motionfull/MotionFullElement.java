@@ -15,7 +15,13 @@ import model.element.Sprite;
  *
  */
 
-public abstract class MotionFullElement extends Element implements IDestructible {
+public abstract class MotionFullElement extends Element implements IDestructible, IMotionFullElement {
+
+	public MotionFullElement(int x, int y, Sprite sprite, Permeability permeability) {
+		super(sprite, permeability);
+		// TODO Auto-generated constructor stub
+	}
+
 
 	public MotionFullElement(Sprite sprite, Permeability permeability) {
 		super(sprite, permeability);
@@ -59,4 +65,13 @@ public abstract class MotionFullElement extends Element implements IDestructible
 	  public void die() {
 	        
 	    }
+	  
+	 public void fight() {
+		 
+	 }
+	 
+	 public void doNothing() {
+		 
+		 
+	 }
 }

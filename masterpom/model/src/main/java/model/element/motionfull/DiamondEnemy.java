@@ -3,6 +3,7 @@
  */
 package model.element.motionfull;
 
+import model.element.Permeability;
 import model.element.Sprite;
 
 /**
@@ -11,12 +12,24 @@ import model.element.Sprite;
  */
 public class DiamondEnemy extends Enemy{
 
-	public DiamondEnemy(Sprite sprite) {
-		super(sprite);
+	
+		// TODO Auto-generated constructor stub
+	public DiamondEnemy(Sprite sprite, Permeability permeability) {
+		super(sprite, permeability);
 		// TODO Auto-generated constructor stub
 	}
+
+
 	
 	public void die() {
+		
+	}
+
+
+
+	@Override
+	public void Fight() {
+		// TODO Auto-generated method stub
 		
 	}
 

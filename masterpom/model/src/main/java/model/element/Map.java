@@ -109,24 +109,25 @@ public class Map extends Observable {
 		return null;
 		
 	}
-	public void SetMapHasChanged() {
-		
-	}
 	/*
 	 * 
 	 */
+	@Override
 	public IElement getAllElements() {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	@Override
 	public IElement getElementByID() {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	@Override
 	public IElement getElementByName() {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	@Override
 	public void setMapHasChanged() {
 		// TODO Auto-generated method stub
 		this.setChanged();
@@ -186,10 +187,11 @@ public class Map extends Observable {
 	public void setObjective(int objective) {
 		this.objective = objective;
 	}
+	@Override
 	public int getWidht() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
-	
+ 
 }

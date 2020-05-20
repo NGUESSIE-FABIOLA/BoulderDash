@@ -3,6 +3,7 @@
  */
 package model.element.motionfull;
 
+import model.element.Permeability;
 import model.element.Sprite;
 
 /**
@@ -12,11 +13,13 @@ import model.element.Sprite;
 public abstract class Enemy extends MotionFullElement{
 
 
-   public void die() {
+   public Enemy(Sprite sprite, Permeability permeability) {
+		super(sprite, permeability);
+		// TODO Auto-generated constructor stub
+	}
+
+public void die() {
 	   
    }
-   
-   public Enemy(Sprite sprite) {
-	   
-   }
+
 }
