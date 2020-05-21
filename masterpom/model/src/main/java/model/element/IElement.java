@@ -1,14 +1,13 @@
 package model.element;
 
-import java.awt.Image;
-
+import fr.exia.showboard.IPawn;
 import fr.exia.showboard.ISquare;
 
 
 /*
  * @author Souar SN
  */
-public interface IElement extends ISquare {
+public interface IElement extends ISquare, IPawn {
 	
 	public Boolean isAlive ();
 	/*

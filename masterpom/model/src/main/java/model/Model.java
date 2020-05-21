@@ -6,6 +6,7 @@ import java.util.Observable;
 import contract.IMap;
 import contract.IModel;
 import entity.HelloWorld;
+import model.element.Map;
 import model.element.motionfull.MotionFullElement;
 
 /**
@@ -86,7 +87,7 @@ public final class Model extends Observable implements IModel {
 	}
 
 	@Override
-	public IMap getMap() {
+	public Map getMap() {
 		// TODO Auto-generated method stub
 		return null;
 	}
