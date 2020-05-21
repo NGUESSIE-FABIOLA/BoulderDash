@@ -50,6 +50,17 @@ public class Map extends Observable {
 	 * 
 	 */
 	public void loadlevel(int level) {
+		this.setHeight(ElementDAO2.getMapHeight(level));
+		this.setWidth(ElementDAO2.getMapWidth(level));
+		map = new IElement[this.getWidth()][this.getHeight()];
+		MotionfullElementFactory.setMap(this);
+
+		char[][] consoleMap = ElementDAO2.getMap(level);
+		for (int y = 0; y < this.getHeight(); y++) {
+			for (int x = 0; x < this.getWidth(); x++) {
+				this.setElementPosition(ElementFactory.getFromFileSymbol(consoleMap[x][y]), x, y);
+			}
+		}
 		
 	}
 	
