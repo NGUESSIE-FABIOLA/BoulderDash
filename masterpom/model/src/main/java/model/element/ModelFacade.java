@@ -7,6 +7,7 @@ import java.util.Observable;
 
 import contract.IMap;
 import contract.IModel;
+import contract.IMotionFullElement;
 import entity.HelloWorld;
 import model.element.motionfull.MotionFullElement;
 
@@ -17,12 +18,12 @@ import model.element.motionfull.MotionFullElement;
 public class ModelFacade implements IModel {
 	private Map map;
 
-	private MotionFullElement character;
+	private IMotionFullElement character;
 	
 	public ModelFacade(int level) {
 		// TODO Auto-generated constructor stub
 		this.setMap(new Map(level));
-		//this.setCharacter(new Character(getMap()));
+		this.setCharacter(new Character(getMap()));
 		this.character.setX(7);
 		this.character.setY(6);
 	}
@@ -44,10 +45,8 @@ public class ModelFacade implements IModel {
 	}
 
 	@Override
-	public MotionFullElement getCharacter() {
-		// TODO Auto-generated method stub
+	public IMotionFullElement getCharacter() {
 		return this.character;
-	
 	}
 
 	/**

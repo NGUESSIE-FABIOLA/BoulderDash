@@ -33,7 +33,7 @@ public interface IModel {
 	 *
 	 * @return the observable
 	 */
-	public MotionFullElement getCharacter();
+	public IMotionFullElement getCharacter();
 
 	Observable getObservable();
 

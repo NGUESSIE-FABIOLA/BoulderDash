@@ -1,5 +1,7 @@
 package model.element;
 
+import java.awt.Image;
+
 import fr.exia.showboard.IPawn;
 import fr.exia.showboard.ISquare;
 
@@ -13,6 +15,8 @@ public interface IElement extends ISquare, IPawn {
 	/*
 	 * 
 	 */
+	Image getImage();
+	
 	public int getID();
 	/*
 	 * 

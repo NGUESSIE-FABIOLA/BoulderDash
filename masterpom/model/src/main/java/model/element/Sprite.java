@@ -41,8 +41,9 @@ public class Sprite {
 	public Sprite(final char character) {
 		this(character , "noimage.jpg");
 	}
-	/*
-	 * 
+
+	/**
+	 * @return the image
 	 */
 	public Image getImage() {
 		return this.image;
@@ -51,7 +52,7 @@ public class Sprite {
 	 * Loads Image
 	 */
 	public final void loadImage() throws IOException {
-		this.setImage(ImageIO.read(new File("../images/" +this.getImageName())));
+		this.setImage(ImageIO.read(new File("../images/ " +this.getImageName())));
 	}
 	/*
 	 * sets the image
