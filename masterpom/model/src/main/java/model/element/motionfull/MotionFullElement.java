@@ -8,6 +8,7 @@ import java.awt.Point;
 import contract.IDestructible;
 import contract.IMotionFullElement;
 import model.element.Element;
+import model.element.Map;
 import model.element.Permeability;
 import model.element.Sprite;
 
@@ -27,6 +28,11 @@ public abstract class MotionFullElement extends Element implements IDestructible
 	public MotionFullElement(Sprite sprite, Permeability permeability) {
 		super(sprite, permeability);
 		// TODO Auto-generated constructor stub
+	}
+
+	public MotionFullElement(Map map) {
+		// TODO Auto-generated constructor stub
+		super(map);
 	}
 
 	public void moveUp() {

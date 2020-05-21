@@ -3,6 +3,7 @@
  */
 package model.element;
 
+import java.sql.SQLException;
 import java.util.Observable;
 
 import contract.IMap;
@@ -20,7 +21,7 @@ public class ModelFacade implements IModel {
 
 	private IMotionFullElement character;
 	
-	public ModelFacade(int level) {
+	public ModelFacade(int level) throws Exception {
 		// TODO Auto-generated constructor stub
 		this.setMap(new Map(level));
 		this.setCharacter(new Character(getMap()));
@@ -28,8 +29,7 @@ public class ModelFacade implements IModel {
 		this.character.setY(6);
 	}
 	
-	
-	
+
 	@Override
 	public Map getMap() {
 		// TODO Auto-generated method stub
@@ -50,20 +50,11 @@ public class ModelFacade implements IModel {
 	}
 
 	/**
-	 * @param character the character to set
+	 * @param character
 	 */
-	public void setCharacter(MotionFullElement character) {
+	public void setCharacter(IMotionFullElement character){
 		this.character = character;
 	}
-
-
-
-	/*@Override
-	public HelloWorld getHelloWorld() {
-		// TODO Auto-generated method stub
-		return null;
-	}*/
-
 
 
 	@Override
@@ -71,15 +62,5 @@ public class ModelFacade implements IModel {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-
-
-	@Override
-	public HelloWorld getHelloWorld() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-
 
 }

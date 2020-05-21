@@ -18,7 +18,7 @@ public interface IModel {
 	 *
 	 * @return the helloworld entity
 	 */
-	HelloWorld getHelloWorld();
+
 
 	/**
 	 * Load the message.
@@ -26,7 +26,7 @@ public interface IModel {
 	 * @param code
 	 *          the code
 	 */
-	public Map getMap();
+	 Map getMap();
 
 	/**
 	 * Gets the observable.

@@ -7,7 +7,7 @@ public class MotionFullElementFactory {
 	private static Map MAP;
 
 	/** The Constant character. */
-	private static final Character Character = new Character(MAP);
+	private static final Character Character = new Character( MAP);
 	
 	/** The Constant pointEnemy. */
 	private static final PointEnemy PointEnemy = new PointEnemy(MAP);

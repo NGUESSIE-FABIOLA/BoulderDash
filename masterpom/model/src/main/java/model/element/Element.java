@@ -14,6 +14,7 @@ public class Element implements IElement {
 	private Permeability permeability;
 	
 	private Point position;
+	private Map map;
 	
 	public Element(final Sprite sprite, final Permeability permeability) {
 		// TODO Auto-generated constructor stub
@@ -21,6 +22,12 @@ public class Element implements IElement {
 	       this.setPermeability(permeability);
 	       this.position = new Point();
 
+	}
+
+
+	public Element(Map map) {
+		// TODO Auto-generated constructor stub
+		this.map = map;
 	}
 
 

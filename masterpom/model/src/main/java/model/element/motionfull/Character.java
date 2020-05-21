@@ -38,6 +38,8 @@ public class Character extends MotionFullElement{
 
 	private Map map;
 
+	private boolean alive;
+
     /**
      * Instantiates a new Character.
      * @throws IOException 
@@ -56,7 +58,8 @@ public class Character extends MotionFullElement{
    
     public Character(Map map) {
 		// TODO Auto-generated constructor stub
-    	this.map = map;
+    	super(map);
+    	this.alive = true;
 	}
 
 
@@ -68,7 +71,13 @@ public class Character extends MotionFullElement{
         super.moveLeft();
         this.setSprite(spriteUp);
     }
-    
+    /**
+     *
+     */
+    @Override
+	public Boolean isAlive() {
+		return this.alive;
+	}
     /*
      * (non-Javadoc)
 =     */
