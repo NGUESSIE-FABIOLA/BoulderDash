@@ -35,9 +35,9 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/bryan/OneDrive/Bureau/PROSIT/PROSIT 4.3 Interfaces/showboard.jar">
+	<classpathentry kind="lib" path="/masterpom/lib/showboardGP2.jar">
 		<attributes>
-			<attribute name="javadoc_location" value="jar:file:/C:/Users/bryan/OneDrive/Bureau/PROSIT/PROSIT%204.3%20Interfaces/showboard.doc.jar!/"/>
+			<attribute name="javadoc_location" value="jar:platform:/resource/masterpom/lib/showboard.doc.jar!/"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
