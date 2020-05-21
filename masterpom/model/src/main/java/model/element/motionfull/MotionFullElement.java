@@ -6,6 +6,7 @@ package model.element.motionfull;
 import java.awt.Point;
 
 import contract.IDestructible;
+import contract.IMotionFullElement;
 import model.element.Element;
 import model.element.Permeability;
 import model.element.Sprite;

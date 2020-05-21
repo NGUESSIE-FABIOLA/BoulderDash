@@ -11,6 +11,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import contract.Example;
+import contract.IMotionFullElement;
 import model.element.IElement;
 import model.element.Sprite;
 
@@ -20,7 +22,8 @@ import model.element.Sprite;
  */
 public class CharacterTest {
 
-
+	private Example id;
+	private Example name;
 	private IElement sprite;
 	private IElement permeability;
 	private Character character;
@@ -47,6 +50,29 @@ public class CharacterTest {
 
 	@After
 	public void tearDown() throws Exception {
+	}
+
+
+	@Test
+	public void testGetId() {
+		final Example expected = id;
+		fail("Not yet implemented");
+		assertEquals(expected, this.id.getId());
+	}
+
+	@Test
+	public void testGetName() {
+		final Example expected = name;
+		fail("Not yet implemented");
+		assertEquals(expected, this.name.getName());
+	}
+
+	@Test
+	public void testSetName() {
+		final Example expected = name;
+		this.name.getName();
+		fail("Not yet implemented");
+		assertEquals(expected, this.name.getName());
 	}
 
 	

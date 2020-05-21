@@ -1,7 +1,7 @@
 /**
  * 
  */
-package model.element.motionfull;
+package contract;
 
 import java.awt.Point;
 
