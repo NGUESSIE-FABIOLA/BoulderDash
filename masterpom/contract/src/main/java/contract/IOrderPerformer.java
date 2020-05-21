@@ -11,6 +11,6 @@ import java.io.IOException;
  */
 public interface IOrderPerformer {
 
-    void orderPerform(UserOrder userOrder) throws IOException;
+    void orderPerform(Order Order) throws IOException;
 
 }

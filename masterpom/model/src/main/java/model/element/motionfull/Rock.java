@@ -25,8 +25,9 @@ public class Rock extends MotionFullElement implements IGravitable {
     }
 	    
    
-   public Rock(Map mAP) {
+   public Rock(Map map) {
 		// TODO Auto-generated constructor stub
+	   super(map);
 	}
 
 

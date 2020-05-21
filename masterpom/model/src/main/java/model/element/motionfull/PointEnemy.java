@@ -18,9 +18,9 @@ public class PointEnemy extends Enemy {
 		// TODO Auto-generated constructor stub
 	}
 
-public PointEnemy(Map mAP) {
+public PointEnemy(Map map) {
 	// TODO Auto-generated constructor stub
-	super();
+	super(map);
 }
 
 public void die() {
