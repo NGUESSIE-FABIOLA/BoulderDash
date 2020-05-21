@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Observable;
 
 import model.Elementboulder;
+import model.element.motionfull.MotionFullElementFactory;
 
 /**
  * @author nodji
@@ -47,8 +48,9 @@ public class Map extends Observable {
 	
 	/**
 	 * @param level
+	 * @throws SQLException 
 	 */
-	public Map(int level ) {
+	public Map(int level ) throws SQLException {
 		super();
 		this.setLevel(level);
 		this.loadlevel(getLevel());
@@ -56,11 +58,11 @@ public class Map extends Observable {
 	/*
 	 * 
 	 */
-	public void loadlevel(int level) {
+	public void loadlevel(int level) throws SQLException {
 		this.setHeight(Elementboulder.getMapHeight(level));
 		this.setWidth(Elementboulder.getMapWidth(level));
 		map = new IElement[this.getWidth()][this.getHeight()];
-		MotionfullElementFactory.setMap(this);
+		MotionFullElementFactory.setMap(this);
 
 		char[][] consoleMap = Elementboulder.getMap(level);
 		for (int y = 0; y < this.getHeight(); y++) {

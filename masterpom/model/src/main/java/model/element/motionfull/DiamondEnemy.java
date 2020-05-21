@@ -24,6 +24,7 @@ public class DiamondEnemy extends Enemy{
 	
 	public DiamondEnemy(Map mAP) {
 		// TODO Auto-generated constructor stub
+		super();
 	}
 
 

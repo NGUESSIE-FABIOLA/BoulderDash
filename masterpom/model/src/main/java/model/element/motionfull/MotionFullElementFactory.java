@@ -2,7 +2,7 @@ package model.element.motionfull;
 
 import model.element.Map;
 
-public class MotionfullElementFactory {
+public class MotionFullElementFactory {
 
 	private static Map MAP;
 
