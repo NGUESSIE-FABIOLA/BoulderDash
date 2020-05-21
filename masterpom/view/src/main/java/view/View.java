@@ -11,7 +11,10 @@ import contract.ControllerOrder;
 import contract.IController;
 import contract.IMap;
 import contract.IModel;
+import contract.IMotionFullElement;
+import contract.IOrderPerformer;
 import contract.IView;
+import contract.Order;
 import fr.exia.showboard.BoardFrame;
 
 
@@ -76,6 +79,7 @@ public final class View implements IView, Runnable {
 	}
 	
 	private Order keyCodeToUserOrder(int keyCode) {
+		return null;
 		
 		
 	}

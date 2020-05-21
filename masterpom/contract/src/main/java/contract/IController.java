@@ -1,5 +1,7 @@
 package contract;
 
+import java.sql.SQLException;
+
 /**
  * The Interface IController.
  *
@@ -10,7 +12,7 @@ public interface IController {
 	/**
 	 * Control.
 	 */
-	public void control();
+	public void control() throws InterruptedException, SQLException;
 
 	/**
 	 * Order perform.
