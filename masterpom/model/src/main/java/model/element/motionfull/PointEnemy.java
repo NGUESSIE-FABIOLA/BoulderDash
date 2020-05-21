@@ -3,6 +3,7 @@
  */
 package model.element.motionfull;
 
+import model.element.Map;
 import model.element.Permeability;
 import model.element.Sprite;
 
@@ -16,6 +17,10 @@ public class PointEnemy extends Enemy {
 		super(sprite, permeability);
 		// TODO Auto-generated constructor stub
 	}
+
+public PointEnemy(Map mAP) {
+	// TODO Auto-generated constructor stub
+}
 
 public void die() {
 	   

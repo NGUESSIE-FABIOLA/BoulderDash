@@ -4,6 +4,7 @@
 package model.element.motionfull;
 
 import contract.IGravitable;
+import model.element.Map;
 import model.element.Permeability;
 import model.element.Sprite;
 
@@ -24,7 +25,12 @@ public class Rock extends MotionFullElement implements IGravitable {
     }
 	    
    
-   public void fall() {
+   public Rock(Map mAP) {
+		// TODO Auto-generated constructor stub
+	}
+
+
+public void fall() {
 	   
    }
 

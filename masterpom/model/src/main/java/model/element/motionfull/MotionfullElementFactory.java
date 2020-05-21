@@ -1,13 +1,13 @@
 package model.element.motionfull;
 
-import model.Map;
+import model.element.Map;
 
 public class MotionfullElementFactory {
 
 	private static Map MAP;
 
 	/** The Constant character. */
-	private static final MainCharacter Character = new MainCharacter(MAP);
+	private static final Character Character = new Character(MAP);
 	
 	/** The Constant pointEnemy. */
 	private static final PointEnemy PointEnemy = new PointEnemy(MAP);
@@ -20,39 +20,39 @@ public class MotionfullElementFactory {
 	private static final Rock Rock = new Rock(MAP);
 	
 
-	private static MotionfullElement[] motionfullElements = { Character, PointEnemy, DiamondEnemy, Diamond, Rock};
+	private static MotionFullElement[] motionfullElements = { Character, PointEnemy, DiamondEnemy, Diamond, Rock};
 
 	public static void setMap(Map map) {
 		MAP = map;
 	}
 
-	public static MotionfullElement createCharacter(Map map) {
+	public static MotionFullElement createCharacter(Map map) {
 		setMap(map);
 		return Character;
 	}
 
-	public static MotionfullElement createPoint(Map map) {
+	public static MotionFullElement createPoint(Map map) {
 		setMap(map);
 		return PointEnemy;
 	}
 
-	public static MotionfullElement createDiamondEnemy(Map map) {
+	public static MotionFullElement createDiamondEnemy(Map map) {
 		setMap(map);
 		return DiamondEnemy;
 	}
 	
-	public static MotionfullElement createDiamond(Map map) {
+	public static MotionFullElement createDiamond(Map map) {
 		setMap(map);
 		return Diamond;
 	}
 	
-	public static MotionfullElement createRock(Map map) {
+	public static MotionFullElement createRock(Map map) {
 		setMap(map);
 		return Rock;
 	}
 
-	public static MotionfullElement getFromFileSymbol(final char fileSymbol) {
-		for (final MotionfullElement motionfullElement : motionfullElements) {
+	public static MotionFullElement getFromFileSymbol(final char fileSymbol) {
+		for (final MotionFullElement motionfullElement : motionfullElements) {
 			if (motionfullElement.getSprite().getConsoleImage() == fileSymbol) {
 				return motionfullElement;
 			}

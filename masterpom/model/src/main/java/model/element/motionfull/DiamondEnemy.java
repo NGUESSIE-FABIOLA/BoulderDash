@@ -3,6 +3,7 @@
  */
 package model.element.motionfull;
 
+import model.element.Map;
 import model.element.Permeability;
 import model.element.Sprite;
 
@@ -21,6 +22,12 @@ public class DiamondEnemy extends Enemy{
 
 
 	
+	public DiamondEnemy(Map mAP) {
+		// TODO Auto-generated constructor stub
+	}
+
+
+
 	public void die() {
 		
 	}

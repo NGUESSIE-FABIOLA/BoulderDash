@@ -5,6 +5,7 @@ package model.element.motionfull;
 
 import java.io.IOException;
 
+import model.element.Map;
 import model.element.Permeability;
 import model.element.Sprite;
 
@@ -35,6 +36,8 @@ public class Character extends MotionFullElement{
     
     private static final Sprite spriteFight = new Sprite('H', "F1.png");
 
+	private Map map;
+
     /**
      * Instantiates a new Character.
      * @throws IOException 
@@ -51,7 +54,13 @@ public class Character extends MotionFullElement{
     }
 
    
-    /*
+    public Character(Map map) {
+		// TODO Auto-generated constructor stub
+    	this.map = map;
+	}
+
+
+	/*
      * (non-Javadoc)
 =     */
     @Override
