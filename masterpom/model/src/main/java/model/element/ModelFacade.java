@@ -3,14 +3,11 @@
  */
 package model.element;
 
-import java.sql.SQLException;
 import java.util.Observable;
 
-import contract.IMap;
 import contract.IModel;
 import contract.IMotionFullElement;
-import entity.HelloWorld;
-import model.element.motionfull.MotionFullElement;
+import model.element.motionfull.Character;
 
 /**
  * @author Souar SN
@@ -24,7 +21,9 @@ public class ModelFacade implements IModel {
 	public ModelFacade(int level) throws Exception {
 		// TODO Auto-generated constructor stub
 		this.setMap(new Map(level));
+		
 		this.setCharacter(new Character(getMap()));
+	//	this.setCharacter(new Character(getMap()));
 		this.character.setX(7);
 		this.character.setY(6);
 	}

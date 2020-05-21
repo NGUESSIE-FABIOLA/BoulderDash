@@ -22,9 +22,9 @@ public class DiamondEnemy extends Enemy{
 
 
 	
-	public DiamondEnemy(Map mAP) {
+	public DiamondEnemy(Map map) {
 		// TODO Auto-generated constructor stub
-		super();
+		super(map);
 	}
 
 

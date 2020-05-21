@@ -30,9 +30,10 @@ public class Diamond extends MotionFullElement implements IGravitable {
 	    }
 		  
    
-   public Diamond(Map mAP) {
+   public Diamond(Map map) {
 			// TODO Auto-generated constructor stub
-		}
+	   super(map);
+   }
 
 
 public void fall() {
