@@ -59,8 +59,16 @@ public class ModelFacade implements IModel {
 
 
 
-	@Override
+	/*@Override
 	public HelloWorld getHelloWorld() {
+		// TODO Auto-generated method stub
+		return null;
+	}*/
+
+
+
+	@Override
+	public Observable getObservable() {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -68,7 +76,7 @@ public class ModelFacade implements IModel {
 
 
 	@Override
-	public Observable getObservable() {
+	public HelloWorld getHelloWorld() {
 		// TODO Auto-generated method stub
 		return null;
 	}

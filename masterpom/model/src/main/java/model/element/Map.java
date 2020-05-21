@@ -13,6 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Observable;
 
+import model.Elementboulder;
+
 /**
  * @author nodji
  *
@@ -43,19 +45,24 @@ public class Map extends Observable {
 	public int objective;
 	
 	
+	/**
+	 * @param level
+	 */
 	public Map(int level ) {
-		// TODO Auto-generated constructor stub
+		super();
+		this.setLevel(level);
+		this.loadlevel(getLevel());
 	}
 	/*
 	 * 
 	 */
 	public void loadlevel(int level) {
-		this.setHeight(ElementDAO2.getMapHeight(level));
-		this.setWidth(ElementDAO2.getMapWidth(level));
+		this.setHeight(Elementboulder.getMapHeight(level));
+		this.setWidth(Elementboulder.getMapWidth(level));
 		map = new IElement[this.getWidth()][this.getHeight()];
 		MotionfullElementFactory.setMap(this);
 
-		char[][] consoleMap = ElementDAO2.getMap(level);
+		char[][] consoleMap = Elementboulder.getMap(level);
 		for (int y = 0; y < this.getHeight(); y++) {
 			for (int x = 0; x < this.getWidth(); x++) {
 				this.setElementPosition(ElementFactory.getFromFileSymbol(consoleMap[x][y]), x, y);
@@ -161,12 +168,18 @@ public class Map extends Observable {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	/**
+	 * 
+	 */
 	public void setMapHasChanged() {
 		// TODO Auto-generated method stub
 		this.setChanged();
 		this.notifyObservers();
 		
 	}
+	/**
+	 * @return
+	 */
 	public Observable getObservable() {
 		return this;
 		
