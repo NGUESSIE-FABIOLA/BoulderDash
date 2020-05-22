@@ -3,9 +3,9 @@
  */
 package model.element.motionless;
 
+import contract.Permeability;
+import contract.Sprite;
 import model.element.Element;
-import model.element.Permeability;
-import model.element.Sprite;
 
 /**
  * @author Heidy Kengne
