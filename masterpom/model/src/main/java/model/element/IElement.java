@@ -43,4 +43,5 @@ public interface IElement extends ISquare, IPawn {
 	int getY();
 	void setY(int y);
 	
+	
 }

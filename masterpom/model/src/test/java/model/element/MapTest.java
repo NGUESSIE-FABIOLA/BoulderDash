@@ -6,7 +6,6 @@ package model.element;
 import static org.junit.Assert.*;
 
 import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -16,6 +15,9 @@ import org.junit.Test;
  *
  */
 public class MapTest {
+	private int height;
+	private int widht;
+	private IElement[][] sizeMap;
 
 	/**
 	 * @throws java.lang.Exception
@@ -24,20 +26,15 @@ public class MapTest {
 	public static void setUpBeforeClass() throws Exception {
 	}
 
-	/**
-	 * @throws java.lang.Exception
-	 */
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
-
-	private Map width;
+	private Map map;
+	private int List;
 
 	/**
 	 * @throws java.lang.Exception
 	 */
 	@Before
 	public void setUp() throws Exception {
+		this.map = new Map(List);
 	}
 
 	/**
@@ -52,7 +49,9 @@ public class MapTest {
 	 */
 	@Test
 	public void testGetHeight() {
-		//fail("Not yet implemented"); // TODO
+		final int expected = 21;
+		//fail("Not yet implemented");
+		assertEquals(expected, this.map.getHeight());
 	}
 
 	/**
@@ -60,7 +59,32 @@ public class MapTest {
 	 */
 	@Test
 	public void testSetHeight() {
-		//fail("Not yet implemented"); // TODO
+	final int expected = 21;
+	this.map.setHeight(expected);
+	assertEquals(expected, this.map.getHeight());
+	}
+
+	/**
+	 * Test method for {@link model.element.Map#getAllElements()}.
+	 */
+	@Test
+	public void testGetAllElements() {
+		fail("Not yet implemented"); // TODO
+	}
+	@Test
+	public void testGetMap() {
+		final Map expected = map;
+//		fail("Not yet implemented");
+		assertEquals(expected, this.map.getMap());
+		
+	}
+
+	@Test
+	public void testSetMap() {
+		final Map expected = map;
+		this.map.setMap(sizeMap);
+	//	fail("Not yet implemented");
+		assertEquals(expected, this.map.getMap());
 	}
 
 	/**
@@ -68,9 +92,9 @@ public class MapTest {
 	 */
 	@Test
 	public void testGetWidth() {
-		Map excepted = width;
-		//fail("Not yet implemented"); // TODO
-		assertEquals(excepted,this.width.getWidth());
+		final int expected = 40;
+	//	fail("Not yet implemented");
+		assertEquals(expected, this.map.getWidth());// TODO
 	}
 
 	/**
@@ -78,7 +102,9 @@ public class MapTest {
 	 */
 	@Test
 	public void testSetWidth() {
-		//fail("Not yet implemented"); // TODO
+		final int expected = 40;
+		this.map.setWidth(expected);
+		assertEquals(expected, this.map.getWidth());
 	}
 
 }

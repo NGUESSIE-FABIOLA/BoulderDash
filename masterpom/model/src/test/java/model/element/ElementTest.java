@@ -33,7 +33,7 @@ public class ElementTest {
 	public void testGetSprite() {
 		IElement excepted = sprite;
 		//fail("Not yet implemented"); // TODO
-		assertEquals(excepted, this.sprite);
+		assertEquals(excepted, this.sprite.getSprite());
 	}
 
 	@Test
@@ -47,8 +47,8 @@ public class ElementTest {
 	public void testSetSprite() {
 	final IElement expected = sprite;
 		//fail("Not yet implemented"); // TODO
-	//this.sprite.getSprite(); miss map
-		assertEquals(expected, this.sprite);
+	this.sprite.getSprite();
+		assertEquals(expected, this.sprite.getSprite());
 	}
 
 	@Test

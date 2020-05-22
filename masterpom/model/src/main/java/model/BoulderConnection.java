@@ -6,12 +6,12 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.mysql.jdbc.Statement;
-
 /**
- * The Class DBConnection.
+ * The Class BoulderConnection.
  *
- * @author Jean-Aymeric Diet
+ *
+ * @author nodji
+ *
  */
 final class BoulderConnection {
 	/** The instance. */
@@ -20,7 +20,7 @@ final class BoulderConnection {
 	/** The connection. */
 	private Connection					connection;
 
-	private Statement 					statement;
+	private java.sql.Statement 					statement;
 
 	/**
 	 * Instantiates a new DB connection.
@@ -55,7 +55,7 @@ final class BoulderConnection {
 	private Boolean open() {
 		final DBProperties dbProperties = new DBProperties();
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			this.connection = DriverManager.getConnection(dbProperties.getUrl(), dbProperties.getLogin(), dbProperties.getPassword());
 		} catch (final ClassNotFoundException e) {
 			e.printStackTrace();
@@ -101,7 +101,7 @@ final class BoulderConnection {
 	 */
 	public int executeUpdate(String query) {
 		try {
-			return this.statement.executeUpdate(query, Statement.RETURN_GENERATED_KEYS);
+			return this.statement.executeUpdate(query, java.sql.Statement.RETURN_GENERATED_KEYS);
 		} catch (final SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -127,14 +127,14 @@ final class BoulderConnection {
 	/**
 	 * @return
 	 */
-	public Statement getStatement() {
+	public java.sql.Statement getStatement() {
 		// TODO Auto-generated method stub
 		return this.statement;
 	}
 	/**
 	 * @param statement
 	 */
-	public void setStatement(final Statement statement) {
+	public void setStatement(final java.sql.Statement statement) {
 		this.statement = statement;
 	}
 }

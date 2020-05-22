@@ -5,10 +5,6 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.mysql.jdbc.Statement;
-
-import entity.HelloWorld;
-
 /**
  * The Class DAOHelloWorld.
  *
@@ -198,7 +194,7 @@ public class Elementboulder extends DAOEntity {
 				
 		try{
 		Connection cn = BoulderConnection.getInstance().getConnection();
-		Statement st = BoulderConnection.getInstance().getStatement();
+		java.sql.Statement st = BoulderConnection.getInstance().getStatement();
 		
 		
 
