@@ -57,8 +57,9 @@ public final class View implements IView, Runnable{
 	 *
 	 * @param model
 	 *          the model
+	 * @throws IOException 
 	 */
-	public View(final IModel model) {
+	public View(final IModel model) throws IOException {
 		
 		this.viewFrame = new ViewFrame(model);
 		this.setMap(map);
@@ -228,8 +229,9 @@ public final class View implements IView, Runnable{
 
 	/**
 	 * @param map the map to set
+	 * @throws IOException 
 	 */
-	public void setMap(IMap map) {
+	public void setMap(IMap map) throws IOException {
 		
 		this.map = map;
 		for (int y = 0; y < this.getMap().getHeight(); y++) {
