@@ -18,7 +18,7 @@ public class Element implements IElement {
 	private Permeability permeability;
 	
 	private Point position;
-	private Map map;
+	protected Map map;
 	
 	public Element(final Sprite sprite, final Permeability permeability) {
 		// TODO Auto-generated constructor stub
