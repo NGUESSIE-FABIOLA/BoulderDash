@@ -4,8 +4,6 @@ import java.awt.Image;
 
 import fr.exia.showboard.IPawn;
 import fr.exia.showboard.ISquare;
-import model.element.Permeability;
-import model.element.Sprite;
 
 
 /*
