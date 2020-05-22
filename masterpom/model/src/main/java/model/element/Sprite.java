@@ -4,6 +4,8 @@
 package model.element;
 
 import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 
@@ -33,6 +35,12 @@ public class Sprite {
 	 */
 	public Sprite (final char character, final String imageName) {
 		this.setConsoleImage(character);
+		try {
+			this.loadImage();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		this.setImageName(imageName);
 	}
 	/*
@@ -52,6 +60,7 @@ public class Sprite {
 	 * Loads Image
 	 */
 	public final void loadImage() throws IOException {
+		
 		this.setImage(ImageIO.read(new File("../images/ " +this.getImageName())));
 	}
 	/*

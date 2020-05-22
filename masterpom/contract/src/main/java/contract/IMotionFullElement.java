@@ -6,7 +6,6 @@ package contract;
 import java.awt.Point;
 
 import fr.exia.showboard.IPawn;
-import model.element.IElement;
 
 /**
  * @author Heidy Kengne
