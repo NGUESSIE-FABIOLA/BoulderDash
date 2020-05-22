@@ -3,6 +3,8 @@
  */
 package contract;
 
+import java.sql.SQLException;
+import java.util.List;
 import java.util.Observable;
 
 import model.element.IElement;
@@ -15,20 +17,22 @@ public interface IMap {
 		/*
 		 * 
 		 */
-		public int getHeight();
-		
-		
-		public int getWidht();
-		
-		public IElement getAllElements();
-		
-		
-		public IElement getElementByID();
-		
-		public IElement getElementByName();
-		
-		public void setMapHasChanged();
-		
-		Observable getObservable();
+	int getHeight();
+	
+	int getWidth();
+	
+	List<IElement> getAllElements() throws SQLException;
+	 
+	IElement getElementByPosition(int x,int y);
+
+    IElement getElementByID(int ID);
+    
+    IElement getElementByName(String name) throws SQLException;
+    
+    void setMapHasChanged();
+    
+    Observable getObservable();
+    
+    void applyPhysics();
 	}
 

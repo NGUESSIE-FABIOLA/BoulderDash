@@ -3,7 +3,9 @@
  */
 package model.element.motionfull;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.fail;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -13,7 +15,6 @@ import org.junit.Test;
 
 import contract.Example;
 import contract.IMotionFullElement;
-import model.element.IElement;
 import model.element.Sprite;
 
 /**
@@ -24,8 +25,8 @@ public class CharacterTest {
 
 	private Example id;
 	private Example name;
-	private IElement sprite;
-	private IElement permeability;
+	private contract.IElement sprite;
+	private contract.IElement permeability;
 	private Character character;
 	private IMotionFullElement x;
 	private IMotionFullElement y;
@@ -138,14 +139,14 @@ public class CharacterTest {
 
 	@Test
 	public void testGetSprite() {
-		final IElement expected = sprite;
+		final contract.IElement expected = sprite;
 		fail("Not yet implemented");
 		assertEquals(expected, this.sprite.getSprite());
 	}
 
 	@Test
 	public void testGetPermeability() {
-		final IElement expected = permeability;
+		final contract.IElement expected = permeability;
 		fail("Not yet implemented");
 		assertEquals(expected, this.permeability.getPermeability());
 	}

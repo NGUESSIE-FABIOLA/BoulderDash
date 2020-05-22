@@ -3,6 +3,8 @@ package model.element;
 import java.awt.Image;
 import java.awt.Point;
 
+import contract.IElement;
+
 /*
  * @author Souar SN
  */
