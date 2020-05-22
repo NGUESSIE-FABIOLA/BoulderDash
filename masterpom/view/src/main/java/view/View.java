@@ -5,6 +5,7 @@ import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.IOException;
 
 import javax.swing.SwingUtilities;
 
@@ -63,7 +64,14 @@ public final class View implements IView, Runnable{
 		this.setMap(map);
 
 		this.setCharacter(character);
-		this.getCharacter().getSprite().loadImage();
+		
+		try {
+			this.getCharacter().getSprite().loadImage();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		this.setCloseView(new Rectangle(0, this.getCharacter().getY(), mapViewSizeX, mapViewSizeY));
 		SwingUtilities.invokeLater(this);
 	}
@@ -337,7 +345,7 @@ public final class View implements IView, Runnable{
 			}
 		}
 
-		boardFrame.addPawn(this.getMainCharacter());
+		boardFrame.addPawn(this.getCharacter());
 
 		this.getMap().getObservable().addObserver(boardFrame.getObserver());
 
