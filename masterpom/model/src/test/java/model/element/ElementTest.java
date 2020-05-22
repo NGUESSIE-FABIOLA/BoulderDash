@@ -57,7 +57,7 @@ public class ElementTest {
 	public void testSetPermeability() {
 		final IElement excepted = permeability;
 		//fail("Not yet implemented"); // TODO
-		//this.permeability.getPermeability(); miss map to complete
+		//this.permeability.getPermeability(); //miss map to complete
 		assertEquals(excepted, this.permeability);
 	}
 
