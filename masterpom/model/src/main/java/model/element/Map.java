@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Observable;
 
 import contract.IElement;
+import contract.Sprite;
 import model.Elementboulder;
 import model.element.motionfull.MotionFullElementFactory;
 

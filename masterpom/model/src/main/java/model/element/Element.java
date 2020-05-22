@@ -4,6 +4,8 @@ import java.awt.Image;
 import java.awt.Point;
 
 import contract.IElement;
+import contract.Permeability;
+import contract.Sprite;
 
 /*
  * @author Souar SN
