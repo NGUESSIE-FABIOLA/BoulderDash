@@ -6,11 +6,12 @@ import java.util.Observer;
 
 import javax.swing.JPanel;
 
+
 /**
- * The Class ViewPanel.
+ * @author bryan
  *
- * @author Jean-Aymeric Diet
  */
+
 class ViewPanel extends JPanel implements Observer {
 
 	/** The view frame. */
@@ -34,7 +35,7 @@ class ViewPanel extends JPanel implements Observer {
 	 *
 	 * @return the view frame
 	 */
-	private ViewFrame getViewFrame() {
+	public ViewFrame getViewFrame() {
 		return this.viewFrame;
 	}
 
@@ -44,7 +45,7 @@ class ViewPanel extends JPanel implements Observer {
 	 * @param viewFrame
 	 *          the new view frame
 	 */
-	private void setViewFrame(final ViewFrame viewFrame) {
+	public void setViewFrame(final ViewFrame viewFrame) {
 		this.viewFrame = viewFrame;
 	}
 

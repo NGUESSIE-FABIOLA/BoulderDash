@@ -4,6 +4,8 @@
  */
 package main;
 
+import java.io.IOException;
+
 import contract.ControllerOrder;
 import contract.IModel;
 import controller.Controller;
@@ -22,14 +24,16 @@ public abstract class Main {
      *
      * @param args
      *            the arguments
+     * @throws IOException 
      */
-    public static void main(final String[] args) {
+    public static void main(final String[] args) throws IOException {
+    	
         final IModel model = new Model();
         final View view = new View(model);
         final Controller controller = new Controller(view, model);
         view.setController(controller);
 
         controller.control();
-        controller.orderPerform(ControllerOrder.English);
+        controller.orderPerform(ControllerOrder.UP);
     }
 }
