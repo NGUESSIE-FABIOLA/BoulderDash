@@ -15,7 +15,7 @@ import org.junit.Test;
 
 import contract.Example;
 import contract.IMotionFullElement;
-import model.element.Sprite;
+import contract.Sprite;
 
 /**
  * @author Heidy Kengne

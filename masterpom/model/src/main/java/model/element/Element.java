@@ -4,6 +4,8 @@ import java.awt.Image;
 import java.awt.Point;
 
 import contract.IElement;
+import contract.Permeability;
+import contract.Sprite;
 
 /*
  * @author Souar SN
@@ -16,7 +18,7 @@ public class Element implements IElement {
 	private Permeability permeability;
 	
 	private Point position;
-	private Map map;
+	protected Map map;
 	
 	public Element(final Sprite sprite, final Permeability permeability) {
 		// TODO Auto-generated constructor stub

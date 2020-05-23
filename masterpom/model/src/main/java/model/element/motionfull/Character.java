@@ -5,9 +5,9 @@ package model.element.motionfull;
 
 import java.io.IOException;
 
+import contract.Permeability;
+import contract.Sprite;
 import model.element.Map;
-import model.element.Permeability;
-import model.element.Sprite;
 
 /**
  * @author Heidy Kengne

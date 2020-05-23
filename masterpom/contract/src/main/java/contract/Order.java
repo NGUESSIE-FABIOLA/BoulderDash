@@ -14,5 +14,5 @@ public enum Order  {
     LEFT,
 
     /** The nop. */
-    NOP
+    NOP;
 }

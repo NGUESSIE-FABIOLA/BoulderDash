@@ -35,7 +35,7 @@ public class ElementTest {
 	public void testGetSprite() {
 		IElement excepted = sprite;
 		//fail("Not yet implemented"); // TODO
-		assertEquals(excepted, this.sprite.getSprite());
+		assertEquals(excepted, this.sprite);
 	}
 
 	@Test
@@ -49,15 +49,15 @@ public class ElementTest {
 	public void testSetSprite() {
 	final IElement expected = sprite;
 		//fail("Not yet implemented"); // TODO
-	this.sprite.getSprite();
-		assertEquals(expected, this.sprite.getSprite());
+//	this.sprite.getSprite();
+		assertEquals(expected, this.sprite);
 	}
 
 	@Test
 	public void testSetPermeability() {
 		final IElement excepted = permeability;
 		//fail("Not yet implemented"); // TODO
-		//this.permeability.getPermeability(); miss map to complete
+		//this.permeability.getPermeability(); //miss map to complete
 		assertEquals(excepted, this.permeability);
 	}
 
