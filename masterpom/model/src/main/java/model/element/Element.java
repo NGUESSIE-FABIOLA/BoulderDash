@@ -66,24 +66,22 @@ public abstract class Element implements IElement {
 		// TODO Auto-generated method stub
 		return this.sprite;
 	}
+	
+	public void setSprite(final Sprite sprite) {
+		this.sprite = sprite;
+	}
 
 	@Override
 	public final Permeability getPermeability() {
 		// TODO Auto-generated method stub
 		return this.permeability;
 	}
-
-	public final void setSprite(Sprite sprite) {
-		this.sprite = sprite;
-	}
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString();
-	}
 	
-
-	public void setPermeability(Permeability permeability) {
+	
+	/**
+	 * @param permeability
+	 */
+	public void setPermeability(final Permeability permeability) {
 		this.permeability = permeability;
 	}
 	@Override
@@ -129,6 +127,9 @@ public abstract class Element implements IElement {
 	}
 
 
+	/**
+	 *get Images in folder
+	 */
 	@Override
 	public final Image getImage() {
 		// TODO Auto-generated method stub
