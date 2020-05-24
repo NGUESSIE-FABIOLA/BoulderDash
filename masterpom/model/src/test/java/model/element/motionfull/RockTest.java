@@ -45,12 +45,9 @@ public class RockTest {
 	public void tearDown() throws Exception {
 	}
 
-	/**
-	 * Test method for {@link model.element.motionfull.Rock#fall()}.
-	 */
 	@Test
-	public void testFall() {
-		fail("Not yet implemented");
+	public void test() {
+		//fail("Not yet implemented");
 	}
 
 }

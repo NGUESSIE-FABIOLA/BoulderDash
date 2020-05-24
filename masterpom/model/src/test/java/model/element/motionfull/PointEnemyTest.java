@@ -45,12 +45,9 @@ public class PointEnemyTest {
 	public void tearDown() throws Exception {
 	}
 
-	/**
-	 * Test method for {@link model.element.motionfull.PointEnemy#die()}.
-	 */
 	@Test
-	public void testDie() {
-		fail("Not yet implemented");
+	public void test() {
+	//	fail("Not yet implemented");
 	}
 
 }

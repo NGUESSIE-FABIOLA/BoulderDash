@@ -36,6 +36,7 @@ public class DiamondTest {
 	 */
 	@Before
 	public void setUp() throws Exception {
+		//test =  new Diamond();
 	}
 
 	/**
@@ -46,19 +47,27 @@ public class DiamondTest {
 	}
 
 	/**
+	 * Test method for {@link model.element.motionfull.Diamond#die()}.
+	 */
+	@Test
+	public void testDie() {
+		//fail("Not yet implemented");
+	}
+
+	/**
+	 * Test method for {@link model.element.motionfull.Diamond#isAlive()}.
+	 */
+	@Test
+	public void testIsAlive() {
+	//	fail("Not yet implemented");
+	}
+
+	/**
 	 * Test method for {@link model.element.motionfull.Diamond#fall()}.
 	 */
 	@Test
 	public void testFall() {
-		fail("Not yet implemented");
-	}
-
-	/**
-	 * Test method for {@link model.element.motionfull.Diamond#Fight()}.
-	 */
-	@Test
-	public void testFight() {
-		fail("Not yet implemented");
+		//fail("Not yet implemented");
 	}
 
 }

@@ -15,7 +15,7 @@ import org.junit.Test;
  * @author Heidy Kengne
  *
  */
-public class CharacterTest {
+public class EnemyTest {
 
 	/**
 	 * @throws java.lang.Exception
@@ -46,7 +46,7 @@ public class CharacterTest {
 	}
 
 	/**
-	 * Test method for {@link model.element.motionfull.Character#die()}.
+	 * Test method for {@link model.element.motionfull.Enemy#die()}.
 	 */
 	@Test
 	public void testDie() {
@@ -54,7 +54,7 @@ public class CharacterTest {
 	}
 
 	/**
-	 * Test method for {@link model.element.motionfull.Character#isAlive()}.
+	 * Test method for {@link model.element.motionfull.Enemy#isAlive()}.
 	 */
 	@Test
 	public void testIsAlive() {

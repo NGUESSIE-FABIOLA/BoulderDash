@@ -1,7 +1,7 @@
 /**
  * 
  */
-package model.element.motionfull;
+package model.element.motionless;
 
 import static org.junit.Assert.*;
 
@@ -15,8 +15,9 @@ import org.junit.Test;
  * @author Heidy Kengne
  *
  */
-public class CharacterTest {
+public class ExitDoorTest {
 
+	private ExitDoor exit;
 	/**
 	 * @throws java.lang.Exception
 	 */
@@ -36,6 +37,7 @@ public class CharacterTest {
 	 */
 	@Before
 	public void setUp() throws Exception {
+		exit = new ExitDoor();
 	}
 
 	/**
@@ -45,19 +47,8 @@ public class CharacterTest {
 	public void tearDown() throws Exception {
 	}
 
-	/**
-	 * Test method for {@link model.element.motionfull.Character#die()}.
-	 */
 	@Test
-	public void testDie() {
-	//	fail("Not yet implemented");
-	}
-
-	/**
-	 * Test method for {@link model.element.motionfull.Character#isAlive()}.
-	 */
-	@Test
-	public void testIsAlive() {
+	public void test() {
 	//	fail("Not yet implemented");
 	}
 
