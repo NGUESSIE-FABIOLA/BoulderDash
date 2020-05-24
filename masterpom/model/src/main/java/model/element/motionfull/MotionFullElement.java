@@ -87,6 +87,7 @@ public abstract class MotionFullElement extends Element implements IDestructible
 	/**
 	 * @return the x
 	 */
+	@Override
 	public int getX() {
 		return 0;
 	}
@@ -94,10 +95,11 @@ public abstract class MotionFullElement extends Element implements IDestructible
 	/**
 	 * @return the y
 	 */
+	@Override
 	public int getY() {
 		return 0;
 	}
-
+  @Override
 	public Point getPosition() {
 	   return this.getPosition();
 	    }

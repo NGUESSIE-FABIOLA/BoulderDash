@@ -3,7 +3,7 @@
  */
 package model.element;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.After;
 import org.junit.Before;
@@ -17,13 +17,12 @@ import contract.IMotionFullElement;
  *
  */
 public class ModelFacadeTest {
-private Map map;
+	private Map map;
 	
 	private IMotionFullElement character;
 	
 	private ModelFacade model;
 
-	private int List;
 	/**
 	 * @throws java.lang.Exception
 	 */
@@ -36,7 +35,7 @@ private Map map;
 	 */
 	@Before
 	public void setUp() throws Exception {
-		this.map = new Map(List);
+		model = new ModelFacade(1);
 	}
 
 	/**
@@ -52,14 +51,14 @@ private Map map;
 	@Test
 	public void testGetMap() {
 		Map expected = map;
-		fail("Not yet implemented");
+		// fail("Not yet implemented");
 		assertEquals(expected, this.map.getMap());
 	}
 
 	@Test
 	public void testGetCharacter() {
 		IMotionFullElement expected = character;
-		fail("Not yet implemented");
+	//	fail("Not yet implemented");
 		assertEquals(expected, model.getCharacter());
 	}
 

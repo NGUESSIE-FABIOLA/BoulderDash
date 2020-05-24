@@ -67,7 +67,7 @@ public final class Model implements IModel {
 	@Override
 	public Observable getObservable() {
 		// TODO Auto-generated method stub
-		return null;
+		return this.getObservable();
 	}
 
 	/** The helloWorld. */

@@ -163,14 +163,6 @@ public class Map extends Observable {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	public IElement getElementByID() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	public IElement getElementByName() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 	/**
 	 * 
 	 */
