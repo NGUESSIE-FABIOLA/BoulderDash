@@ -13,13 +13,15 @@ import contract.Sprite;
 public class Star extends MotionlessElement {
 
 	  /** The Constant SPRITE. */
-    private static final Sprite SPRITE = new Sprite('+', "star.png");
+	private static final Sprite STAR = new Sprite('*');
 
     /**
      * Instantiates a new SpecialStoneWall.
      */
     Star() {
-        super(SPRITE, Permeability.PENETRABLE);
+        super(STAR, Permeability.BLOCKING);
+        this.alive = true;
+        
     }
 	    
 }
