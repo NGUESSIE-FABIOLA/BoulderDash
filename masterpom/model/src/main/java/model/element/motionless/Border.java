@@ -12,13 +12,11 @@ import contract.Sprite;
  */
 public class Border extends MotionlessElement{
 
-	  /** The Constant SPRITE. */
-    private static final Sprite SPRITE = new Sprite('4', "ground.png");
+	/** The Border's sprite*/
+	private static final Sprite BORDER = new Sprite('|');
 
-    /**
-     * Instantiates a new border.
-     */
+	
     Border() {
-        super(SPRITE, Permeability.PENETRABLE);
+        super(BORDER, Permeability.BLOCKING);
     }
 }

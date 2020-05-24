@@ -10,7 +10,7 @@ import contract.Sprite;
 /*
  * @author Souar SN
  */
-public class Element implements IElement {
+public abstract class Element implements IElement {
 	private Sprite sprite;
 	/*
 	 * 
@@ -19,6 +19,8 @@ public class Element implements IElement {
 	
 	private Point position;
 	protected Map map;
+	
+	public Boolean alive;
 	
 	public Element(final Sprite sprite, final Permeability permeability) {
 		// TODO Auto-generated constructor stub
@@ -35,11 +37,11 @@ public class Element implements IElement {
 	}
 
 
-	@Override
+	/*@Override
 	public Boolean isAlive() {
 		// TODO Auto-generated method stub
 		return null;
-	}
+	}*/
 
 	@Override
 	public int getID() {

@@ -27,7 +27,7 @@ public abstract class MotionFullElement extends Element implements IDestructible
 	}
 
 
-	public MotionFullElement(Sprite sprite, Permeability permeability) {
+	public MotionFullElement(Sprite sprite, Permeability permeability, Map map) {
 		super(sprite, permeability);
 		// TODO Auto-generated constructor stub
 	}
@@ -38,71 +38,50 @@ public abstract class MotionFullElement extends Element implements IDestructible
 	}
 
 	public void moveUp() {
-		if (this.getMap().getElementByPosition(this.getX(), this.getY() - 1).getPermeability() == Permeability.PENETRABLE) {
-			System.out.println(this.getMap().getElementByPosition(this.getX(), this.getY() - 1).getSprite().getConsoleImage());
+		//this.getMap().getElementByPosition(this.getX(), this.getY() - 1).getPermeability() == Permeability.PENETRABLE) {
+			this.getMap().getElementByPosition(this.getX(), this.getY() - 1).getSprite().getConsoleImage();
 			fillEmptySpace(this.getX(), this.getY());
 			this.setY(this.getY() - 1);
-			System.out.println("x: "+this.getX()+"y: "+this.getY());
+		//	System.out.println("x: "+this.getX()+"y: "+this.getY());
 			this.getMap().setElementPosition(this, this.getX(), this.getY());
 			this.setHasMoved();
-		}
-		// TODO suppr this debug
-		else {
-			System.out.println(this.getMap().getElementByPosition(this.getX(), this.getY() - 1).getSprite().getConsoleImage());
-			System.out.println("can't go through");
-		}
+		
 	}
 	
 	public void moveDown() {
-		if (this.getMap().getElementByPosition(this.getX(), this.getY() + 1).getPermeability() == Permeability.PENETRABLE) {
-			System.out.println(this.getMap().getElementByPosition(this.getX(), this.getY() + 1).getSprite().getConsoleImage());
-			System.out.println("x: "+this.getX()+"y: "+this.getY());
+		//if (this.getMap().getElementByPosition(this.getX(), this.getY() + 1).getPermeability() == Permeability.PENETRABLE) {
+			this.getMap().getElementByPosition(this.getX(), this.getY() + 1).getSprite().getConsoleImage();
+			//System.out.println("x: "+this.getX()+"y: "+this.getY());
 			fillEmptySpace(this.getX(), this.getY());
 			this.setY(this.getY() + 1);
-			System.out.println("x: "+this.getX()+"y: "+this.getY());
+			//System.out.println("x: "+this.getX()+"y: "+this.getY());
 			this.getMap().setElementPosition(this, this.getX(), this.getY());
 			this.setHasMoved();
 		}
-		// TODO suppr this debug
-		else {
-			System.out.println(this.getMap().getElementByPosition(this.getX(), this.getY() + 1).getSprite().getConsoleImage());
-			System.out.println("can't go through");
-		}
-		
-	}
+	
 
 	public void moveLeft() {
-		if (this.getMap().getElementByPosition(this.getX() - 1, this.getY()).getPermeability() == Permeability.PENETRABLE) {
-			System.out.println(this.getMap().getElementByPosition(this.getX() - 1, this.getY()).getSprite().getConsoleImage());
-			System.out.println("x: "+this.getX()+"y: "+this.getY());
+	//	if (this.getMap().getElementByPosition(this.getX() - 1, this.getY()).getPermeability() == Permeability.PENETRABLE) {
+			this.getMap().getElementByPosition(this.getX() - 1, this.getY()).getSprite().getConsoleImage();
+			//System.out.println("x: "+this.getX()+"y: "+this.getY());
 			fillEmptySpace(this.getX(), this.getY());
 			this.setX(this.getX() - 1);
-			System.out.println("x: "+this.getX()+"y: "+this.getY());
+		//	System.out.println("x: "+this.getX()+"y: "+this.getY());
 			this.getMap().setElementPosition(this, this.getX(), this.getY());
 			this.setHasMoved();
-		}
-		// TODO suppr this debug
-		else {
-			System.out.println(this.getMap().getElementByPosition(this.getX() - 1, this.getY()).getSprite().getConsoleImage());
-			System.out.println("can't go through");
-		}
+	
 	}
 	
 	public void moveRight() {
-		if (this.getMap().getElementByPosition(this.getX() + 1, this.getY()).getPermeability() == Permeability.PENETRABLE) {
-			System.out.println(this.getMap().getElementByPosition(this.getX() + 1, this.getY()).getSprite().getConsoleImage());
-			System.out.println("x: "+this.getX()+"y: "+this.getY());
+	//	if (this.getMap().getElementByPosition(this.getX() + 1, this.getY()).getPermeability() == Permeability.PENETRABLE) {
+			this.getMap().getElementByPosition(this.getX() + 1, this.getY()).getSprite().getConsoleImage();
+			//System.out.println("x: "+this.getX()+"y: "+this.getY());
 			fillEmptySpace(this.getX(), this.getY());
 			this.setX(this.getX() + 1);
-			System.out.println("x: "+this.getX()+"y: "+this.getY());
+		//	System.out.println("x: "+this.getX()+"y: "+this.getY());
 			this.getMap().setElementPosition(this, this.getX(), this.getY());
 			this.setHasMoved();
-		}
-		// TODO suppr this debug
-		else {
-			System.out.println(this.getMap().getElementByPosition(this.getX() + 1, this.getY()).getSprite().getConsoleImage());
-			System.out.println("can't go through");
-		}
+
 	}
 
 	/**
@@ -134,9 +113,6 @@ public abstract class MotionFullElement extends Element implements IDestructible
 			this.getMap().setElementPosition(bg, x, y);
 		}
 	  
-	 public void fight() {
-		 
-	 }
 	 
 	 public void doNothing() {
 		 

@@ -18,5 +18,14 @@ public abstract class MotionlessElement extends Element {
 	        super(sprite, permeability);
 	    }
 	   
-	  
+	/**
+	 * Checks if is alive.
+     *
+     * @return  alive
+     */
+	@Override
+	public Boolean isAlive() {
+		return this.alive;
+	}
+
 }

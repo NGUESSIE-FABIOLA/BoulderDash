@@ -13,38 +13,39 @@ import model.element.Map;
  *
  */
 public class Diamond extends MotionFullElement implements IGravitable {
+	private static final Sprite DIAMOND = new Sprite('D');
 
-	  public Diamond(Sprite sprite, Permeability permeability) {
-		super(sprite, permeability);
-		// TODO Auto-generated constructor stub
+	
+	public Diamond(Map map) {
+		super(DIAMOND, Permeability.BLOCKING, map);
+		this.alive = true;
 	}
 
-	  /** The Constant SPRITE. */
-	    private static final Sprite SPRITE = new Sprite('x', "Dia.png");
-
-	    /**
-	     * Instantiates a new SpecialStoneWall.
-	     */
-	   Diamond() {
-	        super(SPRITE, Permeability.PENETRABLE);
-	    }
-		  
-   
-   public Diamond(Map map) {
-			// TODO Auto-generated constructor stub
-	   super(map);
-   }
-
-
-public void fall() {
-	   
-   }
-
-
-@Override
-public void Fight() {
-	// TODO Auto-generated method stub
 	
-}
+	/**
+	 * Checks if is alive.
+     *
+     * @return  alive
+     */
+	@Override
+	public Boolean isAlive() {
+		return this.alive;
+	}
+
+	
+
+	@Override
+	public void fall() {
+		
+	}
+
+	/**
+	 * Decrements the objective
+	 * */
+	public void die(){
+		this.alive=false;
+		this.getMap().setObjective(this.getMap().getObjective()-1);
+	}
+
    
 }

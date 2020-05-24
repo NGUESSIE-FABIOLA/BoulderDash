@@ -3,7 +3,6 @@
  */
 package model.element.motionfull;
 
-import contract.Permeability;
 import contract.Sprite;
 import model.element.Map;
 
@@ -13,23 +12,23 @@ import model.element.Map;
  */
 public class PointEnemy extends Enemy {
 
-   public PointEnemy(Sprite sprite, Permeability permeability) {
-		super(sprite, permeability);
-		// TODO Auto-generated constructor stub
+	
+	private static final Sprite POINT_ENEMY = new Sprite('P');
+	
+	public PointEnemy(Map map) {
+		super(POINT_ENEMY, map);
+		this.alive = true;
 	}
 
-public PointEnemy(Map map) {
-	// TODO Auto-generated constructor stub
-	super(map);
-}
-
-public void die() {
-	   
-   }
-
-@Override
-public void Fight() {
-	// TODO Auto-generated method stub
 	
-}
+	/**
+	 * Adds 10 points to the score
+	 *  
+	 */
+	@Override
+	public void die(){
+		this.alive= false;
+		this.getMap().setScore(this.getMap().getScore()+10);
+	}
+
 }

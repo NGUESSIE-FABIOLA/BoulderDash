@@ -12,14 +12,13 @@ import contract.Sprite;
  */
 public class ExitDoor extends MotionlessElement {
    
-	/** The Constant SPRITE. */
-    private static final Sprite SPRITE = new Sprite('*', "Door.png");
+	/** The Exit Door's sprite*/
+	private static final Sprite EXIT_DOOR = new Sprite('X');
 
-    /**
-     * Instantiates a new exitDoor.
-     */
+
     ExitDoor() {
-        super(SPRITE, Permeability.PENETRABLE);
+    	super(EXIT_DOOR, Permeability.PENETRABLE);
+		this.alive = true;
 
     }
 }

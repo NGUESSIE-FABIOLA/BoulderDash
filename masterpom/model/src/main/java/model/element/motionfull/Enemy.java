@@ -14,17 +14,30 @@ import model.element.Map;
 public abstract class Enemy extends MotionFullElement{
 
 
-   public Enemy(Sprite sprite, Permeability permeability) {
-		super(sprite, permeability);
-		// TODO Auto-generated constructor stub
+
+	public Enemy(Sprite sprite, Map map) {
+		super(sprite, Permeability.BLOCKING, map );
+		
 	}
 
-   public Enemy(Map map) {
-	   
-	   super(map);
-   }
-public void die() {
-	   
-   }
+	
+	/**
+	 * Checks if is alive.
+     *
+     * @return  alive
+     */
+	@Override
+	public Boolean isAlive() {
+		return this.alive;
+	}
 
+	
+/**
+ * Awaiting override
+ * */
+	@Override
+	public void die() {
+	}
 }
+
+

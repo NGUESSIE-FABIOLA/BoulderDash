@@ -11,14 +11,13 @@ import contract.Sprite;
  *
  */
 public class Background extends MotionlessElement{
-
-	  /** The Constant SPRITE. */
-    private static final Sprite SPRITE = new Sprite(' ', "Bac.png");
-
-    /**
-     * Instantiates a new Background.
-     */
-    Background() {
-        super(SPRITE, Permeability.PENETRABLE);
-    }
+	
+	/** The Background's sprite*/
+	private static final Sprite BACKGROUND = new Sprite('_');
+	 
+	public Background() {
+		super(BACKGROUND, Permeability.PENETRABLE);
+		this.alive = true;
+	}
+	
 }
