@@ -196,8 +196,6 @@ public final class Controller implements IController, IOrderPerformer {
 						this.getModel().getMap().getElementByPosition(x, y).getX(),
 						this.getModel().getMap().getElementByPosition(x, y).getY());
 				this.getView().getBoard().addPawn(this.getModel().getMap().getElementByPosition(x, y));
-				
-				
 			}
 			
 		}	

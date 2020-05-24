@@ -1,5 +1,6 @@
 package contract;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
 /**
@@ -22,6 +23,14 @@ public interface IController {
 	 */
 	
 	IOrderPerformer getOrderPerformer();
+
+	/**
+	 * 
+	 * @param up
+	 * 			Send Order to the Setter
+	 * @throws IOException
+	 */
+	void orderPerform(Enum<ControllerOrder> up) throws IOException;
 	
 	//public void orderPerform(ControllerOrder controllerOrder);
 }
