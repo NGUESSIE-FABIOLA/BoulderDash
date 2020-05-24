@@ -20,5 +20,8 @@ public interface IController {
 	 * @param controllerOrder
 	 *          the controller order
 	 */
-	public void orderPerform(ControllerOrder controllerOrder);
+	
+	IOrderPerformer getOrderPerformer();
+	
+	//public void orderPerform(ControllerOrder controllerOrder);
 }

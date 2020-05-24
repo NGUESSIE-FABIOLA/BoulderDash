@@ -2,9 +2,7 @@ package contract;
 
 import java.util.Observable;
 
-import entity.HelloWorld;
 import model.element.Map;
-import model.element.motionfull.MotionFullElement;
 
 /**
  * The Interface IModel.

@@ -1,5 +1,7 @@
 package contract;
 
+import fr.exia.showboard.BoardFrame;
+
 /**
  * The Interface IView.
  *
@@ -14,4 +16,11 @@ public interface IView {
 	 *          the message
 	 */
 	void printMessage(final String message);
+
+	 void cameraMove();
+	    
+	    BoardFrame getBoard();
+	    
+	    void setBoard(BoardFrame board);
+	    
 }

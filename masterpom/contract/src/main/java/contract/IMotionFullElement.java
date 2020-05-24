@@ -76,6 +76,5 @@ public interface IMotionFullElement extends IPawn, IElement{
     @Override
     Point getPosition();
 
-	void Fight();
 
 }
