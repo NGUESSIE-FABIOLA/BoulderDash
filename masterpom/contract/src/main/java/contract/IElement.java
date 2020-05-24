@@ -33,6 +33,7 @@ public interface IElement extends ISquare, IPawn {
 	/*
 	 * 
 	 */
+	@Override
 	public String toString();
 	/*
 	 * 

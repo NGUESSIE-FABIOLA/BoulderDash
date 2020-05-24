@@ -29,8 +29,6 @@ public final class Model implements IModel {
 	       this.character.setY(5);
 	}
 
-
-
 	/**
 	 * @return the map
 	 */
@@ -38,17 +36,18 @@ public final class Model implements IModel {
 		return this.map;
 	}
 
-
-
 	/**
 	 * @param map the map to set
 	 */
-	public void setMap(Map map) {
+	public void setMap(final Map map) {
 		this.map = map;
 	}
 
-
-
+	@Override
+	public IMotionFullElement getCharacter() {
+		// TODO Auto-generated method stub
+		return this.getCharacter();
+	}
 	/**
 	 * @param character the character to set
 	 */
@@ -56,20 +55,7 @@ public final class Model implements IModel {
 		this.character = character;
 	}
 
-
-
-	@Override
-	public IMotionFullElement getCharacter() {
-		// TODO Auto-generated method stub
-		return this.getCharacter();
-	}
-
-	@Override
-	public Observable getObservable() {
-		// TODO Auto-generated method stub
-		return this.getObservable();
-	}
-
+	
 	/** The helloWorld. */
 	
 }

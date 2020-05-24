@@ -30,7 +30,6 @@ public interface IController {
 	 * 			Send Order to the Setter
 	 * @throws IOException
 	 */
-	void orderPerform(Enum<ControllerOrder> up) throws IOException;
 	
 	//public void orderPerform(ControllerOrder controllerOrder);
 }

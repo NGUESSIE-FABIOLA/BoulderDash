@@ -5,12 +5,16 @@ package model.element;
 
 import static org.junit.Assert.*;
 
+import java.sql.SQLException;
+import java.util.Observable;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import contract.IElement;
+import contract.IMap;
 
 /**
  * @author nodji
@@ -18,8 +22,15 @@ import contract.IElement;
  */
 public class MapTest {
 	private int height;
-	private int widht;
+	private int width;
 	private IElement[][] sizeMap;
+	
+	private Map map;
+	private int List;
+	private Observable observable;
+	private IMap map2;
+	private String name;
+	private int id;
 
 	/**
 	 * @throws java.lang.Exception
@@ -28,8 +39,7 @@ public class MapTest {
 	public static void setUpBeforeClass() throws Exception {
 	}
 
-	private Map map;
-	private int List;
+	
 
 	/**
 	 * @throws java.lang.Exception
@@ -51,7 +61,7 @@ public class MapTest {
 	 */
 	@Test
 	public void testGetHeight() {
-		final int expected = 21;
+		final int expected = 0;
 		//fail("Not yet implemented");
 		assertEquals(expected, this.map.getHeight());
 	}
@@ -61,22 +71,47 @@ public class MapTest {
 	 */
 	@Test
 	public void testSetHeight() {
-	final int expected = 21;
+	final int expected = 40;
 	this.map.setHeight(expected);
 	assertEquals(expected, this.map.getHeight());
 	}
 
 	/**
 	 * Test method for {@link model.element.Map#getAllElements()}.
+	 * @throws SQLException 
 	 */
 	@Test
-	public void testGetAllElements() {
-		fail("Not yet implemented"); // TODO
+	public void testGetAllElements() throws SQLException {
+		IMap expected = map2;
+		fail("Not yet implemented");
+		assertEquals(expected, this.map2.getAllElements());
 	}
+	
+	@Test
+	public void testGetElementByPosition() {
+		IMap expected = map2;
+		fail("Not yet implemented");
+		assertEquals(expected, this.map2.getElementByPosition(height, width));
+	}
+	
+	@Test
+	public void testGetElementByID() {
+		IMap expected = map2;
+		fail("Not yet implemented");
+		assertEquals(expected, this.map2.getElementByID(id));
+	}
+
+	@Test
+	public void testGetElementByName() throws SQLException {
+		IMap expected = map2;
+		fail("Not yet implemented");
+		assertEquals(expected, this.map2.getElementByName(name));
+	}
+	
 	@Test
 	public void testGetMap() {
 		final Map expected = map;
-//		fail("Not yet implemented");
+		fail("Not yet implemented");
 		assertEquals(expected, this.map.getMap());
 		
 	}
@@ -85,7 +120,7 @@ public class MapTest {
 	public void testSetMap() {
 		final Map expected = map;
 		this.map.setMap(sizeMap);
-	//	fail("Not yet implemented");
+		fail("Not yet implemented");
 		assertEquals(expected, this.map.getMap());
 	}
 
@@ -94,7 +129,7 @@ public class MapTest {
 	 */
 	@Test
 	public void testGetWidth() {
-		final int expected = 40;
+		final int expected = 0;
 	//	fail("Not yet implemented");
 		assertEquals(expected, this.map.getWidth());// TODO
 	}
@@ -107,6 +142,21 @@ public class MapTest {
 		final int expected = 40;
 		this.map.setWidth(expected);
 		assertEquals(expected, this.map.getWidth());
+	}
+	
+	@Test
+	public void testSetMapHasChanged() {
+		final Map expected = map;
+		this.map.setMap(sizeMap);
+		fail("Not yet implemented");
+		assertEquals(expected, this.map.getMap());
+	}
+	
+	@Test
+	public void testGetObservable() {
+		Observable expected = observable;
+		fail("Not yet implemented");
+		assertEquals(expected, ((Map) this.observable).getObservable());
 	}
 
 }

@@ -99,10 +99,6 @@ public abstract class MotionFullElement extends Element implements IDestructible
 	public int getY() {
 		return 0;
 	}
-  @Override
-	public Point getPosition() {
-	   return this.getPosition();
-	    }
 	
 	  public void die() {
 	        
@@ -139,6 +135,11 @@ public abstract class MotionFullElement extends Element implements IDestructible
 		public void setMap(Map map) {
 			this.map = map;
 		}
+		
+	public Point getPosition() {
+	
+		return this.getPosition();
+	}
 
 		
 		/**
