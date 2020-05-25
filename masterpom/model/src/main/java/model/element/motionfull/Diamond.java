@@ -3,7 +3,7 @@
  */
 package model.element.motionfull;
 
-import contract.IGravitable;
+import contract.IDestructible;
 import contract.Permeability;
 import contract.Sprite;
 import model.element.Map;
@@ -12,7 +12,7 @@ import model.element.Map;
  * @author Heidy Kengne
  *
  */
-public class Diamond extends MotionFullElement implements IGravitable {
+public class Diamond extends MotionFullElement implements IGravitable, IDestructible {
 	private static final Sprite DIAMOND = new Sprite('D');
 
 	

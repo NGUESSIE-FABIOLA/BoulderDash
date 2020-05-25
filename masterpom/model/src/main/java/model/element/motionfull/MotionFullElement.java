@@ -17,22 +17,22 @@ import model.element.motionless.MotionlessElementFactory;
  *
  */
 
-public abstract class MotionFullElement extends Element implements IDestructible, IMotionFullElement {
+public abstract class MotionFullElement extends Element implements IMotionFullElement {
 
-	public MotionFullElement(int x, int y, Sprite sprite, Permeability permeability) {
+	Map map;
+
+	public MotionFullElement(Sprite sprite, Permeability permeability, Map map, int x, int y) {
 		super(sprite, permeability);
-		// TODO Auto-generated constructor stub
+		this.setMap(map);
+		this.setX(x);
+		this.setY(y);
+		this.alive = true;
 	}
-
 
 	public MotionFullElement(Sprite sprite, Permeability permeability, Map map) {
 		super(sprite, permeability);
-		// TODO Auto-generated constructor stub
-	}
+		this.setMap(map);
 
-	public MotionFullElement(Map map) {
-		// TODO Auto-generated constructor stub
-		super(map);
 	}
 
 	public void moveUp() {

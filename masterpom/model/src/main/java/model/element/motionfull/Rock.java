@@ -3,7 +3,6 @@
  */
 package model.element.motionfull;
 
-import contract.IGravitable;
 import contract.Permeability;
 import contract.Sprite;
 import model.element.Map;
@@ -47,8 +46,6 @@ public class Rock extends MotionFullElement implements IGravitable {
 	public void fallRight(){
 		
 	}
-
-
 
 
 }
