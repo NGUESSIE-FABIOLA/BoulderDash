@@ -165,16 +165,13 @@ class ViewFrame extends JFrame implements KeyListener {
 	 */
 	public void keyPressed(final KeyEvent e) {
 		
-<<<<<<< HEAD
+
 		try {
 			this.getOrderPerformer().orderPerform(View.keyCodeToControllerOrder(e.getKeyCode()));
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-=======
-	//	this.getController().orderPerform(View.keyCodeToControllerOrder(e.getKeyCode()));
->>>>>>> refs/remotes/origin/master
 		
 	}
 
