@@ -344,4 +344,10 @@ public final class View implements IView, Runnable{
 		boardFrame.setVisible(true);
 		
 	}
+
+	@Override
+	public void displayMessage(String message) {
+		// TODO Auto-generated method stub
+		
+	}
 }

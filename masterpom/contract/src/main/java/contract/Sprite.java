@@ -30,24 +30,46 @@ public class Sprite {
 	
 	/**the image loaded**/
 	private boolean imageLoaded;
+	
+	public static int SPRITE_SIZE = 16;
+
 	/*
 	 * 
 	 */
-	public Sprite (final char character, final String imageName) {
+	/*public Sprite (final char character, final String imageName) {
 		this.setConsoleImage(character);
-		this.setImageName(imageName);
+		try {
+			this.loadImage();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}*/
+	
+	public Sprite(final char consoleImage) {
+
+		this.setConsoleImage(consoleImage);
+			try {
+				this.loadImage();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
+		// this.setImageName(imageName);
 	}
+
 	/*
 	 * Instantiates a new sprite
 	 */
-	public Sprite(final char character) {
+/*	public Sprite(final char character) {
 		this(character , "noimage.jpg");
 	}
-
+*/
 	/**
 	 * @return the image
 	 */
-	public Image getImage() {
+	public final Image getImage() {
 		return this.image;
 	}
 	/*
@@ -55,7 +77,80 @@ public class Sprite {
 	 */
 	public final void loadImage() throws IOException {
 		
-		this.setImage(ImageIO.read(new File("../images/ " +this.getImageName())));
+		//this.setImage(ImageIO.read(new File("../images/ " +this.getImageName())));
+		
+BufferedImage buffer;
+		
+		switch(getConsoleImage()){
+
+		case 'C': 
+			buffer = ImageIO.read(new File("../images/player.png")).getSubimage(2*16, 5*16, 16, 16);
+			setImage(buffer);
+			setImageLoaded(true);
+			break;
+		case 'c':
+			buffer = ImageIO.read(new File("../images/player.png")).getSubimage(0*16, 48, 16, 16);
+			setImage(buffer);
+			setImageLoaded(true);
+			break;
+		case 'h':
+			buffer = ImageIO.read(new File("../images/player.png")).getSubimage(3*16, 64, 16, 16);
+			setImage(buffer);
+			setImageLoaded(true);
+			break;
+		case 'N' :
+			buffer= ImageIO.read(new File("../images/player.png")).getSubimage(1*16, 32, 16, 16);
+			setImage(buffer);
+			setImageLoaded(true);
+			break;
+		case 'H':
+			buffer= ImageIO.read(new File("../images/player.png")).getSubimage(0*16,5*16, 16, 16);
+			//buffer = ImageIO.read(new File("../images/player.png"));
+			setImage(buffer);
+			setImageLoaded(true);
+			break;
+		
+		default:
+			buffer = ImageIO.read(new File("../images/sprite.png"));
+			
+			switch(getConsoleImage()){
+			case '|':
+			case 'B':
+				buffer = buffer.getSubimage(0*SPRITE_SIZE,SPRITE_SIZE*4*(LEVEL-1) , SPRITE_SIZE, SPRITE_SIZE);
+				break;
+			case 'M':
+				buffer = buffer.getSubimage(1*SPRITE_SIZE,SPRITE_SIZE*4*(LEVEL-1) , SPRITE_SIZE, SPRITE_SIZE);			
+				break;
+			case '_':
+				buffer = buffer.getSubimage(2*SPRITE_SIZE,SPRITE_SIZE*4*(LEVEL-1) , SPRITE_SIZE, SPRITE_SIZE);			
+				break;
+			case 'O':
+				buffer = buffer.getSubimage(3*SPRITE_SIZE,SPRITE_SIZE*4*(LEVEL-1) , SPRITE_SIZE, SPRITE_SIZE);			
+				break;
+			case 'D':
+				buffer = buffer.getSubimage(4*SPRITE_SIZE,SPRITE_SIZE*4*(LEVEL-1) , SPRITE_SIZE, SPRITE_SIZE);			
+				break;
+			case 'E':
+				buffer = buffer.getSubimage(5*SPRITE_SIZE,SPRITE_SIZE*4*(LEVEL-1) , SPRITE_SIZE, SPRITE_SIZE);			
+				break;
+			case 'X':
+				buffer = buffer.getSubimage(6*SPRITE_SIZE,SPRITE_SIZE*4*(LEVEL-1) , SPRITE_SIZE, SPRITE_SIZE);
+				break;
+			case 'S':
+				buffer = buffer.getSubimage(8*SPRITE_SIZE,SPRITE_SIZE*4*(LEVEL-1) , SPRITE_SIZE, SPRITE_SIZE);			
+				break;
+			case 'P':
+				buffer = buffer.getSubimage(1*SPRITE_SIZE,SPRITE_SIZE*4*(LEVEL-1) , SPRITE_SIZE, SPRITE_SIZE);			
+				break;
+				
+			}
+			setImage(buffer);
+			setImageLoaded(true);
+			break;
+		}
+	
+
+		
 	}
 	/*
 	 * sets the image

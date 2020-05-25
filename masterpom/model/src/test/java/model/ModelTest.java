@@ -3,6 +3,7 @@
  */
 package model;
 
+
 import static org.junit.Assert.assertEquals;
 
 import org.junit.After;
@@ -64,7 +65,8 @@ private Map map;
 	public void testSetCharacter() {
 		IMotionFullElement expected = character;
 		//	fail("Not yet implemented");
-			assertEquals(expected, model.getCharacter());
+		assertEquals(expected, model.getCharacter());	
+		//assertEquals(expected, model.getCharacter());
 	}
 
 	

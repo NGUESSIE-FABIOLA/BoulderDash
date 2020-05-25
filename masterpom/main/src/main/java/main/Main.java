@@ -7,11 +7,11 @@ package main;
 import java.io.IOException;
 import java.sql.SQLException;
 
-import contract.ControllerOrder;
 import contract.IModel;
 import controller.Controller;
 import model.Model;
 import view.View;
+import view.ViewFacade;
 
 /**
  * The Class Main.
@@ -31,11 +31,10 @@ public abstract class Main {
      */
     public static void main(final String[] args) throws IOException, SQLException, InterruptedException {
     	
-        final IModel model = new Model(1);
-        final View view = new View(model);
+        final Model model = new Model(1);
+        final ViewFacade view = new ViewFacade(model.getMap(), model.getCharacter());
         final Controller controller = new Controller(view, model);
-        view.setController(controller);
-
+        view.setOrderPerformer(controller.getOrderPerformer());
         controller.control();
       //  controller.orderPerform(ControllerOrder.UP);
     }
