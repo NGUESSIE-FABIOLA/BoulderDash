@@ -1,6 +1,7 @@
 package model;
 
 import java.sql.SQLException;
+import java.util.Observable;
 
 import contract.IModel;
 import contract.IMotionFullElement;
@@ -52,6 +53,12 @@ public final class Model implements IModel {
 	 */
 	public void setCharacter(IMotionFullElement character){
 		this.character = character;
+	}
+
+	@Override
+	public Observable getObservable() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

@@ -74,7 +74,7 @@ public final class Controller implements IController, IOrderPerformer {
 		}
 		this.clearOrder();
 
-		updateBoard();
+		//updateBoard();
 
 		this.getModel().getMap().applyPhysics();
 		

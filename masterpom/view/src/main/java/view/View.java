@@ -345,9 +345,17 @@ public final class View implements IView, Runnable{
 		boardFrame.setVisible(true);
 		
 	}
+<<<<<<< HEAD
 	
 	public void displayMessage(String message) {
 		// TODO Auto-generated method stub
 		JOptionPane.showMessageDialog(null, "YOU LOOSE");
+=======
+
+	@Override
+	public void displayMessage(String message) {
+		// TODO Auto-generated method stub
+		
+>>>>>>> refs/remotes/origin/master
 	}
 }
