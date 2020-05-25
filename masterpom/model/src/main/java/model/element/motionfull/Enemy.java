@@ -3,6 +3,7 @@
  */
 package model.element.motionfull;
 
+import contract.IDestructible;
 import contract.Permeability;
 import contract.Sprite;
 import model.element.Map;
@@ -11,7 +12,7 @@ import model.element.Map;
  * @author Heidy Kengne
  *
  */
-public abstract class Enemy extends MotionFullElement{
+public abstract class Enemy extends MotionFullElement implements IDestructible{
 
 
 
