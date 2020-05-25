@@ -36,18 +36,18 @@ public abstract class MotionFullElement extends Element implements IMotionFullEl
 	}
 
 	public void moveUp() {
-		//this.getMap().getElementByPosition(this.getX(), this.getY() - 1).getPermeability() == Permeability.PENETRABLE) {
+		if(this.getMap().getElementByPosition(this.getX(), this.getY() - 1).getPermeability() == Permeability.PENETRABLE) {
 			this.getMap().getElementByPosition(this.getX(), this.getY() - 1).getSprite().getConsoleImage();
 			fillEmptySpace(this.getX(), this.getY());
 			this.setY(this.getY() - 1);
 		//	System.out.println("x: "+this.getX()+"y: "+this.getY());
 			this.getMap().setElementPosition(this, this.getX(), this.getY());
 			this.setHasMoved();
-		
+		}
 	}
 	
 	public void moveDown() {
-		//if (this.getMap().getElementByPosition(this.getX(), this.getY() + 1).getPermeability() == Permeability.PENETRABLE) {
+		if (this.getMap().getElementByPosition(this.getX(), this.getY() + 1).getPermeability() == Permeability.PENETRABLE) {
 			this.getMap().getElementByPosition(this.getX(), this.getY() + 1).getSprite().getConsoleImage();
 			//System.out.println("x: "+this.getX()+"y: "+this.getY());
 			fillEmptySpace(this.getX(), this.getY());
@@ -56,10 +56,11 @@ public abstract class MotionFullElement extends Element implements IMotionFullEl
 			this.getMap().setElementPosition(this, this.getX(), this.getY());
 			this.setHasMoved();
 		}
+	}
 	
 
 	public void moveLeft() {
-	//	if (this.getMap().getElementByPosition(this.getX() - 1, this.getY()).getPermeability() == Permeability.PENETRABLE) {
+		if (this.getMap().getElementByPosition(this.getX() - 1, this.getY()).getPermeability() == Permeability.PENETRABLE) {
 			this.getMap().getElementByPosition(this.getX() - 1, this.getY()).getSprite().getConsoleImage();
 			//System.out.println("x: "+this.getX()+"y: "+this.getY());
 			fillEmptySpace(this.getX(), this.getY());
@@ -67,11 +68,11 @@ public abstract class MotionFullElement extends Element implements IMotionFullEl
 		//	System.out.println("x: "+this.getX()+"y: "+this.getY());
 			this.getMap().setElementPosition(this, this.getX(), this.getY());
 			this.setHasMoved();
-	
+		}
 	}
 	
 	public void moveRight() {
-	//	if (this.getMap().getElementByPosition(this.getX() + 1, this.getY()).getPermeability() == Permeability.PENETRABLE) {
+		if (this.getMap().getElementByPosition(this.getX() + 1, this.getY()).getPermeability() == Permeability.PENETRABLE) {
 			this.getMap().getElementByPosition(this.getX() + 1, this.getY()).getSprite().getConsoleImage();
 			//System.out.println("x: "+this.getX()+"y: "+this.getY());
 			fillEmptySpace(this.getX(), this.getY());
@@ -79,23 +80,26 @@ public abstract class MotionFullElement extends Element implements IMotionFullEl
 		//	System.out.println("x: "+this.getX()+"y: "+this.getY());
 			this.getMap().setElementPosition(this, this.getX(), this.getY());
 			this.setHasMoved();
+	}
 
 	}
 
+	 
+	 /**
+	 *
+	 */
+	public void doNothing() {
+		 
+	 }
 
-	  
 	  public void fillEmptySpace(int x, int y) {
-			IElement bg = MotionlessElementFactory.getFromFileSymbol(' ');
+			IElement bg = MotionlessElementFactory.getFromFileSymbol('_');
 			bg.setX(x);
 			bg.setY(y);
 			this.getMap().setElementPosition(bg, x, y);
 		}
 	  
-	 
-	 public void doNothing() {
-		 
-	 }
-	 
+	
 
 		/**
 		 * Gets the map
