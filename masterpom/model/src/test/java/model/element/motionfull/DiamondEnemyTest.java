@@ -5,6 +5,8 @@ package model.element.motionfull;
 
 
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -55,8 +57,8 @@ public class DiamondEnemyTest {
 	 */
 	@Test
 	public void testDie() {
-		/*boolean expected = false ;
-        assertEquals(expected,test.die());
-	*/}
+		boolean expected = true ;
+        assertEquals(expected,test.alive);
+	}
 
 }

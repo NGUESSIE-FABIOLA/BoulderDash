@@ -141,7 +141,6 @@ public abstract class MotionFullElement extends Element implements IDestructible
 		return this.getPosition();
 	}
 
-		
 		/**
 		 * Notifies the observers it has changed
 		 * 
