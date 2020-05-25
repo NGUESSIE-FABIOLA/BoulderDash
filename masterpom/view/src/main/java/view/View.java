@@ -8,7 +8,7 @@ import java.io.IOException;
 
 import javax.swing.SwingUtilities;
 
-import contract.ControllerOrder;
+import contract.Order;
 import contract.IController;
 import contract.IMap;
 import contract.IModel;
@@ -41,9 +41,9 @@ public final class View implements IView, Runnable{
     
     private IOrderPerformer orderPerformer;
     
-    private int mapViewSizeX = 20 ;
+    private int mapViewSizeX = 15 ;
     
-    private int mapViewSizeY = 20 ;
+    private int mapViewSizeY = 15 ;
     
     private BoardFrame board;
     
@@ -115,27 +115,25 @@ public final class View implements IView, Runnable{
 		}
 	}
 	
-	protected static ControllerOrder keyCodeToControllerOrder(final int keyCode) {
+	protected static Order keyCodeToControllerOrder(final int keyCode) {
 		
 		switch (keyCode) {
 		
 			case KeyEvent.VK_RIGHT:
-				return ControllerOrder.RIGHT;
+				return Order.RIGHT;
 				
 			case KeyEvent.VK_LEFT:
-				return ControllerOrder.LEFT;
+				return Order.LEFT;
 				
 			case KeyEvent.VK_UP:
-				return ControllerOrder.UP;
+				return Order.UP;
 				
 			case KeyEvent.VK_DOWN:
-				return ControllerOrder.DOWN;
-				
-			case KeyEvent.VK_C:
-				return ControllerOrder.CARRY;
+				return Order.DOWN;
+
 				
 			default:
-				return ControllerOrder.NOP;
+				return Order.NOP;
 		}
 	} 
 
