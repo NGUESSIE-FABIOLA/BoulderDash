@@ -3,8 +3,6 @@
  */
 package model.element.motionfull;
 
-import java.awt.Point;
-
 import contract.IDestructible;
 import contract.IElement;
 import contract.IMotionFullElement;
@@ -19,22 +17,22 @@ import model.element.motionless.MotionlessElementFactory;
  *
  */
 
-public abstract class MotionFullElement extends Element implements IDestructible, IMotionFullElement {
+public abstract class MotionFullElement extends Element implements IMotionFullElement {
 
-	public MotionFullElement(int x, int y, Sprite sprite, Permeability permeability) {
+	Map map;
+
+	public MotionFullElement(Sprite sprite, Permeability permeability, Map map, int x, int y) {
 		super(sprite, permeability);
-		// TODO Auto-generated constructor stub
+		this.setMap(map);
+		this.setX(x);
+		this.setY(y);
+		this.alive = true;
 	}
-
 
 	public MotionFullElement(Sprite sprite, Permeability permeability, Map map) {
 		super(sprite, permeability);
-		// TODO Auto-generated constructor stub
-	}
+		this.setMap(map);
 
-	public MotionFullElement(Map map) {
-		// TODO Auto-generated constructor stub
-		super(map);
 	}
 
 	public void moveUp() {
@@ -84,25 +82,7 @@ public abstract class MotionFullElement extends Element implements IDestructible
 
 	}
 
-	/**
-	 * @return the x
-	 */
-	@Override
-	public int getX() {
-		return 0;
-	}
 
-	/**
-	 * @return the y
-	 */
-	@Override
-	public int getY() {
-		return 0;
-	}
-	
-	  public void die() {
-	        
-	    }
 	  
 	  public void fillEmptySpace(int x, int y) {
 			IElement bg = MotionlessElementFactory.getFromFileSymbol(' ');
@@ -136,11 +116,11 @@ public abstract class MotionFullElement extends Element implements IDestructible
 			this.map = map;
 		}
 		
-	public Point getPosition() {
+/*	public Point getPosition() {
 	
 		return this.getPosition();
 	}
-
+*/
 		/**
 		 * Notifies the observers it has changed
 		 * 

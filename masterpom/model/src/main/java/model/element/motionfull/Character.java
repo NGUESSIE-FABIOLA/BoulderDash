@@ -5,6 +5,7 @@ package model.element.motionfull;
 
 import java.awt.image.BufferedImage;
 
+import contract.IDestructible;
 import contract.Permeability;
 import contract.Sprite;
 import model.element.Map;
@@ -13,7 +14,7 @@ import model.element.Map;
  * @author Heidy Kengne
  *
  */
-public class Character extends MotionFullElement{
+public class Character extends MotionFullElement implements IDestructible{
 
 	private static final Sprite CHARACTER = new Sprite('H');
 	

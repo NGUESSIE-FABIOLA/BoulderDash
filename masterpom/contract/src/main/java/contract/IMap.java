@@ -30,5 +30,8 @@ public interface IMap {
     void setMapHasChanged();
     
     Observable getObservable();
+    
+    void applyPhysics();
+
 }
 

@@ -22,24 +22,19 @@ private static final Sprite DIAMOND_ENEMY = new Sprite('E');
 		this.alive = true;
 	}
 
-	/**
-	 * Spawns 9 stars, then 9 diamonds in a 1 square radius
-	 * */
+
 	public void die(){
 		
 		IElement[][] map =this.getMap().getMap();
 		
 		
-		//del elements next to it
-		//spawn 9 stars where stuff blew up		
-		for(int i = this.getX()-1; i<=this.getX()+1;i++){
+			for(int i = this.getX()-1; i<=this.getX()+1;i++){
 			for(int j = this.getY()-1;j <= this.getY()+1;j++){
 				if(!(map[i][j]).getClass().equals(Border.class))
 				map[i][j] = MotionlessElementFactory.createStar(getMap().getLevel());
 			}
 		}
 		
-		// spawn 9 diamonds where the stars were
 		for(int i = this.getX()-1; i<=this.getX()+1;i++){
 			for(int j = this.getY()-1;j <= this.getY()+1;j++){
 				map[i][j] = MotionFullElementFactory.createDiamondEnemy(getMap());

@@ -1,6 +1,7 @@
 package contract;
 
 import java.awt.Image;
+import java.awt.Point;
 
 import fr.exia.showboard.IPawn;
 import fr.exia.showboard.ISquare;
@@ -17,7 +18,7 @@ public interface IElement extends ISquare, IPawn {
 	 */
 	Image getImage();
 	
-	public int getID();
+	public int getId();
 	/*
 	 * 
 	 */
@@ -25,7 +26,7 @@ public interface IElement extends ISquare, IPawn {
 	/*
 	 * 
 	 */
-	public void setName(String name);
+	public void setName(final String name);
 	/*
 	 * 
 	 */
@@ -39,10 +40,12 @@ public interface IElement extends ISquare, IPawn {
 	 * 
 	 */
 	public Permeability getPermeability();
+	
 	int getX();
 	void setX(int x);
 	int getY();
 	void setY(int y);
 	
-	
+	  @Override
+	   Point getPosition();
 }

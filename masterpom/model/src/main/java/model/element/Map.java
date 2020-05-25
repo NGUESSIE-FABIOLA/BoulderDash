@@ -17,6 +17,7 @@ import contract.IMap;
 import contract.Sprite;
 import model.Elementboulder;
 import model.element.motionfull.Diamond;
+import model.element.motionfull.Enemy;
 import model.element.motionfull.MotionFullElement;
 import model.element.motionfull.MotionFullElementFactory;
 import model.element.motionfull.Rock;
@@ -326,6 +327,17 @@ public class Map extends Observable implements IMap {
 		}
 	}
 
+	
+	public void lookForAndMoveEnemy() {
+		IElement[][] elem = getMap();
+		for (int j = 0; j < elem.length; j++) {
+			for (int i = 0; i < elem[i].length; i++) {
+				if (getElementByPosition(i, j).getClass().equals(Enemy.class)) {
+					moveEnemy((MotionFullElement) getElementByPosition(i, j));
+				}
+			}
+		}
+	}
 	/**
 	 * @return the score
 	 */

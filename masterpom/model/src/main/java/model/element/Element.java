@@ -31,10 +31,10 @@ public abstract class Element implements IElement {
 	}
 
 
-	public Element(Map map) {
+	/*public Element(Map map) {
 		// TODO Auto-generated constructor stub
 		this.map = map;
-	}
+	}*/
 
 
 	/*@Override
@@ -44,7 +44,7 @@ public abstract class Element implements IElement {
 	}*/
 
 	@Override
-	public int getID() {
+	public int getId() {
 		// TODO Auto-generated method stub
 		return 0;
 	}

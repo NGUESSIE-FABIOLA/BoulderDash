@@ -1,7 +1,7 @@
 /**
  * 
  */
-package contract;
+package model.element.motionfull;
 
 /**
  * @author Heidy Kengne
