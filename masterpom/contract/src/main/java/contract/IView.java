@@ -19,10 +19,10 @@ public interface IView {
 
     void displayMessage(String message);
 	
-	 void cameraMove();
+	void cameraMove();
 	    
-	    BoardFrame getBoard();
+	BoardFrame getBoard();
 	    
-	    void setBoard(BoardFrame board);
+	void setBoard(BoardFrame board);
 	    
 }

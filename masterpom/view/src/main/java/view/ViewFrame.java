@@ -4,12 +4,14 @@ import java.awt.GraphicsConfiguration;
 import java.awt.HeadlessException;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.IOException;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 import contract.IController;
 import contract.IModel;
+import contract.IOrderPerformer;
 
 
 /**
@@ -27,6 +29,7 @@ class ViewFrame extends JFrame implements KeyListener {
 	/** The Constant serialVersionUID. */
 	private static final long	serialVersionUID	= -697358409737458175L;
 
+	private IOrderPerformer orderPerformer;
 	/**
 	 * Instantiates a new view frame.
 	 *
@@ -162,7 +165,12 @@ class ViewFrame extends JFrame implements KeyListener {
 	 */
 	public void keyPressed(final KeyEvent e) {
 		
-		this.getController().orderPerform(View.keyCodeToControllerOrder(e.getKeyCode()));
+		try {
+			this.getOrderPerformer().orderPerform(View.keyCodeToControllerOrder(e.getKeyCode()));
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		
 	}
 
@@ -174,4 +182,20 @@ class ViewFrame extends JFrame implements KeyListener {
 	public void keyReleased(final KeyEvent e) {
 
 	}
+
+	/**
+	 * @return the orderPerformer
+	 */
+	public IOrderPerformer getOrderPerformer() {
+		return orderPerformer;
+	}
+
+	/**
+	 * @param orderPerformer the orderPerformer to set
+	 */
+	public void setOrderPerformer(IOrderPerformer orderPerformer) {
+		this.orderPerformer = orderPerformer;
+	}
+	
+	
 }
