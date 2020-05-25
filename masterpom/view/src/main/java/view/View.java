@@ -6,6 +6,7 @@ import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 
+import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
 import contract.Order;
@@ -345,9 +346,11 @@ public final class View implements IView, Runnable{
 		
 	}
 
-	@Override
+	
 	public void displayMessage(String message) {
 		// TODO Auto-generated method stub
-		
+		JOptionPane.showMessageDialog(null, message);
 	}
+
+	
 }
