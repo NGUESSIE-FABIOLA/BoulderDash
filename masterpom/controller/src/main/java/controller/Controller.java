@@ -175,10 +175,9 @@ public final class Controller implements IController, IOrderPerformer {
 	 * 
 	 * @param order
 	 * 			Send Order to the Setter
-	 * @throws IOException
 	 */
 	@Override
-	public void orderPerform(Order order) throws IOException {
+	public void orderPerform(Order order) {
 		this.setOrder(order);
 	}
 
