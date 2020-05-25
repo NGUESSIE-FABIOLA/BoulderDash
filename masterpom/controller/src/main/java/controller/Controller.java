@@ -3,7 +3,6 @@ package controller;
 import java.io.IOException;
 import java.sql.SQLException;
 
-import contract.ControllerOrder;
 import contract.IController;
 import contract.IModel;
 import contract.IOrderPerformer;
@@ -74,8 +73,16 @@ public final class Controller implements IController, IOrderPerformer {
 				break;	
 		}
 		this.clearOrder();
-		}
+
+		updateBoard();
+
+		this.getModel().getMap().applyPhysics();
+		
+		this.getView().cameraMove();
+	}
 	
+		this.getView().displayMessage("Game Over !");
+		
 	}
 
 		 /**
@@ -187,10 +194,7 @@ public final class Controller implements IController, IOrderPerformer {
 	
 	//TODO debug of board repaint
 	public void updateBoard(){
-		
-		
-		
-		//already works-ish by itself
+	
 		for (int x = 0; x < this.getModel().getMap().getWidth(); x++) {
 			for (int y = 0; y < this.getModel().getMap().getHeight(); y++) {
 				this.getView().getBoard().addSquare(this.getModel().getMap().getElementByPosition(x, y),
@@ -200,7 +204,7 @@ public final class Controller implements IController, IOrderPerformer {
 			}
 			
 		}	
-		//yes I know it spawn ConcurentModif ex sometimes but they don't seem to be a great deal and it's the only way I found
+
 		this.getView().getBoard().repaint();
 	}
 

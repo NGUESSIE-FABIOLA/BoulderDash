@@ -44,7 +44,7 @@ public abstract class Element implements IElement {
 	}*/
 
 	@Override
-	public int getID() {
+	public int getId() {
 		// TODO Auto-generated method stub
 		return 0;
 	}

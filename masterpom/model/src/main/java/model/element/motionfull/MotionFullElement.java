@@ -3,8 +3,6 @@
  */
 package model.element.motionfull;
 
-import java.awt.Point;
-
 import contract.IDestructible;
 import contract.IElement;
 import contract.IMotionFullElement;
@@ -84,25 +82,7 @@ public abstract class MotionFullElement extends Element implements IDestructible
 
 	}
 
-	/**
-	 * @return the x
-	 */
-	@Override
-	public int getX() {
-		return 0;
-	}
 
-	/**
-	 * @return the y
-	 */
-	@Override
-	public int getY() {
-		return 0;
-	}
-	
-	  public void die() {
-	        
-	    }
 	  
 	  public void fillEmptySpace(int x, int y) {
 			IElement bg = MotionlessElementFactory.getFromFileSymbol(' ');
@@ -136,11 +116,11 @@ public abstract class MotionFullElement extends Element implements IDestructible
 			this.map = map;
 		}
 		
-	public Point getPosition() {
+/*	public Point getPosition() {
 	
 		return this.getPosition();
 	}
-
+*/
 		/**
 		 * Notifies the observers it has changed
 		 * 

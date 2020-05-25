@@ -36,6 +36,10 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="/model"/>
-	<classpathentry kind="lib" path="/masterpom/lib/showboardGP2.jar"/>
+	<classpathentry kind="lib" path="/masterpom/lib/showboardGP2.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/masterpom/lib/showboard.doc.jar!/"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
