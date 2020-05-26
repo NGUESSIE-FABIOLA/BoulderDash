@@ -46,6 +46,5 @@ public abstract class Main {
         final Controller controller = new Controller(view, model);
         view.setOrderPerformer(controller.getOrderPerformer());
         controller.control();
-      //  controller.orderPerform(ControllerOrder.UP);
     }
 }
