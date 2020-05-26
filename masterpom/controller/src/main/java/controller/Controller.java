@@ -3,11 +3,14 @@ package controller;
 import java.io.IOException;
 import java.sql.SQLException;
 
+import javax.swing.JOptionPane;
+
 import contract.IController;
 import contract.IModel;
 import contract.IOrderPerformer;
 import contract.IView;
 import contract.Order;
+
 
 /**
  * The Class Controller.
@@ -193,6 +196,8 @@ public final class Controller implements IController, IOrderPerformer {
 	
 	//TODO debug of board repaint
 	public void updateBoard(){
+		
+		try {
 	
 		for (int x = 0; x < this.getModel().getMap().getWidth(); x++) {
 			for (int y = 0; y < this.getModel().getMap().getHeight(); y++) {
@@ -201,11 +206,22 @@ public final class Controller implements IController, IOrderPerformer {
 						this.getModel().getMap().getElementByPosition(x, y).getY());
 				this.getView().getBoard().addPawn(this.getModel().getMap().getElementByPosition(x, y));
 			}
-			
 		}	
-
 		this.getView().getBoard().repaint();
+		} catch (NullPointerException e) {}
 	}
 
+	
+	/*public void animate() {
+		
+		Object[] levelchoice = {1, 2, 3, 4, 5};
+		
+		int level = (int)JOptionPane.showInputDialog(null, "Choose your level", "Boulderdash", JOptionPane.QUESTION_MESSAGE, null, levelchoice, levelchoice[4]);
+		
+		JOptionPane.showMessageDialog(null, "Vous avez choisi le niveau" + level, null, JOptionPane.INFORMATION_MESSAGE);
+		
+		final Model model = new Model(1);
+        final BoulderdashView view = new BoulderdashView (model.getMap(), model.getCharacter());
+		} */
 	
 }

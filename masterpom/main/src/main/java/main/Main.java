@@ -7,11 +7,13 @@ package main;
 import java.io.IOException;
 import java.sql.SQLException;
 
+import javax.swing.JOptionPane;
+
 import contract.IModel;
 import controller.Controller;
 import model.Model;
-import view.View;
-import view.ViewFacade;
+import view.BoulderdashView;
+//import view.ViewFacade;
 
 /**
  * The Class Main.
@@ -31,8 +33,16 @@ public abstract class Main {
      */
     public static void main(final String[] args) throws IOException, SQLException, InterruptedException {
     	
-        final Model model = new Model(1);
-        final ViewFacade view = new ViewFacade(model.getMap(), model.getCharacter());
+    	
+    	Object[] levelchoice = {1, 2, 3, 4, 5};
+		
+		int level = (int)JOptionPane.showInputDialog(null, "Choose your level", "Boulderdash", JOptionPane.QUESTION_MESSAGE, null, levelchoice, levelchoice[4]);
+		
+		JOptionPane.showMessageDialog(null, "Vous avez choisi le niveau" + level, null, JOptionPane.INFORMATION_MESSAGE);
+		
+		final Model model = new Model(level);
+        final BoulderdashView view = new BoulderdashView (model.getMap(), model.getCharacter());
+       
         final Controller controller = new Controller(view, model);
         view.setOrderPerformer(controller.getOrderPerformer());
         controller.control();
