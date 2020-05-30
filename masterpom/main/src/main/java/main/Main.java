@@ -37,7 +37,7 @@ public abstract class Main {
     	Object[] levelchoice = {1, 2, 3, 4, 5};
 		
 		int level = (int)JOptionPane.showInputDialog(null, "Choose your level", "Boulderdash", JOptionPane.QUESTION_MESSAGE, null, levelchoice, levelchoice[4]);
-		
+	
 		JOptionPane.showMessageDialog(null, "Vous avez choisi le niveau" + level, null, JOptionPane.INFORMATION_MESSAGE);
 		
 		final Model model = new Model(level);
