@@ -1,9 +1,6 @@
 package controller;
 
-import java.io.IOException;
 import java.sql.SQLException;
-
-import javax.swing.JOptionPane;
 
 import contract.IController;
 import contract.IModel;
@@ -78,7 +75,7 @@ public final class Controller implements IController, IOrderPerformer {
 		this.clearOrder();
 
 		updateBoard();
-
+	
 		this.getModel().getMap().applyPhysics();
 		
 		this.getView().cameraMove();
@@ -118,7 +115,7 @@ public final class Controller implements IController, IOrderPerformer {
 	    public void setModel(final IModel model){
 	    	this.model = model;
 	    }
-
+	  
 	/**
      * Order perform.
      *

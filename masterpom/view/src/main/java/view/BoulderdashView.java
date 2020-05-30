@@ -121,8 +121,8 @@ public class BoulderdashView implements IView, Runnable, KeyListener{
 					this.map.getElementByPosition(x, y).setY(y);
 
 					boardFrame.addSquare((ISquare) this.map.getElementByPosition(x, y), x, y);
-					// boardFrame.addPawn((IPawn)this.getMap().getElementByPosition(x,
-					// y));
+					 boardFrame.addPawn((IPawn)this.getMap().getElementByPosition(x,
+					 y));
 					boardFrame.addPawn((IPawn) this.map.getElementByPosition(x, y));
 				}
 			}
