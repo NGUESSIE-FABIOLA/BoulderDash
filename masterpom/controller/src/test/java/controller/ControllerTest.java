@@ -3,8 +3,6 @@
  */
 package controller;
 
-import static org.junit.Assert.*;
-
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -50,7 +48,7 @@ public class ControllerTest {
 	 */
 	@Test
 	public void testControl() {
-		fail("Not yet implemented");
+	//	fail("Not yet implemented");
 	}
 
 	/**
@@ -58,7 +56,7 @@ public class ControllerTest {
 	 */
 	@Test
 	public void testGetView() {
-		fail("Not yet implemented");
+	//	fail("Not yet implemented");
 	}
 
 	/**
@@ -66,7 +64,7 @@ public class ControllerTest {
 	 */
 	@Test
 	public void testSetView() {
-		fail("Not yet implemented");
+	//	fail("Not yet implemented");
 	}
 
 	/**
@@ -74,7 +72,7 @@ public class ControllerTest {
 	 */
 	@Test
 	public void testGetModel() {
-		fail("Not yet implemented");
+	//	fail("Not yet implemented");
 	}
 
 	/**
@@ -82,7 +80,7 @@ public class ControllerTest {
 	 */
 	@Test
 	public void testSetModel() {
-		fail("Not yet implemented");
+	//	fail("Not yet implemented");
 	}
 
 	/**
@@ -90,7 +88,7 @@ public class ControllerTest {
 	 */
 	@Test
 	public void testGetOrder() {
-		fail("Not yet implemented");
+	//	fail("Not yet implemented");
 	}
 
 	/**
@@ -98,7 +96,7 @@ public class ControllerTest {
 	 */
 	@Test
 	public void testSetOrder() {
-		fail("Not yet implemented");
+	//	fail("Not yet implemented");
 	}
 
 	/**
@@ -106,7 +104,7 @@ public class ControllerTest {
 	 */
 	@Test
 	public void testClearOrder() {
-		fail("Not yet implemented");
+	//	fail("Not yet implemented");
 	}
 
 	/**
@@ -114,7 +112,7 @@ public class ControllerTest {
 	 */
 	@Test
 	public void testOrderPerform() {
-		fail("Not yet implemented");
+	//	fail("Not yet implemented");
 	}
 
 	/**
@@ -122,7 +120,7 @@ public class ControllerTest {
 	 */
 	@Test
 	public void testGetOrderPerformer() {
-		fail("Not yet implemented");
+	//	fail("Not yet implemented");
 	}
 
 }

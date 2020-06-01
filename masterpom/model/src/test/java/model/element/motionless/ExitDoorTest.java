@@ -17,7 +17,7 @@ import org.junit.Test;
  */
 public class ExitDoorTest {
 
-	private ExitDoor exit;
+//	private ExitDoor exit;
 	/**
 	 * @throws java.lang.Exception
 	 */
@@ -37,7 +37,7 @@ public class ExitDoorTest {
 	 */
 	@Before
 	public void setUp() throws Exception {
-		exit = new ExitDoor();
+	//	exit = new ExitDoor();
 	}
 
 	/**

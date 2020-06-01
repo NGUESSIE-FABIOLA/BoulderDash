@@ -3,7 +3,6 @@
  */
 package model.element.motionfull;
 
-import contract.IDestructible;
 import contract.IElement;
 import contract.IMotionFullElement;
 import contract.Permeability;
