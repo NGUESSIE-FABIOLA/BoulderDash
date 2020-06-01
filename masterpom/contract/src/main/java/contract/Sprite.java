@@ -84,27 +84,27 @@ BufferedImage buffer;
 		switch(getConsoleImage()){
 
 		case 'C': 
-			buffer = ImageIO.read(new File("../images/player.png")).getSubimage(2*16, 5*16, 16, 16);
+			buffer = ImageIO.read(new File("../images/player.png")).getSubimage(0, 16, 16, 16);
 			setImage(buffer);
 			setImageLoaded(true);
 			break;
 		case 'c':
-			buffer = ImageIO.read(new File("../images/player.png")).getSubimage(0*16, 48, 16, 16);
+			buffer = ImageIO.read(new File("../images/player.png")).getSubimage(0, 48, 16, 16);
 			setImage(buffer);
 			setImageLoaded(true);
 			break;
 		case 'h':
-			buffer = ImageIO.read(new File("../images/player.png")).getSubimage(3*16, 64, 16, 16);
+			buffer = ImageIO.read(new File("../images/player.png")).getSubimage(0, 64, 16, 16);
 			setImage(buffer);
 			setImageLoaded(true);
 			break;
 		case 'N' :
-			buffer= ImageIO.read(new File("../images/player.png")).getSubimage(1*16, 32, 16, 16);
+			buffer= ImageIO.read(new File("../images/player.png")).getSubimage(0, 32, 16, 16);
 			setImage(buffer);
 			setImageLoaded(true);
 			break;
 		case 'H':
-			buffer= ImageIO.read(new File("../images/player.png")).getSubimage(0*16,5*16, 16, 16);
+			buffer= ImageIO.read(new File("../images/player.png")).getSubimage(0*16,0*16, 16, 16);
 			//buffer = ImageIO.read(new File("../images/player.png"));
 			setImage(buffer);
 			setImageLoaded(true);
