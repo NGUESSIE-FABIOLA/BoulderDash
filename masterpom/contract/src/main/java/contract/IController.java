@@ -10,26 +10,21 @@ import java.sql.SQLException;
  */
 public interface IController {
 
-	/**
-	 * Control.
-	 */
-	public void control() throws InterruptedException, SQLException;
-
-	/**
-	 * Order perform.
-	 *
-	 * @param controllerOrder
-	 *          the controller order
-	 */
 	
+	/**
+	 * @throws InterruptedException
+	 * 		interrupteException 
+	 * @throws SQLException
+	 * 		if no connection in DB
+	 */
+	 void control() throws InterruptedException, SQLException;
+
+	
+	/**
+	 * @return orderPerformer
+	 */
 	IOrderPerformer getOrderPerformer();
 
-	/**
-	 * 
-	 * @param up
-	 * 			Send Order to the Setter
-	 * @throws IOException
-	 */
 	
 	//public void orderPerform(ControllerOrder controllerOrder);
 //	public void orderPerform(Order order);

@@ -56,14 +56,14 @@ public class Map extends Observable implements IMap {
 	
 	/**
 	 * @param level
-	 * @throws SQLException 
+	 * 			int
+	 * @throws SQLException
+	 * 			SQL error 
 	 */
 	public Map(int level ) throws SQLException {
 		super();
 		this.setLevel(level);
 		this.loadlevel(getLevel());
-		this.height = height;
-		this.width = width;
 	}
 	/*
 	 * 
@@ -154,6 +154,7 @@ public class Map extends Observable implements IMap {
 	}
 	/**
 	 * @param height
+	 * 			int
 	 */
 	public void setHeight(final int height) {
 		this.height = height;
@@ -196,7 +197,7 @@ public class Map extends Observable implements IMap {
 		
 	}
 	/**
-	 * @return
+	 * @return observable
 	 */
 	public Observable getObservable() {
 		return this;
@@ -217,7 +218,7 @@ public class Map extends Observable implements IMap {
 	}
 
 	/**
-	 * @param element
+	 * @param element element 
 	 */
 	public void moveEnemy(MotionFullElement element) {
 		int x = 0;
@@ -245,7 +246,9 @@ public class Map extends Observable implements IMap {
 	
 	/**
 	 * @param fileName
+	 * 		input file
 	 * @throws IOException
+	 * 		read error
 	 */
 	public void loadFile(final String fileName) throws IOException {
 		final BufferedReader buff = new BufferedReader(new InputStreamReader(new FileInputStream(fileName)));

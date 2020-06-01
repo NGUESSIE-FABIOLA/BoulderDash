@@ -28,8 +28,11 @@ public abstract class Main {
      * @param args
      *            the arguments
      * @throws IOException 
-     * @throws InterruptedException 
-     * @throws SQLException 
+     * 			Input output error
+     * @throws InterruptedException
+     * 			interrupted 
+     * @throws SQLException
+     * 			SQL error 
      */
     public static void main(final String[] args) throws IOException, SQLException, InterruptedException {
     	

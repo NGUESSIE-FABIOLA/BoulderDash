@@ -55,10 +55,14 @@ public class BoulderdashView implements IView, Runnable, KeyListener{
 
 		public BoardFrame board;
 
+		
 		/**
-		 * Instantiates a new view facade.
-		 * 
+		 * @param map
+		 * 		map learn
+		 * @param character
+		 * 		view character
 		 * @throws IOException
+		 * 		exception no connection
 		 */
 		public BoulderdashView(final IMap map, final IMotionFullElement character) throws IOException {
 
@@ -121,8 +125,8 @@ public class BoulderdashView implements IView, Runnable, KeyListener{
 					this.map.getElementByPosition(x, y).setY(y);
 
 					boardFrame.addSquare((ISquare) this.map.getElementByPosition(x, y), x, y);
-					 boardFrame.addPawn((IPawn)this.getMap().getElementByPosition(x,
-					 y));
+					// boardFrame.addPawn((IPawn)this.getMap().getElementByPosition(x,
+					// y));
 					boardFrame.addPawn((IPawn) this.map.getElementByPosition(x, y));
 				}
 			}
@@ -210,10 +214,19 @@ public class BoulderdashView implements IView, Runnable, KeyListener{
 			this.closeView = closeView;
 		}
 
+		/**
+		 * @return map
+		 */
 		public IMap getMap() {
 			return map;
 		}
 
+		/**
+		 * @param map
+		 * 		learn map
+		 * @throws IOException
+		 * 		connection error
+		 */
 		public void setMap(IMap map) throws IOException {
 			this.map = map;
 			for (int y = 0; y < this.getMap().getHeight(); y++) {
@@ -264,6 +277,9 @@ public class BoulderdashView implements IView, Runnable, KeyListener{
 		}
 
 		// TODO suppr �a
+		/**
+		 * 
+		 */
 		public final void updateboard() {
 			
 			BoardFrame boardFrame = new BoardFrame("BoulderDash");

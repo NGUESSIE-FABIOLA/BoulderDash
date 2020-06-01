@@ -41,7 +41,7 @@ final class BoulderConnection {
 		return BoulderConnection.INSTANCE;
 	}
 	 /**
-	 * @param INSTANCE
+	 * @param INSTANCE create connection
 	 */
 	private static void setInstance(final BoulderConnection INSTANCE) {
 	        BoulderConnection.INSTANCE = INSTANCE;
@@ -67,8 +67,8 @@ final class BoulderConnection {
 
 
 	/**
-	 * @param query
-	 * @return
+	 * @param query ask connection
+	 * @return result
 	 */
 	public ResultSet executeQuery(final String query) {
 		try {
@@ -82,8 +82,8 @@ final class BoulderConnection {
 
 	
 	/**
-	 * @param query
-	 * @return
+	 * @param query ask connection
+	 * @return null
 	 */
 	public CallableStatement prepareCall(final String query) {
 		try {
@@ -96,8 +96,8 @@ final class BoulderConnection {
 	}
 	
 	/**
-	 * @param query
-	 * @return
+	 * @param query ask connection
+	 * @return o
 	 */
 	public int executeUpdate(String query) {
 		try {
@@ -118,21 +118,21 @@ final class BoulderConnection {
 	}
 
 /**
-	 * @param connection
+	 * @param connection connection
 	 */
 	public void setConnection(final Connection connection) {
 		this.connection = connection;
 	}
 
 	/**
-	 * @return
+	 * @return statement
 	 */
 	public java.sql.Statement getStatement() {
 		// TODO Auto-generated method stub
 		return this.statement;
 	}
 	/**
-	 * @param statement
+	 * @param statement parameter of statement
 	 */
 	public void setStatement(final java.sql.Statement statement) {
 		this.statement = statement;

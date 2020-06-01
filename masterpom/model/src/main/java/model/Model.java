@@ -50,6 +50,7 @@ public final class Model implements IModel {
 
 	/**
 	 * @param character
+	 * 		sent character
 	 */
 	public void setCharacter(IMotionFullElement character){
 		this.character = character;

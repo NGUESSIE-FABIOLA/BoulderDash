@@ -53,7 +53,9 @@ public class Elementboulder extends DAOEntity {
 	 * 
 	 * @param level, the wanted level
 	 * @return height
+	 * 			the int
 	 * @throws SQLException
+	 * 			SQL error
 	 */
 	public static int getMapHeight(int level) throws SQLException {
 		CallableStatement callStatement = prepareCall(mapHeightQuerry);
@@ -73,8 +75,9 @@ public class Elementboulder extends DAOEntity {
 	 * Gets the map's width
 	 * 
 	 * @param level, the wanted level
-	 * @return width
+	 * @return width the int
 	 * @throws SQLException
+	 * 			SQL error
 	 */
 	public static int getMapWidth(int level) throws SQLException {
 		CallableStatement callStatement = prepareCall(mapWidthQuerry);
@@ -95,7 +98,9 @@ public class Elementboulder extends DAOEntity {
 	 * 
 	 * @param level, the wanted level
 	 * @return map
+	 * 			map
 	 * @throws SQLException
+	 * 			SQL error
 	 */
 	public static char[][] getMap(int level) throws SQLException {
 		int width = getMapWidth(level);
@@ -130,14 +135,14 @@ public class Elementboulder extends DAOEntity {
 		return map;
 	}
 
-	
 	/**
 	 * Saves the map's size
 	 * 
-	 * @param level
-	 * @param height
-	 * @param width
+	 * @param level int
+	 * @param height int
+	 * @param width int
 	 * @throws SQLException
+	 * 			SQL error
 	 */
 	@Deprecated
 	public static void saveMapSize(int level, int height, int width) throws SQLException{
@@ -152,11 +157,16 @@ public class Elementboulder extends DAOEntity {
 	
 	/**
 	 * Saves an element at a given location 
-	 * @param level
+	 * @param level 
+	 * 			the int
 	 * @param height
+	 * 			the int
 	 * @param width
+	 * 			the int
 	 * @param element
+	 * 			Element
 	 * @throws SQLException
+	 * 			SQL error
 	 */
 	
 	 //I actually genuinely don't know how this worked, it shouldn't if it was the way it's now
@@ -176,8 +186,7 @@ public class Elementboulder extends DAOEntity {
 				
 			}
 		}
-		
-		
+	
 	}
 	
 	
@@ -185,9 +194,13 @@ public class Elementboulder extends DAOEntity {
 	 * Saves the map into the database
 	 * 
 	 * @param map
+	 * 		map
 	 * @param level
+	 * 		int
 	 * @param height
+	 * 		int
 	 * @param width
+	 * 		int
 	 */
 	 //only used to push the maps in the database
 	public static void saveMap(char[][] map, int level, int height, int width) {

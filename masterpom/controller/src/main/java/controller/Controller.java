@@ -49,7 +49,6 @@ public final class Controller implements IController, IOrderPerformer {
 	 * @see contract.IController#control()
 	 */
 	public void control() throws SQLException, InterruptedException {
-		//this.view.printMessage("Appuyer sur les touches 'E', 'F', 'D' ou 'I', pour afficher Hello world dans la langue d votre choix.");
 		
 		int i=0;
 		while (this.getModel().getCharacter().isAlive()) {
@@ -193,8 +192,6 @@ public final class Controller implements IController, IOrderPerformer {
 	
 	//TODO debug of board repaint
 	public void updateBoard(){
-		
-		try {
 	
 		for (int x = 0; x < this.getModel().getMap().getWidth(); x++) {
 			for (int y = 0; y < this.getModel().getMap().getHeight(); y++) {
@@ -205,7 +202,6 @@ public final class Controller implements IController, IOrderPerformer {
 			}
 		}	
 		this.getView().getBoard().repaint();
-		} catch (NullPointerException e) {}
 	}
 
 	
