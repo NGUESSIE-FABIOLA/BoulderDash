@@ -14,6 +14,7 @@ import java.util.Observable;
 
 import contract.IElement;
 import contract.IMap;
+import contract.IMotionFullElement;
 import contract.Sprite;
 import model.Elementboulder;
 import model.element.motionfull.Diamond;
@@ -220,7 +221,7 @@ public class Map extends Observable implements IMap {
 	/**
 	 * @param element element 
 	 */
-	public void moveEnemy(MotionFullElement element) {
+	public void moveEnemy(IMotionFullElement element) {
 		int x = 0;
 		int y = 0;
 		x = element.getX();
