@@ -11,6 +11,8 @@ public enum Permeability {
 	
 	BLOCKING,
 	
-	PENETRABLE;
+	PENETRABLE,
+	  /** The mineable */
+    MINEABLE;
 
 }

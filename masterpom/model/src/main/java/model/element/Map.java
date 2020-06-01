@@ -364,5 +364,4 @@ public class Map extends Observable implements IMap {
 		this.objective = objective;
 	}
 
-	
 }
