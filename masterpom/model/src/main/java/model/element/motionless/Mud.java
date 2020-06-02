@@ -3,32 +3,23 @@
  */
 package model.element.motionless;
 
-import contract.IDestructible;
-import contract.Permeability;
-import contract.Sprite;
+import java.awt.Rectangle;
+
+import model.Permeability;
+import model.Sprite;
 
 /**
  * @author Heidy Kengne
  *
  */
-public class Mud extends MotionlessElement implements IDestructible{
+public class Mud extends MotionlessElement {
 
 	  /** The Constant SPRITE. */
-	private static final Sprite MUD = new Sprite('M');
+	
+	private static final Sprite sprite = new Sprite('.', Sprite.mapTileSet, new Rectangle(16, 0, 16, 16));
 
-    /**
-     * Instantiates a new SpecialStoneWall.
-     */
-    Mud() {
-        super(MUD, Permeability.PENETRABLE);
-        this.alive = true;
-    }
-	  
-    /**
-	 * Sets alive to false
-	 */
-	@Override
-	public void die() {
-		this.alive=false;
+	public Mud() {
+		super(sprite, Permeability.MINEABLE);
 	}
+
 }

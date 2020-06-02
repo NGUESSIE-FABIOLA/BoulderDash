@@ -4,27 +4,22 @@
 package model;
 
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-
-import contract.IMotionFullElement;
-import model.element.Map;
 
 /**
  * @author nodji
  *
  */
 public class ModelTest {
-/*private Map map;
+//private Map map;
 	
-	private IMotionFullElement character;
+	//private IMobile character;
 	
-	private Model model;
-*/
+	//private Model model;
+
 	/**
 	 * @throws java.lang.Exception
 	 */
@@ -37,7 +32,7 @@ public class ModelTest {
 	 */
 	@Before
 	public void setUp() throws Exception {
-	//	model = new Model(4);
+		//model = new Model(1);
 	}
 
 	/**
@@ -50,24 +45,30 @@ public class ModelTest {
 	/**
 	 * Test method for {@link model.Model#getMap()}.
 	 */
-	@Test
-	public void testGetMap() {
-	//	Map expected = map;
-		// fail("Not yet implemented");
-		//assertEquals(expected, this.map.getMap());
-	}
 
+	@Test
+	public void test() {
+	//	fail("Not yet implemented");
+	}
+	
+/*	@Test
+	public void testGetMap() {
+		Map expected = map;
+		// fail("Not yet implemented");
+		assertEquals(expected, this.map.getPawns());
+	}
+*/
 
 	/**
 	 * Test method for {@link model.Model#setCharacter(contract.IMotionFullElement)}.
 	 */
-	@Test
+	/*@Test
 	public void testSetCharacter() {
-	//	IMotionFullElement expected = character;
+		IMobile expected = character;
 		//	fail("Not yet implemented");
-	//	assertEquals(expected, model.getCharacter());	
+		assertEquals(expected, model.getCharacter());	
 		//assertEquals(expected, model.getCharacter());
 	}
-
+*/
 	
 }

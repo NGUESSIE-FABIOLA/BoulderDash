@@ -1,11 +1,9 @@
 package model;
 
+import java.io.IOException;
 import java.sql.SQLException;
-import java.util.Observable;
+import java.util.ArrayList;
 
-import contract.IModel;
-import contract.IMotionFullElement;
-import model.element.Map;
 import model.element.motionfull.Character;
 
 /**
@@ -16,50 +14,58 @@ import model.element.motionfull.Character;
 public final class Model implements IModel {
 	
 	/** The map*/
-	private Map map;
+	private IMap map;
 
 	/** The player*/
-	private IMotionFullElement character;
-	public Model(int i) throws SQLException {
-		// TODO Auto-generated constructor stub
-		this.setMap(new Map(i));
-	     this.setCharacter(new Character(getMap()) );
-		// this.setCharacter(new Character(getMap())); // y5 x7 TODO get rid of the hard code
-	       this.character.setX(7);
-	       this.character.setY(5);
+	private Character character;
+
+	
+	public Model(final int mapID) throws SQLException, IOException {
+		super();
+		Sprite.loadBuffers();
+		this.setMap(Elementboulder.getMapById(mapID));
+		this.setCharacter(new Character(1, 1, this.getMap()));
+	}
+	
+	@Override
+	public IMap getMap() {
+		return this.map;
 	}
 
-	/**
-	 * @return the map
-	 */
-	public Map getMap() {
-		return this.map;
+
+	@Override
+	public void movePawns() {
+ArrayList<IMobile> copyPawns = new ArrayList<>(this.getMap().getPawns());
+		
+		for (IMobile pawn : copyPawns) {
+			pawn.followMyStrategy();
+		}
+
+	if (this.getCharacter().isCrushed())
+			this.getCharacter().die();
+	
 	}
 
 	/**
 	 * @param map the map to set
 	 */
-	public void setMap(final Map map) {
+	public void setMap(IMap map) {
 		this.map = map;
 	}
 
-	@Override
-	public IMotionFullElement getCharacter() {
+	/**
+	 * @return the character
+	 */
+	public Character getCharacter() {
 		return this.character;
 	}
 
 	/**
-	 * @param character
-	 * 		sent character
+	 * @param character the character to set
 	 */
-	public void setCharacter(IMotionFullElement character){
+	public void setCharacter(Character character) {
 		this.character = character;
 	}
 
-	@Override
-	public Observable getObservable() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
+	
 }

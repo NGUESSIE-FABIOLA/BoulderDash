@@ -3,8 +3,6 @@
  */
 package model.element.motionfull;
 
-import static org.junit.Assert.*;
-
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -36,7 +34,6 @@ public class DiamondTest {
 	 */
 	@Before
 	public void setUp() throws Exception {
-		//test =  new Diamond();
 	}
 
 	/**
@@ -46,28 +43,9 @@ public class DiamondTest {
 	public void tearDown() throws Exception {
 	}
 
-	/**
-	 * Test method for {@link model.element.motionfull.Diamond#die()}.
-	 */
 	@Test
-	public void testDie() {
-		//fail("Not yet implemented");
-	}
-
-	/**
-	 * Test method for {@link model.element.motionfull.Diamond#isAlive()}.
-	 */
-	@Test
-	public void testIsAlive() {
+	public void test() {
 	//	fail("Not yet implemented");
-	}
-
-	/**
-	 * Test method for {@link model.element.motionfull.Diamond#fall()}.
-	 */
-	@Test
-	public void testFall() {
-		//fail("Not yet implemented");
 	}
 
 }

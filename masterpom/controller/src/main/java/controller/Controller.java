@@ -1,12 +1,9 @@
 package controller;
 
-import java.sql.SQLException;
+import java.io.IOException;
 
-import contract.IController;
-import contract.IModel;
-import contract.IOrderPerformer;
-import contract.IView;
-import contract.Order;
+import model.IModel;
+import view.IView;
 
 
 /**
@@ -20,12 +17,9 @@ public final class Controller implements IController, IOrderPerformer {
 	/** The model. */
 	private IModel	model;
 
- 	  /**Order to execute */
-    private Order order;
-    
-    
-    private static final int 	speedCharacter = 250;
+	  private static final int speed = 200;
 
+	  private Order stackOrder = Order.NOP;
 	/**
 	 * Instantiates a new controller.
 	 *
@@ -35,9 +29,9 @@ public final class Controller implements IController, IOrderPerformer {
 	 *          the model
 	 */
 	public Controller(final IView view, final IModel model) {
-		this.setView(view);
-		this.setModel(model);
-		this.clearOrder();
+		super();
+		this.view = view;
+		this.model = model;
 	}
 
 	/**
@@ -48,143 +42,73 @@ public final class Controller implements IController, IOrderPerformer {
 	 *
 	 * @see contract.IController#control()
 	 */
-	public void control() throws SQLException, InterruptedException {
-		
-		int i=0;
-		while (this.getModel().getCharacter().isAlive()) {
-    		Thread.sleep(speedCharacter);
-    		
-    		switch (this.getOrder()) {
-			case UP :
-				this.getModel().getCharacter().moveUp();
-				break;
-			case DOWN :
-				this.getModel().getCharacter().moveDown();
-				break;
-			case RIGHT :
-				this.getModel().getCharacter().moveRight();
-				break;
-			case LEFT :
-				this.getModel().getCharacter().moveLeft();
-			case NOP :
-			default :
-				this.getModel().getCharacter().doNothing();
-				break;	
-		}
-		this.clearOrder();
+	 public void start() throws InterruptedException {
+		    this.getModel().getMap().setCharacter(this.getModel().getCharacter());
+		    while (this.getModel().getCharacter().isAlive()) {
+		      Thread.sleep(speed);
+		      
+		      if (this.getModel().getCharacter().canMoveTo(this.getStackOrder())) {
+		        switch (this.getStackOrder()) {
+		        case RIGHT:
+		          this.getModel().getCharacter().moveRight();
+		          break;
+		        case LEFT:
+		          this.getModel().getCharacter().moveLeft();
+		          break;
+		        case DOWN:
+		          this.getModel().getCharacter().moveDown();
+		          break;
+		        case UP:
+		          this.getModel().getCharacter().moveUp();
+		          break;
+		        case NOP:
+		        default:
+		          this.getModel().getCharacter().doNothing();
+		          break;
+		        }  
+		      }
+    		 this.getModel().movePawns();
+   	      this.clearStackOrder();
 
-		updateBoard();
-	
-		this.getModel().getMap().applyPhysics();
-		
-		this.getView().cameraMove();
-	}
-	
-		this.getView().displayMessage("Game Over !");
-		
-	}
+   	      this.getView().cameraMove();
+   	      this.getView().updateBoard();
 
-		 /**
-	     * Gets the view.
-	     *
-	     * @return the view
-	     */
-	    public IView getView() {
-	        return this.view;
-	    }
-	    
-	    public void setView(final IView view){
-	    	this.view = view;
-	    }
+   	      if (this.getModel().getMap().getDiamondCount() == 0) {
+   	        this.getView().displayMessage("You won !! Congratulations ;) ");
+   	        System.exit(0);
+   	      }
+   	    }
+   	    this.getView().displayMessage("You are dead, GAME OVER. ");
+   	    System.exit(0);
+   	  }
 
-	    /**
-	     * Gets the model.
-	     *
-	     * @return the model
-	     */
-	    public IModel getModel() {
-	        return this.model;
-	    }
-	    
-	    /**
-	     * Sets the Model
-	     * 
-	     * @param model of the game
-	     */
-	    public void setModel(final IModel model){
-	    	this.model = model;
-	    }
+   	  private IView getView() {
+   	    return this.view;
+   	  }
 
-	 /**
-     * 	Gets the order
-     * 
-     * @return an order
-     */
-	public Order getOrder() {
-		return order;
-	}
-	
-	/**
-	 * 
-	 * @param order
-	 * 			Send order to the Setter
-	 */
-	public void setOrder(Order order) {
-		this.order = order;
-	}
-	
-	/**
-	 * Clear the order
-	 */
-	public void clearOrder(){
-		this.order = Order.NOP;
-	}
-	
-	/**
-	 * 
-	 * @param order
-	 * 			Send Order to the Setter
-	 */
-	@Override
-	public void orderPerform(Order order) {
-		this.setOrder(order);
-	}
+   	  private IModel getModel() {
+   	    return this.model;
+   	  }
 
-	/**
-	 * Gets the Order Performer who return this control
-	 */
-	@Override
-	public IOrderPerformer getOrderPerformer() {
-		// TODO Auto-generated method stub
-		return this;
-	}
-	
-	
-	//TODO debug of board repaint
-	public void updateBoard(){
-	
-		for (int x = 0; x < this.getModel().getMap().getWidth(); x++) {
-			for (int y = 0; y < this.getModel().getMap().getHeight(); y++) {
-				this.getView().getBoard().addSquare(this.getModel().getMap().getElementByPosition(x, y),
-						this.getModel().getMap().getElementByPosition(x, y).getX(),
-						this.getModel().getMap().getElementByPosition(x, y).getY());
-				this.getView().getBoard().addPawn(this.getModel().getMap().getElementByPosition(x, y));
-			}
-		}	
-		this.getView().getBoard().repaint();
-	}
+   	  public IOrderPerformer getOrderPeformer() {
+   	    return this;
+   	  }
+   	  
 
-	
-	/*public void animate() {
-		
-		Object[] levelchoice = {1, 2, 3, 4, 5};
-		
-		int level = (int)JOptionPane.showInputDialog(null, "Choose your level", "Boulderdash", JOptionPane.QUESTION_MESSAGE, null, levelchoice, levelchoice[4]);
-		
-		JOptionPane.showMessageDialog(null, "Vous avez choisi le niveau" + level, null, JOptionPane.INFORMATION_MESSAGE);
-		
-		final Model model = new Model(1);
-        final BoulderdashView view = new BoulderdashView (model.getMap(), model.getCharacter());
-		} */
-	
+   	  
+   	  public final void orderPerform(final Order order) throws IOException {
+   	    this.setStackOrder(order);
+   	  }
+
+   	  private Order getStackOrder() {
+   	    return this.stackOrder;
+   	  }
+
+   	  private void setStackOrder(Order order) {
+   	    this.stackOrder = order;
+   	  }
+
+   	  private void clearStackOrder() {
+   	    this.stackOrder = Order.NOP;
+   	  }
 }

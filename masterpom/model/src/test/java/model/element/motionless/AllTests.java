@@ -5,8 +5,8 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({ BackgroundTest.class, BorderTest.class, ExitDoorTest.class, MudTest.class, SpecialStoneWallTest.class,
-		StarTest.class, WallTest.class })
+@SuiteClasses({ BackgroundTest.class, MudTest.class,
+		 WallTest.class })
 public class AllTests {
 
 }

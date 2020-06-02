@@ -3,8 +3,10 @@
  */
 package model.element.motionless;
 
-import contract.Permeability;
-import contract.Sprite;
+import java.awt.Rectangle;
+
+import model.Permeability;
+import model.Sprite;
 
 /**
  * @author Heidy Kengne
@@ -13,11 +15,11 @@ import contract.Sprite;
 public class Background extends MotionlessElement{
 	
 	/** The Background's sprite*/
-	private static final Sprite BACKGROUND = new Sprite('_');
-	 
-	public Background() {
-		super(BACKGROUND, Permeability.PENETRABLE);
-		this.alive = true;
-	}
 	
+	private static final Sprite sprite = new Sprite(' ', Sprite.mapTileSet, new Rectangle(32, 0, 16, 16));
+
+	public Background() {
+		super(sprite, Permeability.PENETRABLE);
+	}
+
 }

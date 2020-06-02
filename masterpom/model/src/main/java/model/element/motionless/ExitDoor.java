@@ -3,8 +3,10 @@
  */
 package model.element.motionless;
 
-import contract.Permeability;
-import contract.Sprite;
+import java.awt.Rectangle;
+
+import model.Permeability;
+import model.Sprite;
 
 /**
  * @author Heidy Kengne
@@ -13,12 +15,10 @@ import contract.Sprite;
 public class ExitDoor extends MotionlessElement {
    
 	/** The Exit Door's sprite*/
-	private static final Sprite EXIT_DOOR = new Sprite('X');
 
+	private static final Sprite sprite = new Sprite('X', Sprite.mapTileSet, new Rectangle(0, 0, 16, 16));
 
-    ExitDoor() {
-    	super(EXIT_DOOR, Permeability.PENETRABLE);
-		this.alive = true;
-
-    }
+	public ExitDoor() {
+		super(sprite, Permeability.BLOCKING);
+	}
 }

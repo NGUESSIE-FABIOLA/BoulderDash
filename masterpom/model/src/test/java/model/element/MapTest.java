@@ -5,158 +5,96 @@ package model.element;
 
 import static org.junit.Assert.*;
 
-import java.sql.SQLException;
-import java.util.Observable;
-
 import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import contract.IElement;
-import contract.IMap;
-
 /**
- * @author nodji
+ * @author Heidy Kengne
  *
  */
 public class MapTest {
-/*	private int height;
-	private int width;
-	private IElement[][] sizeMap;
-	
-	private Map map;
-	private int List;
-	private Observable observable;
-	private IMap map2;
-	private String name;
-	private int id;
-*/
-	/**
-	 * @throws java.lang.Exception
-	 */
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
 
-	
+	  private Map map;
 
-	/**
-	 * @throws java.lang.Exception
-	 */
-	@Before
-	public void setUp() throws Exception {
-	//	this.map = new Map(List);
-	}
+	  @BeforeClass
+	  public static void setUpBeforeClass() throws Exception {
+	  }
 
-	/**
-	 * @throws java.lang.Exception
-	 */
-	@After
-	public void tearDown() throws Exception {
-	}
+	  @AfterClass
+	  public static void tearDownAfterClass() throws Exception {
+	  }
 
-	/**
-	 * Test method for {@link model.element.Map#getHeight()}.
-	 */
-	@Test
-	public void testGetHeight() {
-	//	final int expected = 0;
-		//fail("Not yet implemented");
-	//	assertEquals(expected, this.map.getHeight());
-	}
+	  @Before
+	  public void setUp() throws Exception {
+	    
+	    map = new Map(10, 12, null);
+	    map.addDiamondCount();
+	    map.addDiamondCount();
+	    map.addDiamondCount();
+	  }
 
-	/**
-	 * Test method for {@link model.element.Map#setHeight(int)}.
-	 */
-	@Test
-	public void testSetHeight() {
-//	final int expected = 40;
-//	this.map.setHeight(expected);
-//	assertEquals(expected, this.map.getHeight());
-	}
+	  @After
+	  public void tearDown() throws Exception {
+	  }
 
-	/**
-	 * Test method for {@link model.element.Map#getAllElements()}.
-	 * @throws SQLException 
-	 */
-	@Test
-	public void testGetAllElements() throws SQLException {
-		//IMap expected = map2;
-	//	fail("Not yet implemented");
-	//	assertEquals(expected, this.map2.getAllElements());
-	}
-	
-	@Test
-	public void testGetElementByPosition() {
-	//	IMap expected = map2;
-	//	fail("Not yet implemented");
-	//	assertEquals(expected, this.map2.getElementByPosition(height, width));
-	}
-	
-	@Test
-	public void testGetElementByID() {
-	//	IMap expected = map2;
-	//	fail("Not yet implemented");
-	//	assertEquals(expected, this.map2.getElementByID(id));
-	}
+	  /**
+	   * This test verifie that a piece has been properly initialized and are equals.
+	   * 
+	   */
+	  @Test
+	  public void testDecreaseDiamondCount() {
+	   int expected = 2;
+	   this.map.decreaseDiamondCount();
+	   assertEquals(expected, this.map.getDiamondCount());
+	  }
 
-	@Test
-	public void testGetElementByName() throws SQLException {
-	//	IMap expected = map2;
-		//fail("Not yet implemented");
-	//	assertEquals(expected, this.map2.getElementByName(name));
-	}
-	
-	@Test
-	public void testGetMap() {
-	//	final Map expected = map;
-		//fail("Not yet implemented");
-	//	assertEquals(expected, this.map.getMap());
-		
-	}
+	  /**
+	   * This test verifie that a piece has been properly initialized and are equals.
+	   * 
+	   */
+	  @Test
+	  public void testAddDiamondCount() {
+	    int expected = 4;
+	    this.map.addDiamondCount();
+	    assertEquals(expected, this.map.getDiamondCount());;
+	  }
+	  
+	  /**
+	   * This test verifie that a piece has been properly initialized and are equals,
+	   * and the method does not return a null result.
+	   * 
+	   */
+	  @Test
+	  public void testGetDiamondCount() {
+	    int expected = 3;
+	    assertNotNull(this.map.getDiamondCount());
+	    assertEquals(expected, this.map.getDiamondCount());
+	  }
 
-	@Test
-	public void testSetMap() {
-	//	final Map expected = map;
-	//	this.map.setMap(sizeMap);
-		//fail("Not yet implemented");
-	//	assertEquals(expected, this.map.getMap());
-	}
+	  /**
+	   * This test verifie that a piece has been properly initialized and don't return a null result,
+	   * and is greater then 0.
+	   * 
+	   */
+	  @Test
+	  public void testGetWidth() {
+	    assertNotNull(this.map);
+	    assertTrue(this.map.getWidth() > 0);
+	    
+	  }
 
-	/**
-	 * Test method for {@link model.element.Map#getWidth()}.
-	 */
-	@Test
-	public void testGetWidth() {
-	//	final int expected = 0;
-	//	fail("Not yet implemented");
-	//	assertEquals(expected, this.map.getWidth());// TODO
-	}
-
-	/**
-	 * Test method for {@link model.element.Map#setWidth(int)}.
-	 */
-	@Test
-	public void testSetWidth() {
-	//	final int expected = 40;
-	//	this.map.setWidth(expected);
-		//assertEquals(expected, this.map.getWidth());
-	}
-	
-	@Test
-	public void testSetMapHasChanged() {
-	//	final Map expected = map;
-	//	this.map.setMap(sizeMap);
-		//fail("Not yet implemented");
-	//	assertEquals(expected, this.map.getMap());
-	}
-	
-	@Test
-	public void testGetObservable() {
-	//	Observable expected = observable;
-	//	fail("Not yet implemented");
-	//	assertEquals(expected, ((Map) this.observable).getObservable());
-	}
+	  /**
+	   * This test verifie that a piece has been properly initialized and don't return a null result,
+	   * and is greater then 0.
+	   * 
+	   */
+	  @Test
+	  public void testGetHeight() {
+	    assertNotNull(this.map);
+	    assertTrue(this.map.getHeight() > 0);
+	  }
 
 }

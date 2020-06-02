@@ -3,9 +3,7 @@
  */
 package model;
 
-import static org.junit.Assert.*;
-
-import java.sql.SQLException;
+import java.io.IOException;
 
 import org.junit.After;
 import org.junit.Before;
@@ -41,43 +39,17 @@ public class ElementboulderTest {
 
 	/**
 	 * Test method for {@link model.Elementboulder#getMapHeight(int)}.
+	 * @throws IOException 
 	 */
 	@Test
-	public void testGetMapHeight() {
-		int height = 28;
+	public void testGetMapHeight() throws IOException {
+		/*int height = 48;
 		try {
-			assertEquals(height, Elementboulder.getMapHeight(1));
+			assertEquals(height, Elementboulder.getMapById(1));
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 	}
-
-	/**
-	 * Test method for {@link model.Elementboulder#getMapWidth(int)}.
-	 */
-	@Test
-	public void testGetMapWidth() {
-		int width = 48;
-		try {
-			assertEquals(width, Elementboulder.getMapWidth(1));
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
-	/**
-	 * Test method for {@link model.Elementboulder#getMap(int)}.
-	 */
-	@Test
-	public void testGetMap() {
-		try {
-			assertNotNull(Elementboulder.getMap(1));
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
+	
 }

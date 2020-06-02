@@ -3,30 +3,23 @@
  */
 package model.element.motionless;
 
-import contract.IDestructible;
-import contract.Permeability;
-import contract.Sprite;
+import java.awt.Rectangle;
+
+import model.Permeability;
+import model.Sprite;
 
 /**
  * @author Heidy Kengne
  *
  */
-public class Wall extends MotionlessElement implements IDestructible{
+public class Wall extends MotionlessElement {
 
-	/** The Star's sprite*/
-	private static final Sprite WALL = new Sprite('W');
-	
+	/** The Wall sprite*/
+
+	private static final Sprite sprite = new Sprite('#', Sprite.mapTileSet, new Rectangle(0, 0, 16, 16));
+
 	public Wall() {
-		super(WALL, Permeability.BLOCKING);
-		this.alive = true;
-	}
-
-	/**
-	 * Sets alive to false
-	 */
-	@Override
-	public void die() {
-		this.alive=false;
+		super(sprite, Permeability.BLOCKING);
 	}
 	
 }

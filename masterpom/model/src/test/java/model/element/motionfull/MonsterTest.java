@@ -13,7 +13,7 @@ import org.junit.Test;
  * @author Heidy Kengne
  *
  */
-public class RockTest {
+public class MonsterTest {
 
 	/**
 	 * @throws java.lang.Exception

@@ -3,8 +3,6 @@
  */
 package model.element.motionfull;
 
-import static org.junit.Assert.*;
-
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -45,19 +43,8 @@ public class CharacterTest {
 	public void tearDown() throws Exception {
 	}
 
-	/**
-	 * Test method for {@link model.element.motionfull.Character#die()}.
-	 */
 	@Test
-	public void testDie() {
-	//	fail("Not yet implemented");
-	}
-
-	/**
-	 * Test method for {@link model.element.motionfull.Character#isAlive()}.
-	 */
-	@Test
-	public void testIsAlive() {
+	public void test() {
 	//	fail("Not yet implemented");
 	}
 

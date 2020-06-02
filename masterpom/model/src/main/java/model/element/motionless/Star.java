@@ -3,8 +3,10 @@
  */
 package model.element.motionless;
 
-import contract.Permeability;
-import contract.Sprite;
+import java.awt.Rectangle;
+
+import model.Permeability;
+import model.Sprite;
 
 /**
  * @author Heidy Kengne
@@ -13,15 +15,10 @@ import contract.Sprite;
 public class Star extends MotionlessElement {
 
 	  /** The Constant SPRITE. */
-	private static final Sprite STAR = new Sprite('*');
 
-    /**
-     * Instantiates a new SpecialStoneWall.
-     */
-    Star() {
-        super(STAR, Permeability.BLOCKING);
-        this.alive = true;
-        
-    }
-	    
+	private static final Sprite sprite = new Sprite('*', Sprite.mapTileSet, new Rectangle(0, 8, 16, 16));
+
+	public Star() {
+		super(sprite, Permeability.BLOCKING);
+	} 
 }
