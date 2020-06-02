@@ -26,11 +26,13 @@ public abstract class Main {
      *
      * @param args
      *            the arguments
-     */
-	 public static void main(final String[] args) throws SQLException, IOException {
+	 * @throws SQLException
+	 * 			SQL error
+	 * @throws IOException
+	 * 			reject exception
+	 */
+	public static void main(final String[] args) throws SQLException, IOException {
 	    	
-	    	/*String idToAsk= JOptionPane.showInputDialog("Hello ! Please input id of the map : ", 1);
-	        int idAsked = Integer.parseInt(idToAsk);*/
 		 Object[] levelchoice = {1, 2, 3, 4, 5, 6};
 			
 			int level = (int)JOptionPane.showInputDialog(null, "Choose your level ", "Boulderdash", JOptionPane.QUESTION_MESSAGE, null, levelchoice, levelchoice[0]);

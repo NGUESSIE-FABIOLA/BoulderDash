@@ -17,6 +17,7 @@ public class MonsterTest {
 
 	/**
 	 * @throws java.lang.Exception
+	 * 				Exception
 	 */
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -24,6 +25,7 @@ public class MonsterTest {
 
 	/**
 	 * @throws java.lang.Exception
+	 * 			exception
 	 */
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
@@ -31,6 +33,7 @@ public class MonsterTest {
 
 	/**
 	 * @throws java.lang.Exception
+	 * 				Exception
 	 */
 	@Before
 	public void setUp() throws Exception {
@@ -38,6 +41,7 @@ public class MonsterTest {
 
 	/**
 	 * @throws java.lang.Exception
+	 * 				Exception
 	 */
 	@After
 	public void tearDown() throws Exception {

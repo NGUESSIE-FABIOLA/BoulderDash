@@ -17,6 +17,7 @@ public class ControllerTest {
 
 	/**
 	 * @throws java.lang.Exception
+	 * 				Exception
 	 */
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -24,6 +25,7 @@ public class ControllerTest {
 
 	/**
 	 * @throws java.lang.Exception
+	 * 				Exception
 	 */
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
@@ -31,6 +33,7 @@ public class ControllerTest {
 
 	/**
 	 * @throws java.lang.Exception
+	 * 				Exception
 	 */
 	@Before
 	public void setUp() throws Exception {
@@ -38,13 +41,14 @@ public class ControllerTest {
 
 	/**
 	 * @throws java.lang.Exception
+	 * 			Exception
 	 */
 	@After
 	public void tearDown() throws Exception {
 	}
 
 	/**
-	 * Test method for {@link controller.Controller#control()}.
+	 * Test method .
 	 */
 	@Test
 	public void testControl() {
@@ -52,7 +56,7 @@ public class ControllerTest {
 	}
 
 	/**
-	 * Test method for {@link controller.Controller#getView()}.
+	 * Test method .
 	 */
 	@Test
 	public void testGetView() {
@@ -60,7 +64,7 @@ public class ControllerTest {
 	}
 
 	/**
-	 * Test method for {@link controller.Controller#setView(contract.IView)}.
+	 * Test method .
 	 */
 	@Test
 	public void testSetView() {
@@ -68,7 +72,7 @@ public class ControllerTest {
 	}
 
 	/**
-	 * Test method for {@link controller.Controller#getModel()}.
+	 * Test method.
 	 */
 	@Test
 	public void testGetModel() {
@@ -76,7 +80,7 @@ public class ControllerTest {
 	}
 
 	/**
-	 * Test method for {@link controller.Controller#setModel(contract.IModel)}.
+	 * Test method.
 	 */
 	@Test
 	public void testSetModel() {
@@ -84,7 +88,7 @@ public class ControllerTest {
 	}
 
 	/**
-	 * Test method for {@link controller.Controller#getOrder()}.
+	 * Test method.
 	 */
 	@Test
 	public void testGetOrder() {
@@ -92,7 +96,7 @@ public class ControllerTest {
 	}
 
 	/**
-	 * Test method for {@link controller.Controller#setOrder(contract.Order)}.
+	 * Test method .
 	 */
 	@Test
 	public void testSetOrder() {
@@ -100,7 +104,7 @@ public class ControllerTest {
 	}
 
 	/**
-	 * Test method for {@link controller.Controller#clearOrder()}.
+	 * Test method.
 	 */
 	@Test
 	public void testClearOrder() {
@@ -108,7 +112,7 @@ public class ControllerTest {
 	}
 
 	/**
-	 * Test method for {@link controller.Controller#orderPerform(contract.Order)}.
+	 * Test method .
 	 */
 	@Test
 	public void testOrderPerform() {
@@ -116,7 +120,7 @@ public class ControllerTest {
 	}
 
 	/**
-	 * Test method for {@link controller.Controller#getOrderPerformer()}.
+	 * Test method.
 	 */
 	@Test
 	public void testGetOrderPerformer() {

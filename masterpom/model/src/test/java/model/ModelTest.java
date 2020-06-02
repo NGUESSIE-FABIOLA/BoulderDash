@@ -7,21 +7,23 @@ package model;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
-import org.junit.Test;
+
+import model.element.Map;
 
 /**
  * @author nodji
  *
  */
 public class ModelTest {
-//private Map map;
+private Map map;
 	
-	//private IMobile character;
+	private IMobile character;
 	
-	//private Model model;
+	private Model model;
 
 	/**
 	 * @throws java.lang.Exception
+	 * 		exception
 	 */
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -29,46 +31,49 @@ public class ModelTest {
 
 	/**
 	 * @throws java.lang.Exception
+	 * 			exception
 	 */
 	@Before
 	public void setUp() throws Exception {
-		//model = new Model(1);
+		//model = new Model(2);
 	}
 
 	/**
 	 * @throws java.lang.Exception
+	 * 		exception
 	 */
 	@After
 	public void tearDown() throws Exception {
 	}
 
 	/**
-	 * Test method for {@link model.Model#getMap()}.
+	 * Test method
 	 */
 
-	@Test
+/*	@Test
 	public void test() {
 	//	fail("Not yet implemented");
 	}
 	
-/*	@Test
+	@Test
 	public void testGetMap() {
 		Map expected = map;
 		// fail("Not yet implemented");
 		assertEquals(expected, this.map.getPawns());
 	}
-*/
 
+
+	
 	/**
-	 * Test method for {@link model.Model#setCharacter(contract.IMotionFullElement)}.
+	 * test
 	 */
-	/*@Test
+/*	@Test
 	public void testSetCharacter() {
 		IMobile expected = character;
 		//	fail("Not yet implemented");
 		assertEquals(expected, model.getCharacter());	
-		//assertEquals(expected, model.getCharacter());
-	}
-*/
+		
+	}*/
+
 	
 }

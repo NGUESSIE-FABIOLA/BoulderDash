@@ -144,7 +144,9 @@ public class Map extends Observable implements IMap {
 	   * Returns the permeability of an element on the map. Note that this will return
 	   * the permeability of a pawn if one is there at the given coordonates.
 	   * @param x
+	   * 	int
 	   * @param y
+	   * 	int
 	   * @return x and y
 	   */
 	  

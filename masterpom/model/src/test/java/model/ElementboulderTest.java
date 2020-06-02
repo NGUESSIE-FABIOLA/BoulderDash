@@ -18,6 +18,7 @@ public class ElementboulderTest {
 
 	/**
 	 * @throws java.lang.Exception
+	 * 		exception
 	 */
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -25,6 +26,7 @@ public class ElementboulderTest {
 
 	/**
 	 * @throws java.lang.Exception
+	 * 		exception
 	 */
 	@Before
 	public void setUp() throws Exception {
@@ -32,14 +34,16 @@ public class ElementboulderTest {
 
 	/**
 	 * @throws java.lang.Exception
+	 * 				exception
 	 */
 	@After
 	public void tearDown() throws Exception {
 	}
 
+	
 	/**
-	 * Test method for {@link model.Elementboulder#getMapHeight(int)}.
-	 * @throws IOException 
+	 * @throws IOException
+	 * 		 reject exception 
 	 */
 	@Test
 	public void testGetMapHeight() throws IOException {

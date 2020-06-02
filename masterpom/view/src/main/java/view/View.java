@@ -52,8 +52,14 @@ import model.IMobile;
 		/**
 		 * Instantiates a new view facade.
 		 * 
+		 * @param map
+		 * 			map
+		 * @param character
+		 * 			character
+		 * @param pawns
+		 * 			pawns
 		 * @throws IOException
-		 *             reject exceptions
+		 * 			reject exceptions
 		 */
 		public View(final IMap map, final IMobile character, final ArrayList<IMobile> pawns) throws IOException {
 			super();
@@ -65,10 +71,11 @@ import model.IMobile;
 			SwingUtilities.invokeLater(this);
 		}
 
+		
+		
 		/**
-		 * Displays the message in dialog box.
-		 * 
-		 * @see contract.view.IView#displayMessage(java.lang.String)
+		 *@param message
+		 *		displays message
 		 */
 		public final void displayMessage(final String message) {
 			JOptionPane.showMessageDialog(null, message);

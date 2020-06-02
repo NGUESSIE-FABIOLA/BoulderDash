@@ -9,6 +9,8 @@ public interface IModel {
 
     /**
      * Gets the map.
+     * 
+     * @return map
      */
     public IMap getMap();
     
