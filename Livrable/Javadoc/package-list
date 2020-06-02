@@ -1,0 +1,10 @@
+controller
+entity
+fr.exia.showboard
+main
+model
+model.element
+model.element.motionfull
+model.element.motionless
+model.element.strategy
+view

@@ -138,6 +138,9 @@
 				<configuration>
 					<aggregate>true</aggregate>
 					<show>private</show>
+					<reportsDirectories>
+						<reportsDirectory>${basedir}/target/javadoc</reportsDirectory>
+					</reportsDirectories>
 				</configuration>
 			</plugin>
 		</plugins>
