@@ -160,7 +160,8 @@ public class Character extends Mobile{
 					// Player stepped on a diamond
 
 					pawn.removeFromBoard();
-					this.getMap().decreaseDiamondCount();
+					this.getMap().getNbDiamond();
+					this.getMap().getAddScore();
 
 					return true;
 				}

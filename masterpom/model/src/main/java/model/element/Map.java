@@ -84,7 +84,10 @@ public class Map extends Observable implements IMap {
 	public int getScore() {
 		return score;
 	}
-
+	
+	public void getAddScore() {
+		 score++;
+	}
 
 	/**
 	 * @param score the score to set

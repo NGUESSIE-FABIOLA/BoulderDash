@@ -104,4 +104,6 @@ public interface IMap {
 	public Permeability getSquareIsOccupiedXY(final int x, final int y);
 
 	int getNbDiamond();
+
+	void getAddScore();
 }

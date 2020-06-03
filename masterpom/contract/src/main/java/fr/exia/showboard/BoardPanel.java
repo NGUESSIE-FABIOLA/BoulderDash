@@ -121,7 +121,7 @@ class BoardPanel extends JPanel implements Observer {
             }
         }
         Font fonte = new Font(" TimesRoman ",Font.BOLD,30);
-        g2.setColor(Color.GREEN);
+        g2.setColor(Color.green);
         g2.setFont(fonte);
         g2.drawString("Score : " + score ,5, 30);
       //  System.out.println("Je passe par la");
