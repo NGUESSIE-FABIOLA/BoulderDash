@@ -8,9 +8,15 @@ import java.awt.Rectangle;
 import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
@@ -62,12 +68,15 @@ import model.IMobile;
 		 * 			pawns
 		 * @throws IOException
 		 * 			reject exceptions
+		 * @throws LineUnavailableException 
+		 * @throws UnsupportedAudioFileException 
 		 */
-		public View(final IMap map, final IMobile character, final ArrayList<IMobile> pawns) throws IOException {
+		public View(final IMap map, final IMobile character, final ArrayList<IMobile> pawns) throws IOException, UnsupportedAudioFileException, LineUnavailableException {
 			super();
 			this.setMap(map);
 			this.setCharacter(character);
 			this.setPawns(pawns);
+			playSound();
 			this.setCloseView(this.getReasonableViewPort());
 
 			SwingUtilities.invokeLater(this);
@@ -75,6 +84,16 @@ import model.IMobile;
 
 		
 		
+		private void playSound() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+			// TODO Auto-generated method stub
+			AudioInputStream audio = AudioSystem.getAudioInputStream(new File("game.wav").getAbsoluteFile());
+			Clip clip = AudioSystem.getClip();
+			clip.open(audio);
+			clip.start();
+		}
+
+
+
 		/**
 		 *@param message
 		 *		displays message

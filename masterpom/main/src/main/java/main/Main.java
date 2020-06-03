@@ -7,6 +7,8 @@ package main;
 import java.io.IOException;
 import java.sql.SQLException;
 
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.JOptionPane;
 
 import controller.Controller;
@@ -34,8 +36,10 @@ public abstract class Main {
      * 			interrupted 
      * @throws SQLException
      * 			SQL error 
+     * @throws LineUnavailableException 
+     * @throws UnsupportedAudioFileException 
      */
-    public static void main(final String[] args) throws IOException, SQLException, InterruptedException {
+    public static void main(final String[] args) throws IOException, SQLException, InterruptedException, UnsupportedAudioFileException, LineUnavailableException {
     	
     	
     	Object[] levelchoice = {1, 2, 3, 4, 5};
