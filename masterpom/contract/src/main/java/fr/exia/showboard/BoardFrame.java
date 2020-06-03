@@ -193,4 +193,10 @@ public class BoardFrame extends JFrame implements IBoard {
     public final void setHeightLooped(final Boolean heightLooped) {
         this.getBoardPanel().setHeightLooped(heightLooped);
     }
+    /**
+     * @param score set score
+     */
+    public void setScore(String score) {
+    	this.boardPanel.setScore(score);
+	}
 }

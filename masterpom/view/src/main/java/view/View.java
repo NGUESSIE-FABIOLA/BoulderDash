@@ -48,6 +48,8 @@ import model.IMobile;
 		/** The BoardFrame. */
 		private final BoardFrame boardFrame = new BoardFrame("BoulderDash");
 
+		private String score;
+
 		
 		/**
 		 * Instantiates a new view facade.
@@ -129,7 +131,7 @@ import model.IMobile;
 			this.cameraMove();
 
 			boardFrame.setVisible(true);
-
+			
 		}
 
 		/**
@@ -250,6 +252,13 @@ import model.IMobile;
 		protected void setPawns(final ArrayList<IMobile> newPawns) {
 			this.pawns = newPawns;
 		}
+		
+		/**
+		 * @param score score to set
+		 */
+		public void drawScore(String score) {
+	        boardFrame.setScore(score);
+	    }
 
 	}
 	

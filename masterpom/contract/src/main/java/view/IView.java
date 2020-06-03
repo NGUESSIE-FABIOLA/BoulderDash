@@ -24,4 +24,6 @@ public interface IView {
      * Refreshes and redraws elements on the board
      */
     void updateBoard();
+
+	void drawScore(String string);
 }

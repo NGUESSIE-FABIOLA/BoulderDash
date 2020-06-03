@@ -71,10 +71,11 @@ public final class Controller implements IController, IOrderPerformer {
     		 this.getModel().movePawns();
    	      this.clearStackOrder();
 
+   	      render();
    	      this.getView().cameraMove();
    	      this.getView().updateBoard();
 
-   	      if (this.getModel().getMap().getDiamondCount() == 0) {
+   	      if (this.getModel().getMap().getDiamondCount() == this.getModel().getMap().getScore() && this.getModel().getCharacter().isAlive()) {
    	        this.getView().displayMessage("You won !! Congratulations ;) ");
    	        System.exit(0);
    	      }
@@ -95,6 +96,10 @@ public final class Controller implements IController, IOrderPerformer {
    	    return this;
    	  }
    	  
+   	  private void render() {
+
+          this.getView().drawScore(this.getModel().getMap().getScore() + "/" + this.getModel().getMap().getDiamondCount());
+      }
 
    	  
    	  public final void orderPerform(final Order order) throws IOException {
