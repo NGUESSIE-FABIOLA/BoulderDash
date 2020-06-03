@@ -35,6 +35,8 @@ public class Map extends Observable implements IMap {
 	  
 	  /** The diamond count */
 	  private int diamondCount = 0;
+	  
+	  private int score;
 
 	  /**
 	   * Default constructor.
@@ -51,7 +53,7 @@ public class Map extends Observable implements IMap {
 	  public Map(final int newWidth, final int newHeight, final IElement[][] newMap) throws SQLException {
 	    super();
 	    this.map = newMap;
-
+	    score = 0;
 	    this.width = newWidth;
 	    this.height = newHeight;
 	    this.pawns = new ArrayList<IMobile>();
@@ -77,6 +79,25 @@ public class Map extends Observable implements IMap {
 	  }
 
 	  /**
+	 * @return the score
+	 */
+	public int getScore() {
+		return score;
+	}
+	
+	public void getAddScore() {
+		 score++;
+	}
+
+	/**
+	 * @param score the score to set
+	 */
+	public void setScore(int score) {
+		this.score = score;
+	}
+
+
+	/**
 	   * @return the map in ASCII character
 	   */
 	  
@@ -162,6 +183,13 @@ public class Map extends Observable implements IMap {
 	    
 	    return this.getOnTheMapXY(x, y).getPermeability();
 	  }
+
+
+	@Override
+	public int getNbDiamond() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
 	
 }

@@ -2,6 +2,7 @@ package fr.exia.showboard;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
@@ -78,6 +79,8 @@ class BoardPanel extends JPanel implements Observer {
 
     /** The height looped. */
     private Boolean             heightLooped     = false;
+    
+    private String score;
 
     /**
      * Instantiates a new board panel.
@@ -89,6 +92,7 @@ class BoardPanel extends JPanel implements Observer {
         final Graphics2D graphics = this.noImage.createGraphics();
         graphics.setColor(Color.darkGray);
         graphics.fillRect(0, 0, 2, 2);
+        
     }
 
     /**
@@ -103,7 +107,7 @@ class BoardPanel extends JPanel implements Observer {
      */
     @Override
     public final void paintComponent(final Graphics graphics) {
-
+    	 Graphics2D g2 = (Graphics2D) graphics;
        	if(this.getDisplayFrame() == null)
 			return;
        	
@@ -113,8 +117,14 @@ class BoardPanel extends JPanel implements Observer {
             for (int y = this.getCornerMinY(); y <= this.getCornerMaxY(); y++) {
                 this.drawSquareXY(graphics, x, y);
                 this.drawPawnsXY(graphics, mapPawn, x, y);
+                this.setScore(score);
             }
         }
+        Font fonte = new Font(" TimesRoman ",Font.BOLD,30);
+        g2.setColor(Color.green);
+        g2.setFont(fonte);
+        g2.drawString("Score : " + score ,5, 30);
+      //  System.out.println("Je passe par la");
     }
 
     /*
@@ -441,5 +451,14 @@ class BoardPanel extends JPanel implements Observer {
     private int getSquareSizeHeight() {
         return this.getHeight() / this.getDisplayFrame().height;
     }
+
+	/**
+	 * @param score
+	 * 		 the score to set
+	 */
+	public void setScore(String score) {
+		this.score = score;
+		this.repaint();
+	}
 
 }

@@ -12,7 +12,18 @@ import java.util.Observable;
 
 public interface IMap {
   
-  /**
+	/**
+     * @return int
+     */
+    int getScore();
+
+    /**
+     * @param score
+     */
+    void setScore(int score);
+
+
+/**
    *  Get Width.
    *  
    * @return the Width of the map
@@ -91,4 +102,8 @@ public interface IMap {
 	 * @param y The y.
 	 */
 	public Permeability getSquareIsOccupiedXY(final int x, final int y);
+
+	int getNbDiamond();
+
+	void getAddScore();
 }
