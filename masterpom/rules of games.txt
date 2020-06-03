@@ -1,0 +1,13 @@
+rules of the game:
+
+score update at each diamond
+Enemies follow the right wall
+If the Enemies are within one square of the character they will go on him.
+If one enemy meets another enemy, they treat each other like walls...
+If a rock falls on the character he dies...
+If an enemy touches the character, he dies.
+
+	physics of the game:
+		if you release a rock/diamond it doesn't move until the character moves AND if there's a stack of 2 the character is not crushed.
+		at the moment when the person moves the gravity applies on them, they update to all the ticks of the clock.
+		if a moving element is on top of another and has the possibility to fall to its right or left, it will go in the direction of its last horizontal movement (~conservation of momentum), if it does not have a random direction
