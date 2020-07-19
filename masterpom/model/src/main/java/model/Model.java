@@ -9,7 +9,7 @@ import model.element.motionfull.Character;
 /**
  * The Class Model.
  *
- * @author Jean-Aymeric Diet
+ * @author nodji
  */
 public final class Model implements IModel {
 	

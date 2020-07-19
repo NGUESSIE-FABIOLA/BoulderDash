@@ -10,7 +10,7 @@ import entity.Entity;
 /**
  * The Class DAOEntity.
  *
- * @author Jean-Aymeric Diet
+ * @author nodji
  *
  * 
  */

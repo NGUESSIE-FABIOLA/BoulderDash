@@ -14,7 +14,7 @@ import model.element.motionfull.Rock;
 /**
  * The Class DAOHelloWorld.
  *
- * @author Jean-Aymeric Diet
+ * @author nodji
  */
 public class Elementboulder extends DAOEntity {
 
