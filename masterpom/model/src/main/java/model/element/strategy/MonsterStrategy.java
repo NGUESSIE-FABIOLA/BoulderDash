@@ -4,8 +4,8 @@
 package model.element.strategy;
 
 import controller.IStrategy;
-import model.IMap;
-import model.IMobile;
+import imodel.IMap;
+import imodel.IMobile;
 import model.element.motionfull.Monster;
 
 /**

@@ -2,8 +2,8 @@ package controller;
 
 import java.io.IOException;
 
-import model.IModel;
-import view.IView;
+import imodel.IModel;
+import iview.IView;
 
 
 /**
@@ -34,12 +34,8 @@ public final class Controller implements IController, IOrderPerformer {
 		this.view = view;
 		this.model = model;
 	}
-
-	/**
-     * Control.
-     */
 	/*
-	 * (non-Javadoc)
+	 *
 	 *
 	 * @see contract.IController#control()
 	 */

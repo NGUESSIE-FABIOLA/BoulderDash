@@ -3,8 +3,8 @@
  */
 package model.element.motionless;
 
-import model.Permeability;
-import model.Sprite;
+import imodel.Permeability;
+import imodel.Sprite;
 import model.element.Element;
 
 /**

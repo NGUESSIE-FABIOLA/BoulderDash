@@ -1,7 +1,4 @@
-/**
- * @author Jean-Aymeric DIET jadiet@cesi.fr
- * @version 1.0
- */
+
 package main;
 
 import java.io.IOException;
@@ -13,15 +10,14 @@ import javax.swing.JOptionPane;
 
 import controller.Controller;
 import controller.IController;
-import model.IModel;
+import imodel.IModel;
 import model.Model;
 import view.View;
-//import view.ViewFacade;
+
 
 /**
- * The Class Main.
+ * @author Fabiola, Bryan
  *
- * @author Jean-Aymeric Diet
  */
 public abstract class Main {
 

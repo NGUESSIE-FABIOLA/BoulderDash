@@ -8,10 +8,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Observable;
 
-import model.IElement;
-import model.IMap;
-import model.IMobile;
-import model.Permeability;
+import imodel.IElement;
+import imodel.IMap;
+import imodel.IMobile;
+import imodel.Permeability;
 
 /**
  * @author nodji

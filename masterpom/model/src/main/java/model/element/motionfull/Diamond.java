@@ -7,9 +7,9 @@ import java.awt.Rectangle;
 import java.io.IOException;
 
 import controller.IStrategy;
-import model.IMap;
-import model.Permeability;
-import model.Sprite;
+import imodel.IMap;
+import imodel.Permeability;
+import imodel.Sprite;
 import model.element.strategy.DiamondStrategy;
 
 /**

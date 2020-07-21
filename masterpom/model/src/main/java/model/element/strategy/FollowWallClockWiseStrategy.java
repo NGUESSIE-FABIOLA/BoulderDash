@@ -4,8 +4,8 @@
 package model.element.strategy;
 
 import controller.Order;
-import model.IMap;
-import model.IMobile;
+import imodel.IMap;
+import imodel.IMobile;
 
 /**
  * @author Heidy Kengne

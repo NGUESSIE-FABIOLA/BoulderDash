@@ -5,8 +5,8 @@ package model.element.motionless;
 
 import java.awt.Rectangle;
 
-import model.Permeability;
-import model.Sprite;
+import imodel.Permeability;
+import imodel.Sprite;
 
 /**
  * @author Heidy Kengne

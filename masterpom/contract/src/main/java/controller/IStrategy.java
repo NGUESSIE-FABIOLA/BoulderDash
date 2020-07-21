@@ -3,8 +3,8 @@
  */
 package controller;
 
-import model.IMap;
-import model.IMobile;
+import imodel.IMap;
+import imodel.IMobile;
 
 /**
  * @author Heidy Kengne

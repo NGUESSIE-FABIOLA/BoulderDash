@@ -1,4 +1,4 @@
-package model;
+package imodel;
 
 import java.util.ArrayList;
 import java.util.Observable;

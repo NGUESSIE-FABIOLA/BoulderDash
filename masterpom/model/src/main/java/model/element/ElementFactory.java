@@ -5,7 +5,7 @@ import model.element.motionless.Mud;
 import model.element.motionless.Wall;
 
 /*
- * @author Souar SN
+ * @author Souar, Heidy
  */
 
 
@@ -72,29 +72,5 @@ public abstract class ElementFactory {
         }
         return background;
     }
-	
-    	/*public static IElement getFromFileSymbol(char c) {
-		switch(c){
-		
-		case 'D':
-		case 'E':
-		case 'H':
-		case 'P':
-		case 'O':
-			return MotionFullElementFactory.getFromFileSymbol(c);
-		case '_':
-		case '|':
-		case 'X':
-		case 'M':
-		case 'S':
-		case '*':
-		case 'W':
-			return MotionlessElementFactory.getFromFileSymbol(c);
-		
-		default: return null; 
-				
-			
-	}
-}*/
 	
 }

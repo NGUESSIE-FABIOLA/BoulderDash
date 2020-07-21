@@ -5,9 +5,9 @@ package model.element.strategy;
 
 import controller.IStrategy;
 import controller.Order;
-import model.IMap;
-import model.IMobile;
-import model.Permeability;
+import imodel.IMap;
+import imodel.IMobile;
+import imodel.Permeability;
 
 /**
  * @author Heidy Kengne

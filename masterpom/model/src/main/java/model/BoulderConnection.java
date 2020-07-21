@@ -10,7 +10,7 @@ import java.sql.SQLException;
  * The Class BoulderConnection.
  *
  *
- * @author nodji
+ * @author Souar, Fabiola
  *
  */
 final class BoulderConnection {

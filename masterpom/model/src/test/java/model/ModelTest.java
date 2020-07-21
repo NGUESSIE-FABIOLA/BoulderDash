@@ -3,27 +3,27 @@
  */
 package model;
 
+import static org.junit.Assert.*;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Test;
 
-import model.element.Map;
+import imodel.IMap;
+import model.element.motionfull.Hero;
 
 /**
- * @author nodji
+ * @author Souar
  *
  */
 public class ModelTest {
-private Map map;
+	private IMap map;
 	
-	private IMobile character;
-	
-	private Model model;
+	private Hero character;
 
 	/**
 	 * @throws java.lang.Exception
-	 * 		exception
 	 */
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -31,49 +31,45 @@ private Map map;
 
 	/**
 	 * @throws java.lang.Exception
-	 * 			exception
 	 */
 	@Before
 	public void setUp() throws Exception {
-		//model = new Model(2);
 	}
+	
 
 	/**
 	 * @throws java.lang.Exception
-	 * 		exception
 	 */
 	@After
 	public void tearDown() throws Exception {
 	}
 
 	/**
-	 * Test method
+	 * Test method for {@link model.Model#getMap()}.
 	 */
-
-/*	@Test
-	public void test() {
-	//	fail("Not yet implemented");
-	}
-	
 	@Test
 	public void testGetMap() {
-		Map expected = map;
-		// fail("Not yet implemented");
-		assertEquals(expected, this.map.getPawns());
+		IMap excepted = map;
+		assertEquals(excepted, this.map);
+		
 	}
 
-
-	
 	/**
-	 * test
+	 * Test method for {@link model.Model#setMap(imodel.IMap)}.
 	 */
-/*	@Test
-	public void testSetCharacter() {
-		IMobile expected = character;
-		//	fail("Not yet implemented");
-		assertEquals(expected, model.getCharacter());	
-		
-	}*/
+	@Test
+	public void testSetMap() {
+		final IMap excepted = map;
+		assertEquals(excepted, this.map);
+	}
 
-	
+	/**
+	 * Test method for {@link model.Model#getCharacter()}.
+	 */
+	@Test
+	public void testGetCharacter() {
+		Hero excepted = character;
+		assertEquals(excepted, this.character);
+	}
+
 }

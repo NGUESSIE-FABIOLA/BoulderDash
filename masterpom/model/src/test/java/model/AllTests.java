@@ -5,7 +5,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({ ElementboulderTest.class, ModelTest.class })
+@SuiteClasses({ DBPropertiesTest.class, ModelTest.class })
 public class AllTests {
 
 }

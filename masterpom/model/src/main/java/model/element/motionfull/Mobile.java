@@ -8,10 +8,10 @@ import java.io.IOException;
 
 import controller.Order;
 import fr.exia.showboard.IBoard;
-import model.IMap;
-import model.IMobile;
-import model.Permeability;
-import model.Sprite;
+import imodel.IMap;
+import imodel.IMobile;
+import imodel.Permeability;
+import imodel.Sprite;
 import model.element.Element;
 import model.element.ElementFactory;
 
@@ -41,12 +41,6 @@ public abstract class Mobile extends Element implements IMobile {
 
 	protected Mobile(final int x, final int y, final Sprite sprite, final IMap map, final Permeability permeability) {
 		this(sprite, map, permeability);
-		// Following code will not work: if (0, y) or (x, 0) is BLOCKING,
-		// The game will end instanty. We have to set the initial position
-		// without
-		// Checking for collisions
-		// this.setX(x);
-		// this.setY(y);
 
 		this.getPosition().x = x;
 		this.getPosition().y = y;

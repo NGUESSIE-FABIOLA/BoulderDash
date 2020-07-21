@@ -8,16 +8,16 @@ import java.awt.Rectangle;
 import java.io.IOException;
 
 import controller.Order;
-import model.IMap;
-import model.IMobile;
-import model.Permeability;
-import model.Sprite;
+import imodel.IMap;
+import imodel.IMobile;
+import imodel.Permeability;
+import imodel.Sprite;
 
 /**
  * @author Heidy Kengne
  *
  */
-public class Character extends Mobile{
+public class Hero extends Mobile{
 
 	private static final Sprite sprite = new Sprite('H', Sprite.characterTileSet, new Rectangle(0, 0, 16, 16));
 
@@ -35,7 +35,7 @@ public class Character extends Mobile{
 	private static final Sprite spriteDie = new Sprite('H', Sprite.characterTileSet, new Rectangle(0, 64, 16, 16));
 
 
-	public Character(final int x, final int y, final IMap map) throws IOException {
+	public Hero(final int x, final int y, final IMap map) throws IOException {
 		super(x, y, sprite, map, Permeability.BLOCKING);
 		spriteTurnLeft.loadImage();
 		spriteTurnRight.loadImage();

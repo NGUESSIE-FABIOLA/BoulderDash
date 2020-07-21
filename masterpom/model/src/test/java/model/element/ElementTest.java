@@ -11,10 +11,10 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import model.IElement;
+import imodel.IElement;
 
 /**
- * @author Souar SN
+ * @author Souar
  *
  */
 public class ElementTest {
@@ -57,30 +57,27 @@ public class ElementTest {
 	@Test
 	public void testGetSprite() {
 		IElement excepted = sprite;
-		//fail("Not yet implemented"); // TODO
+		
 		assertEquals(excepted, this.sprite);
 	}
 
 	@Test
 	public void testGetPermeability() {
 		IElement excepted = permeability;
-		//fail("Not yet implemented"); // TODO
+		
 		assertEquals(excepted, this.permeability);
 	}
 
 	@Test
 	public void testSetSprite() {
 	final IElement expected = sprite;
-		//fail("Not yet implemented"); // TODO
-//	this.sprite.getSprite();
+
 		assertEquals(expected, this.sprite);
 	}
 
 	@Test
 	public void testSetPermeability() {
 		final IElement excepted = permeability;
-		//fail("Not yet implemented"); // TODO
-		//this.permeability.getPermeability(); //miss map to complete
 		assertEquals(excepted, this.permeability);
 	}
 

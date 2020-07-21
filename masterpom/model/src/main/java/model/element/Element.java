@@ -2,9 +2,9 @@ package model.element;
 
 import java.awt.Image;
 
-import model.IElement;
-import model.Permeability;
-import model.Sprite;
+import imodel.IElement;
+import imodel.Permeability;
+import imodel.Sprite;
 
 
 /*

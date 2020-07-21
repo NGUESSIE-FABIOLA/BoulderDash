@@ -41,7 +41,7 @@ public class MapTest {
 	  }
 
 	  /**
-	   * This test verifie that a piece has been properly initialized and are equals.
+	   * This test checks that a piece has been properly initialized and are equals.
 	   * 
 	   */
 	  @Test
@@ -52,7 +52,7 @@ public class MapTest {
 	  }
 
 	  /**
-	   * This test verifie that a piece has been properly initialized and are equals.
+	   * This test checks that a piece has been properly initialized and are equals.
 	   * 
 	   */
 	  @Test
@@ -63,7 +63,7 @@ public class MapTest {
 	  }
 	  
 	  /**
-	   * This test verifie that a piece has been properly initialized and are equals,
+	   * This test checks that a piece has been properly initialized and are equals,
 	   * and the method does not return a null result.
 	   * 
 	   */
@@ -75,7 +75,7 @@ public class MapTest {
 	  }
 
 	  /**
-	   * This test verifie that a piece has been properly initialized and don't return a null result,
+	   * This test checks that a piece has been properly initialized and don't return a null result,
 	   * and is greater then 0.
 	   * 
 	   */
@@ -87,7 +87,7 @@ public class MapTest {
 	  }
 
 	  /**
-	   * This test verifie that a piece has been properly initialized and don't return a null result,
+	   * This test checks that a piece has been properly initialized and don't return a null result,
 	   * and is greater then 0.
 	   * 
 	   */

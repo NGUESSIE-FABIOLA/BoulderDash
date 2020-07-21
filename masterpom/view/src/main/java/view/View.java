@@ -23,11 +23,12 @@ import javax.swing.SwingUtilities;
 import controller.IOrderPerformer;
 import controller.Order;
 import fr.exia.showboard.BoardFrame;
-import model.IMap;
-import model.IMobile;
+import imodel.IMap;
+import imodel.IMobile;
+import iview.IView;
 
 /**
- * @author bryan
+ * @author Bryan
  *
  */
 

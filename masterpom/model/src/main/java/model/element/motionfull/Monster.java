@@ -8,9 +8,9 @@ import java.io.IOException;
 
 import controller.IStrategy;
 import controller.Order;
-import model.IMap;
-import model.Permeability;
-import model.Sprite;
+import imodel.IMap;
+import imodel.Permeability;
+import imodel.Sprite;
 import model.element.strategy.FollowWallAntiClockWiseStrategy;
 import model.element.strategy.FollowWallClockWiseStrategy;
 import model.element.strategy.NoStrategy;
