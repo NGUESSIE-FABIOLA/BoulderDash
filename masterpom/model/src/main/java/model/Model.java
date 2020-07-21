@@ -4,7 +4,11 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import model.element.motionfull.Character;
+import imodel.IMap;
+import imodel.IMobile;
+import imodel.IModel;
+import imodel.Sprite;
+import model.element.motionfull.Hero;
 
 /**
  * The Class Model.
@@ -17,14 +21,14 @@ public final class Model implements IModel {
 	private IMap map;
 
 	/** The player*/
-	private Character character;
+	private Hero character;
 
 	
 	public Model(final int mapID) throws SQLException, IOException {
 		super();
 		Sprite.loadBuffers();
 		this.setMap(Elementboulder.getMapById(mapID));
-		this.setCharacter(new Character(1, 1, this.getMap()));
+		this.setHero(new Hero(1, 1, this.getMap()));
 	}
 	
 	@Override
@@ -56,14 +60,14 @@ ArrayList<IMobile> copyPawns = new ArrayList<>(this.getMap().getPawns());
 	/**
 	 * @return the character
 	 */
-	public Character getCharacter() {
+	public Hero getCharacter() {
 		return this.character;
 	}
 
 	/**
 	 * @param character the character to set
 	 */
-	public void setCharacter(Character character) {
+	public void setHero(Hero character) {
 		this.character = character;
 	}
 

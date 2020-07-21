@@ -5,6 +5,7 @@ import java.sql.CallableStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import imodel.IElement;
 import model.element.ElementFactory;
 import model.element.Map;
 import model.element.motionfull.Diamond;
