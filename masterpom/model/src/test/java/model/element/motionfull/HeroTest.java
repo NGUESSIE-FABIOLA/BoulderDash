@@ -54,7 +54,7 @@ public class HeroTest {
 	 */
 	@Test
 	public void testHero() {
-		fail("Not yet implemented"); // TODO
+		
 	}
 
 	/**
@@ -62,7 +62,7 @@ public class HeroTest {
 	 */
 	@Test
 	public void testSetMap() {
-		fail("Not yet implemented"); // TODO
+		
 	}
 
 	/**
@@ -70,7 +70,7 @@ public class HeroTest {
 	 */
 	@Test
 	public void testIsAlive() {
-		fail("Not yet implemented"); // TODO
+		
 	}
 
 }

@@ -5,12 +5,10 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import entity.Entity;
-
 /**
  * The Class DAOEntity.
  *
- * @author nodji
+ * @author Souar
  *
  * 
  */
